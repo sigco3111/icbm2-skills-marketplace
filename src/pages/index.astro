@@ -283,19 +283,19 @@ const categoryIcons: Record<string, string> = {
   </section>
 </Layout>
 
-<script>
+<script is:inline>
   // Sort functionality for All Skills grid
-  document.addEventListener('DOMContentLoaded', () => {
+  function initSort() {
     const grid = document.getElementById('skills-grid');
     if (!grid) return;
     const sortBtns = document.querySelectorAll('.sort-btn');
 
-    function sortGrid(method: string) {
-      const cards = Array.from(grid.querySelectorAll('.skill-card-wrapper')) as HTMLElement[];
+    function sortGrid(method) {
+      const cards = Array.from(grid.querySelectorAll('.skill-card-wrapper'));
 
-      cards.sort((a, b) => {
-        const aTime = parseInt(a.dataset.created_at || '0');
-        const bTime = parseInt(b.dataset.created_at || '0');
+      cards.sort(function(a, b) {
+        var aTime = parseInt(a.dataset.created_at || '0');
+        var bTime = parseInt(b.dataset.created_at || '0');
         switch (method) {
           case 'name-asc':
             return (a.dataset.name || '').localeCompare(b.dataset.name || '');
@@ -310,14 +310,13 @@ const categoryIcons: Record<string, string> = {
         }
       });
 
-      // Clear grid and re-append in sorted order with animation
       grid.innerHTML = '';
-      cards.forEach((card, i) => {
+      cards.forEach(function(card, i) {
         card.style.opacity = '0';
         card.style.transform = 'translateY(8px)';
         grid.appendChild(card);
-        requestAnimationFrame(() => {
-          setTimeout(() => {
+        requestAnimationFrame(function() {
+          setTimeout(function() {
             card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
@@ -326,13 +325,12 @@ const categoryIcons: Record<string, string> = {
       });
     }
 
-    sortBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const method = btn.getAttribute('data-sort');
+    sortBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var method = btn.getAttribute('data-sort');
         if (!method) return;
 
-        // Update active state
-        sortBtns.forEach(b => {
+        sortBtns.forEach(function(b) {
           b.classList.remove('active-sort', 'bg-accent', 'text-dark-bg', 'border-accent');
           b.classList.add('bg-dark-surface/30', 'text-dark-muted', 'border-dark-border/50');
         });
@@ -342,5 +340,12 @@ const categoryIcons: Record<string, string> = {
         sortGrid(method);
       });
     });
-  });
+  }
+
+  // Run immediately (script is at bottom of body) and also on DOMContentLoaded as safety
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSort);
+  } else {
+    initSort();
+  }
 </script>
