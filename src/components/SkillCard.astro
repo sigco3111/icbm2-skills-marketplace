@@ -29,7 +29,7 @@ const {
 
 const baseUrl = '/icbm2-skills-marketplace';
 const displayDesc = compact ? description : description;
-const showToggle = descriptionEn && !compact;
+const showToggle = !!descriptionEn;
 ---
 
 <a href={`${baseUrl}/skills/${slug}`} class="group block">
@@ -78,12 +78,26 @@ const showToggle = descriptionEn && !compact;
       </h3>
 
       <!-- Description -->
-      <p class:list={[
-        'text-dark-muted text-sm leading-relaxed line-clamp-2',
-        compact ? 'line-clamp-2' : 'line-clamp-3'
-      ]}>
-        {description}
-      </p>
+      <div>
+        <p class:list={[
+          'desc-ko text-dark-muted text-sm leading-relaxed',
+          compact ? 'line-clamp-2' : 'line-clamp-3'
+        ]}>
+          {description}
+        </p>
+        {showToggle && (
+          <button
+            class="inline-flex items-center gap-1 mt-1 text-[11px] text-dark-muted/40 hover:text-accent transition-colors cursor-pointer"
+            onclick={`event.stopPropagation(); const ko = this.parentElement.querySelector('.desc-ko'); const en = this.parentElement.querySelector('.desc-en'); const isKo = !ko.classList.contains('hidden'); ko.classList.toggle('hidden'); en.classList.toggle('hidden'); this.textContent = isKo ? '한국어' : 'English';`}
+          >English</button>
+        )}
+        <p class:list={[
+          'desc-en text-dark-muted text-sm leading-relaxed hidden',
+          compact ? 'line-clamp-2' : 'line-clamp-3'
+        ]}>
+          {descriptionEn}
+        </p>
+      </div>
 
       <!-- Tags -->
       {tags.length > 0 && (
