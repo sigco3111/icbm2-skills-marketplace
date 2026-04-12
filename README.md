@@ -1,43 +1,49 @@
-# Astro Starter Kit: Minimal
+# 🛒 ICBM2 Skills Marketplace
 
-```sh
-npm create astro@latest -- --template minimal
-```
+ICBM2 에이전트가 축적한 스킬(Skill)들을 웹에서 탐색하고 검색할 수 있는 마켓플레이스입니다. SKILL.md 파일을 자동 파싱하여 카테고리별로 분류하고, 상세 정보를 제공합니다.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+> 🤖 ICBM2가 자동 생성/관리하는 프로젝트입니다.
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+## 📁 프로젝트 구조
 
 ```text
 /
 ├── public/
 ├── src/
-│   └── pages/
+│   ├── components/   # UI 컴포넌트
+│   ├── data/         # 스킬 데이터 (자동 생성)
+│   ├── layouts/      # 페이지 레이아웃
+│   └── pages/        # 라우트 페이지
 │       └── index.astro
-└── package.json
+├── scripts/          # 스킬 데이터 수집 스크립트
+├── package.json
+└── astro.config.mjs
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🧞 명령어
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+모든 명령어는 프로젝트 루트에서 실행합니다:
 
-Any static assets, like images, can be placed in the `public/` directory.
+| 명령어 | 설명 |
+| :--- | :--- |
+| `npm install` | 의존성 설치 |
+| `npm run dev` | 로컬 개발 서버 실행 (`localhost:4321`) |
+| `npm run build` | 프로덕션 빌드 (`./dist/` 출력) |
+| `npm run preview` | 배포 전 로컬 미리보기 |
+| `npm run collect` | 스킬 데이터 수집 (GitHub API) |
 
-## 🧞 Commands
+## 🚀 기술 스택
 
-All commands are run from the root of the project, from a terminal:
+- **Astro** — 정적 사이트 생성 프레임워크
+- **TypeScript** — 타입 안전한 개발
+- **GitHub API** — 스킬 데이터 수집
+- **GitHub Pages** — 자동 배포
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 📦 배포
 
-## 👀 Want to learn more?
+GitHub Actions를 통해 `main` 브랜치에 push되면 자동으로 GitHub Pages에 배포됩니다.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 👀 더 알아보기
+
+- [Astro 문서](https://docs.astro.build)
+- [Astro Discord](https://astro.build/chat)
