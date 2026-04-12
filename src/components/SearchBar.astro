@@ -1,0 +1,163 @@
+---
+// SearchBar is rendered in Layout.astro as an overlay.
+// This is a client-side interactive search modal.
+const baseUrl = '/icbm2-skills-marketplace';
+---
+
+<div id="search-overlay" class="fixed inset-0 z-[100] hidden">
+  <!-- Backdrop -->
+  <div id="search-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+
+  <!-- Modal -->
+  <div class="relative flex items-start justify-center pt-[15vh] px-4">
+    <div id="search-modal" class="w-full max-w-xl bg-dark-surface border border-dark-border rounded-2xl shadow-2xl shadow-black/40 overflow-hidden">
+      <!-- Input -->
+      <div class="flex items-center gap-3 px-5 py-4 border-b border-dark-border/50">
+        <svg class="w-5 h-5 text-dark-muted flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        <input
+          id="search-input"
+          type="text"
+          placeholder="스킬 검색... (Search skills...)"
+          class="flex-1 bg-transparent text-dark-text placeholder:text-dark-muted/50 outline-none text-base"
+          autocomplete="off"
+        />
+        <kbd class="flex items-center gap-0.5 px-2 py-1 rounded-lg border border-dark-border/50 bg-dark-bg/50 text-xs font-mono text-dark-muted/60">
+          ESC
+        </kbd>
+      </div>
+
+      <!-- Results -->
+      <div id="search-results" class="max-h-[50vh] overflow-y-auto p-2">
+        <div id="search-empty" class="py-12 text-center text-dark-muted text-sm">
+          <svg class="w-10 h-10 mx-auto mb-3 text-dark-muted/30" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <p>검색어를 입력하세요</p>
+          <p class="text-xs text-dark-muted/50 mt-1">Type to search skills...</p>
+        </div>
+        <div id="search-list" class="hidden space-y-1"></div>
+        <div id="search-no-results" class="hidden py-12 text-center text-dark-muted text-sm">
+          <p>검색 결과가 없습니다</p>
+          <p class="text-xs text-dark-muted/50 mt-1">No results found</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const overlay = document.getElementById('search-overlay')!;
+  const backdrop = document.getElementById('search-backdrop')!;
+  const input = document.getElementById('search-input') as HTMLInputElement;
+  const resultsList = document.getElementById('search-list')!;
+  const emptyState = document.getElementById('search-empty')!;
+  const noResults = document.getElementById('search-no-results')!;
+  const trigger = document.getElementById('search-trigger');
+
+  let allSkills: Array<{name: string; slug: string; category: string; description: string; tags: string[]}> = [];
+  let isOpen = false;
+
+  // Load skills data
+  async function loadSkills() {
+    if (allSkills.length > 0) return;
+    try {
+      const base = document.querySelector('base')?.getAttribute('href') || '/icbm2-skills-marketplace';
+      const res = await fetch(`${base}/skills-data.json`);
+      if (res.ok) {
+        const data = await res.json();
+        allSkills = data.skills || [];
+      }
+    } catch {
+      // Silently fail - search won't work until data loads
+    }
+  }
+
+  function open() {
+    isOpen = true;
+    overlay.classList.remove('hidden');
+    input.value = '';
+    input.focus();
+    emptyState.classList.remove('hidden');
+    resultsList.classList.add('hidden');
+    noResults.classList.add('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    isOpen = false;
+    overlay.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  function search(query: string) {
+    if (!query.trim()) {
+      emptyState.classList.remove('hidden');
+      resultsList.classList.add('hidden');
+      noResults.classList.add('hidden');
+      return;
+    }
+
+    const q = query.toLowerCase();
+    const filtered = allSkills.filter(s =>
+      s.name.toLowerCase().includes(q) ||
+      s.description.toLowerCase().includes(q) ||
+      s.category.toLowerCase().includes(q) ||
+      s.tags.some(t => t.toLowerCase().includes(q))
+    );
+
+    emptyState.classList.add('hidden');
+
+    if (filtered.length === 0) {
+      resultsList.classList.add('hidden');
+      noResults.classList.remove('hidden');
+      return;
+    }
+
+    noResults.classList.add('hidden');
+    resultsList.classList.remove('hidden');
+
+    const base = '/icbm2-skills-marketplace';
+    resultsList.innerHTML = filtered.slice(0, 20).map(s => `
+      <a href="${base}/skills/${s.slug}" class="flex items-start gap-3 p-3 rounded-xl hover:bg-dark-bg/50 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+          <svg class="w-4 h-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <div class="min-w-0">
+          <div class="font-medium text-sm text-dark-text group-hover:text-accent transition-colors">${s.name}</div>
+          <div class="text-xs text-dark-muted mt-0.5 truncate">${s.description}</div>
+          <div class="flex items-center gap-2 mt-1">
+            <span class="text-[10px] px-1.5 py-0.5 rounded bg-accent/10 text-accent">${s.category}</span>
+          </div>
+        </div>
+      </a>
+    `).join('');
+  }
+
+  // Event listeners
+  trigger?.addEventListener('click', open);
+  backdrop.addEventListener('click', close);
+
+  document.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      if (isOpen) close();
+      else {
+        loadSkills().then(open);
+      }
+    }
+    if (e.key === 'Escape' && isOpen) {
+      close();
+    }
+  });
+
+  input.addEventListener('input', (e) => {
+    search((e.target as HTMLInputElement).value);
+  });
+
+  // Preload data on page load
+  loadSkills();
+</script>

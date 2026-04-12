@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-bg: #0f172a;
+  --color-dark-surface: #1e293b;
+  --color-dark-border: #334155;
+  --color-dark-text: #e2e8f0;
+  --color-dark-muted: #94a3b8;
+  --color-accent: #06b6d4;
+  --color-accent-hover: #22d3ee;
+  --color-accent-dim: #0891b2;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-dark-bg);
+  color: var(--color-dark-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-dark-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-dark-muted);
+}
+
+/* Selection */
+::selection {
+  background-color: rgba(6, 182, 212, 0.3);
+  color: #f0f9ff;
+}
+
+/* Category pills horizontal scroll - hide scrollbar */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Prose styling for markdown content */
+.prose-dark {
+  color: var(--color-dark-text);
+  line-height: 1.8;
+}
+
+.prose-dark h1,
+.prose-dark h2,
+.prose-dark h3,
+.prose-dark h4 {
+  color: #f1f5f9;
+  font-weight: 700;
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+  line-height: 1.3;
+}
+
+.prose-dark h1 { font-size: 1.75rem; }
+.prose-dark h2 { font-size: 1.5rem; }
+.prose-dark h3 { font-size: 1.25rem; }
+
+.prose-dark p {
+  margin-bottom: 1em;
+}
+
+.prose-dark ul,
+.prose-dark ol {
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+}
+
+.prose-dark ul {
+  list-style-type: disc;
+}
+
+.prose-dark ol {
+  list-style-type: decimal;
+}
+
+.prose-dark li {
+  margin-bottom: 0.25em;
+}
+
+.prose-dark code {
+  background-color: rgba(6, 182, 212, 0.1);
+  color: var(--color-accent);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.875em;
+  font-family: var(--font-mono);
+}
+
+.prose-dark pre {
+  background-color: var(--color-dark-surface);
+  border: 1px solid var(--color-dark-border);
+  border-radius: 8px;
+  padding: 1em 1.25em;
+  overflow-x: auto;
+  margin-bottom: 1.5em;
+}
+
+.prose-dark pre code {
+  background: none;
+  color: var(--color-dark-text);
+  padding: 0;
+  font-size: 0.875em;
+}
+
+.prose-dark blockquote {
+  border-left: 3px solid var(--color-accent);
+  padding-left: 1em;
+  margin-bottom: 1em;
+  color: var(--color-dark-muted);
+  font-style: italic;
+}
+
+.prose-dark a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose-dark a:hover {
+  color: var(--color-accent-hover);
+}
+
+.prose-dark table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5em;
+}
+
+.prose-dark th,
+.prose-dark td {
+  border: 1px solid var(--color-dark-border);
+  padding: 0.5em 0.75em;
+  text-align: left;
+}
+
+.prose-dark th {
+  background-color: var(--color-dark-surface);
+  font-weight: 600;
+}
+
+.prose-dark hr {
+  border: none;
+  border-top: 1px solid var(--color-dark-border);
+  margin: 2em 0;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effect */
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.15), 0 0 40px rgba(6, 182, 212, 0.05);
+}
+
+/* Animated gradient border */
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, #06b6d4, #8b5cf6, #06b6d4);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Hero background pattern */
+.hero-pattern {
+  background-image: radial-gradient(circle at 1px 1px, rgba(6, 182, 212, 0.08) 1px, transparent 0);
+  background-size: 40px 40px;
+}

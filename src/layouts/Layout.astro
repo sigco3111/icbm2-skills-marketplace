@@ -1,0 +1,107 @@
+---
+import Header from '../components/Header.astro';
+import SearchBar from '../components/SearchBar.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'ICBM2 Skills Marketplace',
+  description = 'AI 에이전트 스킬 마켓플레이스 - Discover and explore 100+ AI agent skills across 20+ categories'
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="ko" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0f172a" />
+
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="icon" type="image/svg+xml" href="/icbm2-skills-marketplace/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={`${Astro.site}og-image.png`} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <Header />
+    <SearchBar />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <footer class="border-t border-dark-border/50 mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <div class="flex items-center gap-2 mb-3">
+              <div class="w-8 h-8 rounded-lg bg-accent/20 flex items-center justify-center">
+                <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <span class="font-bold text-lg">ICBM2</span>
+            </div>
+            <p class="text-dark-muted text-sm leading-relaxed">
+              AI 에이전트를 위한 스킬 마켓플레이스.<br />
+              Skills marketplace for AI agents.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-sm uppercase tracking-wider text-dark-muted mb-3">Resources</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="/icbm2-skills-marketplace/" class="text-dark-text/70 hover:text-accent transition-colors">All Skills</a></li>
+              <li><a href="/icbm2-skills-marketplace/" class="text-dark-text/70 hover:text-accent transition-colors">Categories</a></li>
+              <li><a href="https://github.com/sigco3111" class="text-dark-text/70 hover:text-accent transition-colors">GitHub</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-sm uppercase tracking-wider text-dark-muted mb-3">About</h4>
+            <ul class="space-y-2 text-sm">
+              <li><span class="text-dark-text/70">Built with Astro & Tailwind CSS</span></li>
+              <li><span class="text-dark-text/70">Open Source</span></li>
+              <li><span class="text-dark-text/70">ICBM2 Project</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-dark-border/30 mt-8 pt-8 text-center">
+          <p class="text-dark-muted text-sm">
+            &copy; {new Date().getFullYear()} ICBM2 Skills Marketplace. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Scroll-based header shadow
+      const header = document.getElementById('main-header');
+      if (header) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 10) {
+            header.classList.add('shadow-lg', 'shadow-black/20');
+          } else {
+            header.classList.remove('shadow-lg', 'shadow-black/20');
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

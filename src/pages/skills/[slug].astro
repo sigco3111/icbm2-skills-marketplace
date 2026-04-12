@@ -1,0 +1,220 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SkillCard from '../../components/SkillCard.astro';
+import skillsData from '../../data/skills.json';
+
+export function getStaticPaths() {
+  const { categories, skills } = skillsData;
+  return skills.map(skill => {
+    const catSlug = categories.find(c => c.name === skill.category)?.slug || 'uncategorized';
+    return {
+      params: { slug: skill.slug },
+      props: { skill, catSlug, categories, skills }
+    };
+  });
+}
+
+const { slug } = Astro.params;
+const { skill, catSlug, categories, skills } = Astro.props;
+
+// Find related skills
+const relatedSkills = (skill.related_skills || [])
+  .map((name: string) => skills.find(s => s.name === name))
+  .filter(Boolean)
+  .slice(0, 4);
+
+// Find other skills in the same category
+const sameCategorySkills = skills
+  .filter(s => s.category === skill.category && s.slug !== skill.slug)
+  .slice(0, 4);
+
+const displayRelated = relatedSkills.length > 0 ? relatedSkills : sameCategorySkills;
+
+const baseUrl = '/icbm2-skills-marketplace';
+
+// Simple markdown-to-HTML conversion for the content
+function markdownToHtml(md: string): string {
+  let html = md
+    // Code blocks
+    .replace(/```(\w*)\n([\s\S]*?)```/g, '<pre><code>$2</code></pre>')
+    // Inline code
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    // Headers
+    .replace(/^#### (.+)$/gm, '<h4>$1</h4>')
+    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+    .replace(/^# (.+)$/gm, '<h1>$1</h1>')
+    // Bold and italic
+    .replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    // Links
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+    // Horizontal rules
+    .replace(/^---$/gm, '<hr>')
+    // Unordered lists
+    .replace(/^\- (.+)$/gm, '<li>$1</li>')
+    // Ordered lists
+    .replace(/^\d+\. (.+)$/gm, '<li>$1</li>')
+    // Blockquotes
+    .replace(/^> (.+)$/gm, '<blockquote>$1</blockquote>')
+    // Paragraphs (double newlines)
+    .replace(/\n\n/g, '</p><p>')
+    // Single newlines to <br>
+    .replace(/\n/g, '<br>');
+
+  // Wrap consecutive <li> items in <ul>
+  html = html.replace(/(<li>.*?<\/li>(<br>)?)+/g, (match) => {
+    return '<ul>' + match.replace(/<br>/g, '') + '</ul>';
+  });
+
+  // Wrap in paragraph tags if not already wrapped
+  if (!html.startsWith('<')) {
+    html = '<p>' + html + '</p>';
+  }
+
+  return html;
+}
+
+const contentHtml = markdownToHtml(skill.content || 'No content available.');
+---
+
+<Layout title={`${skill.name} — ICBM2 Skills Marketplace`} description={skill.description}>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-sm text-dark-muted mb-8">
+      <a href={`${baseUrl}/`} class="hover:text-accent transition-colors">Home</a>
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+      <a href={`${baseUrl}/category/${catSlug}`} class="hover:text-accent transition-colors">{skill.category}</a>
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+      <span class="text-dark-text">{skill.name}</span>
+    </nav>
+
+    <!-- Back button -->
+    <a
+      href={`${baseUrl}/category/${catSlug}`}
+      class="inline-flex items-center gap-2 text-dark-muted hover:text-accent transition-colors text-sm mb-8 group"
+    >
+      <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg>
+      Back to {skill.category}
+    </a>
+
+    <!-- Skill Header -->
+    <header class="mb-10">
+      <div class="flex flex-wrap items-center gap-3 mb-4">
+        <a
+          href={`${baseUrl}/category/${catSlug}`}
+          class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-accent/10 text-accent border border-accent/20 hover:bg-accent/20 transition-colors"
+        >
+          {skill.category}
+        </a>
+        {skill.version && (
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-mono text-dark-muted bg-dark-surface/50 border border-dark-border/30">
+            v{skill.version}
+          </span>
+        )}
+        {skill.reading_time_minutes && (
+          <span class="inline-flex items-center gap-1 text-sm text-dark-muted">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            {skill.reading_time_minutes} min read
+          </span>
+        )}
+        {skill.line_count && (
+          <span class="inline-flex items-center gap-1 text-sm text-dark-muted">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            {skill.line_count} lines
+          </span>
+        )}
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl font-bold text-dark-text mb-4">{skill.name}</h1>
+      <p class="text-lg text-dark-muted leading-relaxed max-w-3xl">{skill.description}</p>
+
+      <!-- Meta info -->
+      <div class="flex flex-wrap items-center gap-4 mt-6 pt-6 border-t border-dark-border/30">
+        {skill.author && (
+          <div class="flex items-center gap-2 text-sm text-dark-muted">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+            {skill.author}
+          </div>
+        )}
+        {skill.license && (
+          <div class="flex items-center gap-2 text-sm text-dark-muted">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            {skill.license}
+          </div>
+        )}
+      </div>
+    </header>
+
+    <!-- Tags -->
+    {skill.tags && skill.tags.length > 0 && (
+      <div class="flex flex-wrap gap-2 mb-10">
+        {skill.tags.map(tag => (
+          <span class="inline-flex items-center px-3 py-1 rounded-lg text-sm bg-dark-surface/50 text-dark-muted border border-dark-border/30">
+            #{tag}
+          </span>
+        ))}
+      </div>
+    )}
+
+    <!-- Prerequisites -->
+    {skill.prerequisites && skill.prerequisites.length > 0 && (
+      <div class="mb-10 p-5 rounded-xl border border-amber-500/20 bg-amber-500/5">
+        <h3 class="flex items-center gap-2 font-semibold text-amber-400 mb-3">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+          </svg>
+          Prerequisites / 사전 요구사항
+        </h3>
+        <ul class="space-y-1.5">
+          {skill.prerequisites.map((prereq: string) => (
+            <li class="flex items-center gap-2 text-sm text-dark-muted">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-500/50"></span>
+              {prereq}
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+
+    <!-- Content -->
+    <div class="prose-dark mb-16" set:html={contentHtml} />
+
+    <!-- Related Skills -->
+    {displayRelated.length > 0 && (
+      <section class="border-t border-dark-border/30 pt-10">
+        <h2 class="text-xl font-bold text-dark-text mb-6">Related Skills / 관련 스킬</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {displayRelated.map((related: any) => (
+            <SkillCard
+              name={related.name}
+              slug={related.slug}
+              category={related.category}
+              categorySlug={categories.find(c => c.name === related.category)?.slug || ''}
+              description={related.description}
+              version={related.version}
+              tags={related.tags}
+              author={related.author}
+              compact={true}
+            />
+          ))}
+        </div>
+      </section>
+    )}
+  </article>
+</Layout>

@@ -1,0 +1,49 @@
+---
+interface Props {
+  categories: { name: string; slug: string; count: number }[];
+  activeSlug?: string;
+}
+
+const { categories, activeSlug } = Astro.props;
+const baseUrl = '/icbm2-skills-marketplace';
+---
+
+<div class="relative">
+  <div class="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-dark-bg to-transparent z-10 pointer-events-none"></div>
+  <div class="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-dark-bg to-transparent z-10 pointer-events-none"></div>
+
+  <div class="flex gap-2 overflow-x-auto scrollbar-hide py-2 px-1">
+    <a
+      href={`${baseUrl}/`}
+      class:list={[
+        'inline-flex items-center px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap border transition-all duration-200 flex-shrink-0',
+        !activeSlug
+          ? 'bg-accent text-dark-bg border-accent shadow-lg shadow-accent/20'
+          : 'bg-dark-surface/30 text-dark-muted border-dark-border/50 hover:text-dark-text hover:border-dark-border hover:bg-dark-surface/60'
+      ]}
+    >
+      All Skills
+    </a>
+    {categories.map(cat => (
+      <a
+        href={`${baseUrl}/category/${cat.slug}`}
+        class:list={[
+          'inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap border transition-all duration-200 flex-shrink-0',
+          activeSlug === cat.slug
+            ? 'bg-accent text-dark-bg border-accent shadow-lg shadow-accent/20'
+            : 'bg-dark-surface/30 text-dark-muted border-dark-border/50 hover:text-dark-text hover:border-dark-border hover:bg-dark-surface/60'
+        ]}
+      >
+        {cat.name}
+        <span class:list={[
+          'text-xs px-1.5 py-0.5 rounded-full',
+          activeSlug === cat.slug
+            ? 'bg-dark-bg/20 text-dark-bg'
+            : 'bg-dark-bg/40 text-dark-muted'
+        ]}>
+          {cat.count}
+        </span>
+      </a>
+    ))}
+  </div>
+</div>

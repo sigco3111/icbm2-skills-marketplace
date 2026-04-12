@@ -1,0 +1,84 @@
+---
+interface Props {
+  name: string;
+  slug: string;
+  category: string;
+  categorySlug: string;
+  description: string;
+  version: string;
+  tags?: string[];
+  author?: string;
+  compact?: boolean;
+}
+
+const {
+  name,
+  slug,
+  category,
+  categorySlug,
+  description,
+  version,
+  tags = [],
+  author,
+  compact = false,
+} = Astro.props;
+
+const baseUrl = '/icbm2-skills-marketplace';
+---
+
+<a href={`${baseUrl}/skills/${slug}`} class="group block">
+  <div class="relative rounded-xl border border-dark-border/50 bg-dark-surface/30 hover:bg-dark-surface/60 hover:border-accent/30 transition-all duration-300 overflow-hidden">
+    <!-- Top accent line on hover -->
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+    <div class:list={['p-5', compact && 'p-4']}>
+      <!-- Header: category badge + version -->
+      <div class="flex items-center justify-between mb-3">
+        <a
+          href={`${baseUrl}/category/${categorySlug}`}
+          class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-accent/10 text-accent border border-accent/20 hover:bg-accent/20 transition-colors"
+          onclick="event.stopPropagation()"
+        >
+          {category}
+        </a>
+        {version && (
+          <span class="text-[11px] font-mono text-dark-muted/60 bg-dark-bg/50 px-2 py-0.5 rounded">
+            v{version}
+          </span>
+        )}
+      </div>
+
+      <!-- Title -->
+      <h3 class:list={[
+        'font-semibold text-dark-text group-hover:text-accent transition-colors duration-200 mb-2',
+        compact ? 'text-base' : 'text-lg'
+      ]}>
+        {name}
+      </h3>
+
+      <!-- Description -->
+      <p class:list={[
+        'text-dark-muted text-sm leading-relaxed line-clamp-2',
+        compact ? 'line-clamp-2' : 'line-clamp-3'
+      ]}>
+        {description}
+      </p>
+
+      <!-- Tags -->
+      {tags.length > 0 && (
+        <div class="flex flex-wrap gap-1.5 mt-3">
+          {tags.slice(0, compact ? 2 : 3).map(tag => (
+            <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-dark-bg/50 text-dark-muted border border-dark-border/30">
+              {tag}
+            </span>
+          ))}
+          {tags.length > (compact ? 2 : 3) && (
+            <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] text-dark-muted/50">
+              +{tags.length - (compact ? 2 : 3)}
+            </span>
+          )}
+        </div>
+      )}
+    </div>
+  </div>
+</a>

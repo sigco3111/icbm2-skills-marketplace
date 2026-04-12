@@ -1,0 +1,55 @@
+---
+const navLinks = [
+  { label: 'Skills', href: '/' },
+  { label: 'Categories', href: '/#categories' },
+];
+---
+
+<header
+  id="main-header"
+  class="sticky top-0 z-50 border-b border-dark-border/50 bg-dark-bg/80 backdrop-blur-xl transition-shadow duration-300"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="/icbm2-skills-marketplace/" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-accent to-cyan-400 flex items-center justify-center shadow-lg shadow-accent/20 group-hover:shadow-accent/40 transition-shadow">
+          <svg class="w-5 h-5 text-dark-bg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <div class="hidden sm:block">
+          <span class="font-bold text-lg text-dark-text">ICBM2</span>
+          <span class="text-dark-muted font-light text-lg ml-1">Skills</span>
+        </div>
+      </a>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex items-center gap-1">
+        {navLinks.map(link => (
+          <a
+            href={`/icbm2-skills-marketplace${link.href}`}
+            class="px-4 py-2 text-sm font-medium text-dark-muted hover:text-dark-text rounded-lg hover:bg-dark-surface/50 transition-all duration-200"
+          >
+            {link.label}
+          </a>
+        ))}
+      </nav>
+
+      <!-- Search trigger -->
+      <button
+        id="search-trigger"
+        class="flex items-center gap-2 px-3 py-2 rounded-lg border border-dark-border/50 bg-dark-surface/30 text-dark-muted hover:text-dark-text hover:border-dark-border hover:bg-dark-surface/50 transition-all duration-200 text-sm cursor-pointer"
+        aria-label="Search skills (Cmd+K)"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        <span class="hidden sm:inline">Search skills...</span>
+        <kbd class="hidden sm:inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded border border-dark-border/50 bg-dark-bg/50 text-[10px] font-mono text-dark-muted">
+          <span class="text-xs">⌘</span>K
+        </kbd>
+      </button>
+    </div>
+  </div>
+</header>
