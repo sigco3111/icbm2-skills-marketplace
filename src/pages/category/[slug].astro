@@ -2,13 +2,9 @@
 import Layout from '../../layouts/Layout.astro';
 import SkillCard from '../../components/SkillCard.astro';
 import skillsData from '../../data/skills.json';
-import { readFileSync } from 'node:fs';
+import downloadsData from '../../data/downloads.json';
 
-let downloadableSlugs: Set<string> = new Set();
-try {
-  const dl = JSON.parse(readFileSync('./public/downloads/downloads.json', 'utf-8'));
-  downloadableSlugs = new Set(Object.keys(dl));
-} catch {}
+const downloadableSlugs: Set<string> = new Set(Object.keys(downloadsData));
 
 export function getStaticPaths() {
   const { categories, skills } = skillsData;

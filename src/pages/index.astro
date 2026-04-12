@@ -9,12 +9,8 @@ const { categories, skills } = skillsData;
 const baseUrl = '/icbm2-skills-marketplace';
 
 // Load download manifest
-import { readFileSync } from 'node:fs';
-let downloadableSlugs: Set<string> = new Set();
-try {
-  const dl = JSON.parse(readFileSync('./public/downloads/downloads.json', 'utf-8'));
-  downloadableSlugs = new Set(Object.keys(dl));
-} catch {}
+import downloadsData from '../data/downloads.json';
+const downloadableSlugs: Set<string> = new Set(Object.keys(downloadsData));
 
 const hasDownload = (slug: string) => downloadableSlugs.has(slug);
 
