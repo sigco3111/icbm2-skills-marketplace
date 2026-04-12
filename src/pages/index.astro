@@ -281,17 +281,16 @@ const categoryIcons: Record<string, string> = {
       ))}
     </div>
   </section>
-</Layout>
 
-<script is:inline>
+  <script is:inline>
   // Sort functionality for All Skills grid
-  function initSort() {
-    const grid = document.getElementById('skills-grid');
+  (function() {
+    var grid = document.getElementById('skills-grid');
     if (!grid) return;
-    const sortBtns = document.querySelectorAll('.sort-btn');
+    var sortBtns = document.querySelectorAll('.sort-btn');
 
     function sortGrid(method) {
-      const cards = Array.from(grid.querySelectorAll('.skill-card-wrapper'));
+      var cards = Array.from(grid.querySelectorAll('.skill-card-wrapper'));
 
       cards.sort(function(a, b) {
         var aTime = parseInt(a.dataset.created_at || '0');
@@ -340,12 +339,6 @@ const categoryIcons: Record<string, string> = {
         sortGrid(method);
       });
     });
-  }
-
-  // Run immediately (script is at bottom of body) and also on DOMContentLoaded as safety
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initSort);
-  } else {
-    initSort();
-  }
-</script>
+  })();
+  </script>
+</Layout>
