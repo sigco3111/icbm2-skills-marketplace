@@ -18,6 +18,14 @@ try {
 
 const hasDownload = (slug: string) => downloadableSlugs.has(slug);
 
+// Use Korean description by default
+const getDesc = (skill: any) => skill.description_ko || skill.description;
+const getDescEn = (skill: any) => {
+  const ko = skill.description_ko;
+  const en = skill.description;
+  return (ko && en && ko !== en) ? en : '';
+};
+
 // Sort categories by count descending
 const sortedCategories = [...categories].sort((a, b) => b.count - a.count);
 
@@ -159,7 +167,7 @@ const categoryIcons: Record<string, string> = {
           slug={skill.slug}
           category={skill.category}
           categorySlug={categories.find(c => c.name === skill.category)?.slug || ''}
-          description={skill.description}
+          description={getDesc(skill)}
           version={skill.version}
           tags={skill.tags}
           author={skill.author}
@@ -185,7 +193,7 @@ const categoryIcons: Record<string, string> = {
           slug={skill.slug}
           category={skill.category}
           categorySlug={categories.find(c => c.name === skill.category)?.slug || ''}
-          description={skill.description}
+          description={getDesc(skill)}
           version={skill.version}
           tags={skill.tags}
           author={skill.author}
@@ -215,7 +223,7 @@ const categoryIcons: Record<string, string> = {
           slug={skill.slug}
           category={skill.category}
           categorySlug={categories.find(c => c.name === skill.category)?.slug || ''}
-          description={skill.description}
+          description={getDesc(skill)}
           version={skill.version}
           tags={skill.tags}
           author={skill.author}

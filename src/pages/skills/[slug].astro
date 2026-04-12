@@ -26,6 +26,10 @@ const { slug } = Astro.params;
 const { skill, catSlug, categories, skills } = Astro.props;
 const canDownload = downloadableSlugs.has(skill.slug);
 
+// Korean description as default, English as secondary
+const descKo = skill.description_ko || skill.description;
+const descEn = (skill.description_ko && skill.description && skill.description_ko !== skill.description) ? skill.description : '';
+
 // Find related skills
 const relatedSkills = (skill.related_skills || [])
   .map((name: string) => skills.find(s => s.name === name))
@@ -147,7 +151,37 @@ const contentHtml = markdownToHtml(skill.content || 'No content available.');
       </div>
 
       <h1 class="text-3xl sm:text-4xl font-bold text-dark-text mb-4">{skill.name}</h1>
-      <p class="text-lg text-dark-muted leading-relaxed max-w-3xl">{skill.description}</p>
+      <div id="desc-container">
+        <p class="text-lg text-dark-muted leading-relaxed max-w-3xl" id="desc-ko">{descKo}</p>
+        {descEn && (
+          <p class="text-lg text-dark-muted/60 leading-relaxed max-w-3xl hidden" id="desc-en">{descEn}</p>
+        )}
+        {descEn && (
+          <button
+            id="desc-toggle"
+            class="inline-flex items-center gap-1 mt-2 text-xs text-dark-muted/50 hover:text-accent transition-colors"
+            onclick={() => {
+              const ko = document.getElementById('desc-ko');
+              const en = document.getElementById('desc-en');
+              const btn = document.getElementById('desc-toggle');
+              if (ko.classList.contains('hidden')) {
+                ko.classList.remove('hidden');
+                en.classList.add('hidden');
+                btn.textContent = 'English';
+              } else {
+                ko.classList.add('hidden');
+                en.classList.remove('hidden');
+                btn.textContent = '한국어';
+              }
+            }}
+          >
+            English
+            <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+            </svg>
+          </button>
+        )}
+      </div>
 
       <!-- Download button -->
       {canDownload && (
@@ -230,11 +264,12 @@ const contentHtml = markdownToHtml(skill.content || 'No content available.');
               slug={related.slug}
               category={related.category}
               categorySlug={categories.find(c => c.name === related.category)?.slug || ''}
-              description={related.description}
+              description={related.description_ko || related.description}
               version={related.version}
               tags={related.tags}
               author={related.author}
               compact={true}
+              hasDownload={downloadableSlugs.has(related.slug)}
             />
           ))}
         </div>

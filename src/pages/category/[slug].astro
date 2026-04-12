@@ -2,6 +2,13 @@
 import Layout from '../../layouts/Layout.astro';
 import SkillCard from '../../components/SkillCard.astro';
 import skillsData from '../../data/skills.json';
+import { readFileSync } from 'node:fs';
+
+let downloadableSlugs: Set<string> = new Set();
+try {
+  const dl = JSON.parse(readFileSync('./public/downloads/downloads.json', 'utf-8'));
+  downloadableSlugs = new Set(Object.keys(dl));
+} catch {}
 
 export function getStaticPaths() {
   const { categories, skills } = skillsData;
@@ -50,10 +57,11 @@ const baseUrl = '/icbm2-skills-marketplace';
             slug={skill.slug}
             category={skill.category}
             categorySlug={slug}
-            description={skill.description}
+            description={skill.description_ko || skill.description}
             version={skill.version}
             tags={skill.tags}
             author={skill.author}
+            hasDownload={downloadableSlugs.has(skill.slug)}
           />
         ))}
       </div>
