@@ -285,57 +285,62 @@ const categoryIcons: Record<string, string> = {
 
 <script>
   // Sort functionality for All Skills grid
-  const grid = document.getElementById('skills-grid');
-  const sortBtns = document.querySelectorAll('.sort-btn');
-
-  function sortGrid(method: string) {
+  document.addEventListener('DOMContentLoaded', () => {
+    const grid = document.getElementById('skills-grid');
     if (!grid) return;
-    const cards = Array.from(grid.querySelectorAll('.skill-card-wrapper')) as HTMLElement[];
+    const sortBtns = document.querySelectorAll('.sort-btn');
 
-    cards.sort((a, b) => {
-      switch (method) {
-        case 'name-asc':
-          return (a.dataset.name || '').localeCompare(b.dataset.name || '');
-        case 'name-desc':
-          return (b.dataset.name || '').localeCompare(a.dataset.name || '');
-        case 'newest':
-          return parseInt(b.dataset.created_at || '0') - parseInt(a.dataset.created_at || '0');
-        case 'oldest':
-          return parseInt(a.dataset.created_at || '0') - parseInt(b.dataset.created_at || '0');
-        default:
-          return parseInt(a.dataset.defaultIndex || '0') - parseInt(b.dataset.defaultIndex || '0');
-      }
-    });
+    function sortGrid(method: string) {
+      const cards = Array.from(grid.querySelectorAll('.skill-card-wrapper')) as HTMLElement[];
 
-    // Re-append in sorted order with animation
-    cards.forEach((card, i) => {
-      card.style.opacity = '0';
-      card.style.transform = 'translateY(8px)';
-      grid.appendChild(card);
-      requestAnimationFrame(() => {
-        setTimeout(() => {
-          card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-          card.style.opacity = '1';
-          card.style.transform = 'translateY(0)';
-        }, i * 20);
+      cards.sort((a, b) => {
+        const aTime = parseInt(a.dataset.created_at || '0');
+        const bTime = parseInt(b.dataset.created_at || '0');
+        switch (method) {
+          case 'name-asc':
+            return (a.dataset.name || '').localeCompare(b.dataset.name || '');
+          case 'name-desc':
+            return (b.dataset.name || '').localeCompare(a.dataset.name || '');
+          case 'newest':
+            return bTime - aTime;
+          case 'oldest':
+            return aTime - bTime;
+          default:
+            return parseInt(a.dataset.defaultIndex || '0') - parseInt(b.dataset.defaultIndex || '0');
+        }
       });
-    });
-  }
 
-  sortBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const method = btn.getAttribute('data-sort');
-      if (!method) return;
-
-      // Update active state
-      sortBtns.forEach(b => {
-        b.classList.remove('active-sort', 'bg-accent', 'text-dark-bg', 'border-accent');
-        b.classList.add('bg-dark-surface/30', 'text-dark-muted', 'border-dark-border/50');
+      // Clear grid and re-append in sorted order with animation
+      grid.innerHTML = '';
+      cards.forEach((card, i) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(8px)';
+        grid.appendChild(card);
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, i * 15);
+        });
       });
-      btn.classList.add('active-sort', 'bg-accent', 'text-dark-bg', 'border-accent');
-      btn.classList.remove('bg-dark-surface/30', 'text-dark-muted', 'border-dark-border/50');
+    }
 
-      sortGrid(method);
+    sortBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const method = btn.getAttribute('data-sort');
+        if (!method) return;
+
+        // Update active state
+        sortBtns.forEach(b => {
+          b.classList.remove('active-sort', 'bg-accent', 'text-dark-bg', 'border-accent');
+          b.classList.add('bg-dark-surface/30', 'text-dark-muted', 'border-dark-border/50');
+        });
+        btn.classList.add('active-sort', 'bg-accent', 'text-dark-bg', 'border-accent');
+        btn.classList.remove('bg-dark-surface/30', 'text-dark-muted', 'border-dark-border/50');
+
+        sortGrid(method);
+      });
     });
   });
 </script>
