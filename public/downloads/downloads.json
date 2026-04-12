@@ -191,6 +191,12 @@
     "size_human": "114.7 KB",
     "file_count": 10
   },
+  "ideation": {
+    "filename": "creative-ideation.zip",
+    "size_bytes": 5210,
+    "size_human": "5.1 KB",
+    "file_count": 2
+  },
   "excalidraw": {
     "filename": "excalidraw.zip",
     "size_bytes": 10079,
@@ -329,11 +335,137 @@
     "size_human": "4.2 KB",
     "file_count": 3
   },
+  "modal-serverless-gpu": {
+    "filename": "cloud.zip",
+    "size_bytes": 12120,
+    "size_human": "11.8 KB",
+    "file_count": 4
+  },
+  "evaluating-llms-harness": {
+    "filename": "evaluation.zip",
+    "size_bytes": 38209,
+    "size_human": "37.3 KB",
+    "file_count": 10
+  },
+  "weights-and-biases": {
+    "filename": "evaluation.zip",
+    "size_bytes": 38209,
+    "size_human": "37.3 KB",
+    "file_count": 10
+  },
   "huggingface-hub": {
     "filename": "huggingface-hub.zip",
     "size_bytes": 1926,
     "size_human": "1.9 KB",
     "file_count": 1
+  },
+  "gguf-quantization": {
+    "filename": "inference.zip",
+    "size_bytes": 89042,
+    "size_human": "87.0 KB",
+    "file_count": 27
+  },
+  "guidance": {
+    "filename": "inference.zip",
+    "size_bytes": 89042,
+    "size_human": "87.0 KB",
+    "file_count": 27
+  },
+  "llama-cpp": {
+    "filename": "inference.zip",
+    "size_bytes": 89042,
+    "size_human": "87.0 KB",
+    "file_count": 27
+  },
+  "obliteratus": {
+    "filename": "inference.zip",
+    "size_bytes": 89042,
+    "size_human": "87.0 KB",
+    "file_count": 27
+  },
+  "outlines": {
+    "filename": "inference.zip",
+    "size_bytes": 89042,
+    "size_human": "87.0 KB",
+    "file_count": 27
+  },
+  "serving-llms-vllm": {
+    "filename": "inference.zip",
+    "size_bytes": 89042,
+    "size_human": "87.0 KB",
+    "file_count": 27
+  },
+  "audiocraft-audio-generation": {
+    "filename": "models.zip",
+    "size_bytes": 53797,
+    "size_human": "52.5 KB",
+    "file_count": 14
+  },
+  "clip": {
+    "filename": "models.zip",
+    "size_bytes": 53797,
+    "size_human": "52.5 KB",
+    "file_count": 14
+  },
+  "segment-anything-model": {
+    "filename": "models.zip",
+    "size_bytes": 53797,
+    "size_human": "52.5 KB",
+    "file_count": 14
+  },
+  "stable-diffusion-image-generation": {
+    "filename": "models.zip",
+    "size_bytes": 53797,
+    "size_human": "52.5 KB",
+    "file_count": 14
+  },
+  "whisper": {
+    "filename": "models.zip",
+    "size_bytes": 53797,
+    "size_human": "52.5 KB",
+    "file_count": 14
+  },
+  "dspy": {
+    "filename": "research.zip",
+    "size_bytes": 19744,
+    "size_human": "19.3 KB",
+    "file_count": 5
+  },
+  "axolotl": {
+    "filename": "training.zip",
+    "size_bytes": 742002,
+    "size_human": "724.6 KB",
+    "file_count": 25
+  },
+  "grpo-rl-training": {
+    "filename": "training.zip",
+    "size_bytes": 742002,
+    "size_human": "724.6 KB",
+    "file_count": 25
+  },
+  "peft-fine-tuning": {
+    "filename": "training.zip",
+    "size_bytes": 742002,
+    "size_human": "724.6 KB",
+    "file_count": 25
+  },
+  "pytorch-fsdp": {
+    "filename": "training.zip",
+    "size_bytes": 742002,
+    "size_human": "724.6 KB",
+    "file_count": 25
+  },
+  "fine-tuning-with-trl": {
+    "filename": "training.zip",
+    "size_bytes": 742002,
+    "size_human": "724.6 KB",
+    "file_count": 25
+  },
+  "unsloth": {
+    "filename": "training.zip",
+    "size_bytes": 742002,
+    "size_human": "724.6 KB",
+    "file_count": 25
   },
   "obsidian": {
     "filename": "obsidian.zip",

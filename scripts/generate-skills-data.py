@@ -190,6 +190,7 @@ def process_skill_file(filepath: Path) -> Optional[dict]:
         "slug": slugify(name),
         "category": category,
         "category_slug": slugify(category),
+        "dir_name": skill_dir_name,
         "description": description,
         "version": version,
         "author": author,
