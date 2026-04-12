@@ -593,6 +593,12 @@
     "size_human": "137.4 KB",
     "file_count": 50
   },
+  "word-document": {
+    "filename": "word-document.zip",
+    "size_bytes": 3131,
+    "size_human": "3.1 KB",
+    "file_count": 1
+  },
   "godmode": {
     "filename": "godmode.zip",
     "size_bytes": 37804,

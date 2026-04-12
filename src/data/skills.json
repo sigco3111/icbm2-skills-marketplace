@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-12T15:14:30.737345+00:00",
-  "total_skills": 114,
+  "generated_at": "2026-04-12T21:06:03.615245+00:00",
+  "total_skills": 115,
   "total_categories": 24,
   "categories": [
     {
@@ -19,13 +19,13 @@
       "count": 8
     },
     {
-      "name": "github",
-      "slug": "github",
-      "count": 6
-    },
-    {
       "name": "productivity",
       "slug": "productivity",
+      "count": 7
+    },
+    {
+      "name": "github",
+      "slug": "github",
       "count": 6
     },
     {
@@ -2193,6 +2193,26 @@
       "reading_time_minutes": 6.5,
       "line_count": 232,
       "created_at": 1775442713
+    },
+    {
+      "name": "word-document",
+      "slug": "word-document",
+      "category": "productivity",
+      "category_slug": "productivity",
+      "dir_name": "word-document",
+      "description": "Microsoft Word (.docx) 문서 생성, 읽기, 편집 — docx 라이브러리로 리포트/템플릿/편지 생성, Pandoc으로 텍스트 추출/변환",
+      "description_ko": "",
+      "description_en": "Microsoft Word (.docx) 문서 생성, 읽기, 편집 — docx 라이브러리로 리포트/템플릿/편지 생성, Pandoc으로 텍스트 추출/변환",
+      "version": "",
+      "author": "",
+      "license": "MIT",
+      "tags": [],
+      "related_skills": [],
+      "prerequisites": {},
+      "content": "# Word Document (.docx) Processing\n\nCreate, read, and manipulate Microsoft Word (.docx) documents.\n\n## When to Use\n\n- Generate Word reports (weekly status, audit summaries) from structured data.\n- Produce standardized memos/letters/templates with consistent formatting.\n- Insert images, headers/footers, page numbers, page breaks, and table of contents.\n- Extract text from existing `.docx` files for indexing, review, or conversion to Markdown.\n- Create invoices, contracts, or agreements from templates.\n\n## Key Features\n\n- Create `.docx` documents using the `docx` (docx-js) Node.js library.\n- Read/extract `.docx` content via Pandoc conversion.\n- Explicit page setup (US Letter vs A4), margins, and landscape handling.\n- Style control (default font, overriding built-in Heading styles for TOC compatibility).\n- Proper list generation (bullets/numbering via numbering config).\n- Robust table rendering (DXA widths, column widths + cell widths, shading, borders).\n- Images with required metadata and transformations.\n- Page breaks, headers/footers, and page numbering.\n- Table of contents generation based on Word heading levels.\n\n## Dependencies\n\n- **Node.js**: >= 18\n- **docx**: `^9.0.0` (`npm i docx`)\n- **pandoc**: `>= 2.0` (CLI tool for extracting/converting `.docx` content)\n\n## Usage\n\n### 1) Create a `.docx` (Node.js)\n\n**Install**\n```bash\nnpm i docx\n```\n\n**create-doc.js**\n```javascript\nconst fs = require(\"fs\");\nconst {\n  Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,\n  ImageRun, Header, Footer, AlignmentType, BorderStyle, WidthType,\n  ShadingType, PageNumber, PageBreak, TableOfContents, HeadingLevel,\n  LevelFormat,\n} = require(\"docx\");\n\nconst US_LETTER = { width: 12240, height: 15840 }; // DXA (1440 = 1 inch)\nconst MARGINS_1IN = { top: 1440, right: 1440, bottom: 1440, left: 1440 };\nconst CONTENT_WIDTH = US_LETTER.width - MARGINS_1IN.left - MARGINS_1IN.right; // 9360\n\nconst border = { style: BorderStyle.SINGLE, size: 1, color: \"CCCCCC\" };\nconst borders = { top: border, bottom: border, left: border, right: border };\n\nconst doc = new Document({\n  styles: {\n    default: {\n      document: { run: { font: \"Arial\", size: 24 } }, // 12pt\n    },\n    paragraphStyles: [\n      {\n        id: \"Heading1\", name: \"Heading 1\", basedOn: \"Normal\", next: \"Normal\", quickFormat: true,\n        run: { size: 32, bold: true, font: \"Arial\" },\n        paragraph: { spacing: { before: 240, after: 240 }, outlineLevel: 0 },\n      },\n      {\n        id: \"Heading2\", name: \"Heading 2\", basedOn: \"Normal\", next: \"Normal\", quickFormat: true,\n        run: { size: 28, bold: true, font: \"Arial\" },\n        paragraph: { spacing: { before: 180, after: 180 }, outlineLevel: 1 },\n      },\n    ],\n  },\n  numbering: {\n    config: [\n      {\n        reference: \"bullets\", levels: [{\n          level: 0, format: LevelFormat.BULLET, text: \"•\", alignment: AlignmentType.LEFT,\n          style: { paragraph: { indent: { left: 720, hanging: 360 } } },\n        }],\n      },\n      {\n        reference: \"numbers\", levels: [{\n          level: 0, format: LevelFormat.DECIMAL, text: \"%1.\", alignment: AlignmentType.LEFT,\n          style: { paragraph: { indent: { left: 720, hanging: 360 } } },\n        }],\n      },\n    ],\n  },\n  sections: [{\n    properties: {\n      page: { size: { width: US_LETTER.width, height: US_LETTER.height }, margin: MARGINS_1IN },\n    },\n    headers: {\n      default: new Header({ children: [new Paragraph({ children: [new TextRun(\"Sample Header\")] })] }),\n    },\n    footers: {\n      default: new Footer({ children: [\n        new Paragraph({ children: [new TextRun(\"Page \"), new TextRun({ children: [PageNumber.CURRENT] })] }),\n      ] }),\n    },\n    children: [\n      new Paragraph({ heading: HeadingLevel.HEADING_1, children: [new TextRun(\"DOCX Creation Example\")] }),\n      new TableOfContents(\"Table of Contents\", { hyperlink: true, headingStyleRange: \"1-3\" }),\n      new Paragraph({ heading: HeadingLevel.HEADING_2, children: [new TextRun(\"Lists\")] }),\n      new Paragraph({ numbering: { reference: \"bullets\", level: 0 }, children: [new TextRun(\"Bullet item\")] }),\n      new Paragraph({ numbering: { reference: \"numbers\", level: 0 }, children: [new TextRun(\"Numbered item\")] }),\n      new Paragraph({ heading: HeadingLevel.HEADING_2, children: [new TextRun(\"Table\")] }),\n      new Table({\n        width: { size: CONTENT_WIDTH, type: WidthType.DXA },\n        columnWidths: [CONTENT_WIDTH / 2, CONTENT_WIDTH / 2],\n        rows: [\n          new TableRow({ children: [\n            new TableCell({\n              borders, width: { size: CONTENT_WIDTH / 2, type: WidthType.DXA },\n              shading: { fill: \"D5E8F0\", type: ShadingType.CLEAR },\n              margins: { top: 80, bottom: 80, left: 120, right: 120 },\n              children: [new Paragraph(\"Left cell\")],\n            }),\n            new TableCell({\n              borders, width: { size: CONTENT_WIDTH / 2, type: WidthType.DXA },\n              shading: { fill: \"FFFFFF\", type: ShadingType.CLEAR },\n              margins: { top: 80, bottom: 80, left: 120, right: 120 },\n              children: [new Paragraph(\"Right cell\")],\n            }),\n          ] }),\n        ],\n      }),\n      new Paragraph({ children: [new PageBreak()] }),\n      new Paragraph({ heading: HeadingLevel.HEADING_2, children: [new TextRun(\"New Page Section\")] }),\n      new Paragraph({ children: [new TextRun(\"This is on a new page.\")] }),\n    ],\n  }],\n});\n\n(async () => {\n  const buffer = await Packer.toBuffer(doc);\n  fs.writeFileSync(\"output.docx\", buffer);\n  console.log(\"Wrote output.docx\");\n})();\n```\n\n**Run**\n```bash\nnode create-doc.js\n```\n\n### 2) Read/extract `.docx` text with Pandoc\n\n```bash\npandoc document.docx -o output.md\n```\n\n### 3) Python alternative (python-docx)\n\n```bash\npip install python-docx\n```\n\n```python\nfrom docx import Document\n\n# Create\ndoc = Document()\ndoc.add_heading('Title', level=1)\ndoc.add_paragraph('Hello World')\ndoc.save('output.docx')\n\n# Read\ndoc = Document('input.docx')\nfor para in doc.paragraphs:\n    print(para.text)\n```\n\n## Implementation Details\n\n- **DOCX structure**: `.docx` is a ZIP archive containing XML parts.\n- **Page sizing (DXA)**: 1440 DXA = 1 inch. US Letter: 12240 x 15840 DXA. A4: 11906 x 16838 DXA.\n- **Landscape**: Provide portrait dimensions and set `orientation: PageOrientation.LANDSCAPE`.\n- **Headings and TOC**: TOC requires `HeadingLevel.*`. Override styles with exact IDs: `\"Heading1\"`, `\"Heading2\"`. Include `outlineLevel`.\n- **Paragraphs**: Do not embed `\\n` in runs — create separate `Paragraph` elements.\n- **Lists**: Use `numbering.config` with `LevelFormat.BULLET` / `LevelFormat.DECIMAL`. Same reference continues numbering; different reference restarts.\n- **Tables**: Always use `WidthType.DXA`. Set table `width` and `columnWidths` (sum must equal table width). Set each cell `width` to match its column width.\n- **Images**: `ImageRun` requires valid `type` and `altText` fields.\n- **Page breaks**: `PageBreak` must be inside a `Paragraph` (or use `pageBreakBefore: true`).\n\n## Troubleshooting\n\n| Problem | Fix |\n|---------|-----|\n| `Cannot find module 'docx'` | Run `npm i docx` in working directory |\n| `pandoc: command not found` | Install: `brew install pandoc` |\n| TOC empty in Word | Open doc in Word and press Ctrl+A then F9 to update fields |\n| Table widths broken in Google Docs | Use `WidthType.DXA` instead of percentages |\n| `python-docx` not found | `pip install python-docx` |",
+      "reading_time_minutes": 4.8,
+      "line_count": 203,
+      "created_at": 1776025916
     },
     {
       "name": "godmode",
