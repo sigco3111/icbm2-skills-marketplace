@@ -25,133 +25,133 @@
   },
   "agentnews-monitor": {
     "filename": "agentnews-monitor.zip",
-    "size_bytes": 1691,
-    "size_human": "1.7 KB",
+    "size_bytes": 1681,
+    "size_human": "1.6 KB",
     "file_count": 1
   },
   "ai-model-tracker": {
     "filename": "ai-model-tracker.zip",
-    "size_bytes": 1653,
+    "size_bytes": 1645,
     "size_human": "1.6 KB",
     "file_count": 1
   },
   "automation-healthcheck": {
     "filename": "automation-healthcheck.zip",
-    "size_bytes": 1461,
+    "size_bytes": 1462,
     "size_human": "1.4 KB",
     "file_count": 1
   },
   "botmadang": {
     "filename": "botmadang.zip",
-    "size_bytes": 2080,
+    "size_bytes": 2090,
     "size_human": "2.0 KB",
     "file_count": 1
   },
   "colab-image-gen": {
     "filename": "colab-image-gen.zip",
-    "size_bytes": 1398,
+    "size_bytes": 1389,
     "size_human": "1.4 KB",
     "file_count": 1
   },
   "daily-self-review": {
     "filename": "daily-self-review.zip",
-    "size_bytes": 2619,
-    "size_human": "2.6 KB",
+    "size_bytes": 2608,
+    "size_human": "2.5 KB",
     "file_count": 1
   },
   "dev-news-to-wiki": {
     "filename": "dev-news-to-wiki.zip",
-    "size_bytes": 852,
+    "size_bytes": 845,
     "size_human": "0.8 KB",
     "file_count": 1
   },
   "feedback-loop": {
     "filename": "feedback-loop.zip",
-    "size_bytes": 1736,
+    "size_bytes": 1731,
     "size_human": "1.7 KB",
     "file_count": 1
   },
   "invest-memo": {
     "filename": "invest-memo.zip",
-    "size_bytes": 1609,
+    "size_bytes": 1601,
     "size_human": "1.6 KB",
     "file_count": 1
   },
   "ios-trend-digest": {
     "filename": "ios-trend-digest.zip",
-    "size_bytes": 1782,
+    "size_bytes": 1772,
     "size_human": "1.7 KB",
     "file_count": 1
   },
   "knowledge-graph": {
     "filename": "knowledge-graph.zip",
-    "size_bytes": 1869,
-    "size_human": "1.8 KB",
+    "size_bytes": 1784,
+    "size_human": "1.7 KB",
     "file_count": 1
   },
   "learning-log": {
     "filename": "learning-log.zip",
-    "size_bytes": 1671,
+    "size_bytes": 1663,
     "size_human": "1.6 KB",
     "file_count": 1
   },
   "morning-briefing": {
     "filename": "morning-briefing.zip",
-    "size_bytes": 4960,
+    "size_bytes": 4896,
     "size_human": "4.8 KB",
     "file_count": 1
   },
   "notion-dashboard": {
     "filename": "notion-dashboard.zip",
-    "size_bytes": 2543,
-    "size_human": "2.5 KB",
+    "size_bytes": 2463,
+    "size_human": "2.4 KB",
     "file_count": 1
   },
   "notion-idea-note": {
     "filename": "notion-idea-note.zip",
-    "size_bytes": 3824,
+    "size_bytes": 3797,
     "size_human": "3.7 KB",
     "file_count": 1
   },
   "shiporslop-kr": {
     "filename": "shiporslop-kr.zip",
-    "size_bytes": 6632,
+    "size_bytes": 6617,
     "size_human": "6.5 KB",
     "file_count": 1
   },
   "stock-market-tracker": {
     "filename": "stock-market-tracker.zip",
-    "size_bytes": 2740,
+    "size_bytes": 2734,
     "size_human": "2.7 KB",
     "file_count": 1
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 5671,
+    "size_bytes": 5679,
     "size_human": "5.5 KB",
     "file_count": 1
   },
   "weekly-automation-report": {
     "filename": "weekly-automation-report.zip",
-    "size_bytes": 1666,
+    "size_bytes": 1653,
     "size_human": "1.6 KB",
     "file_count": 1
   },
   "weekly-self-report": {
     "filename": "weekly-self-report.zip",
-    "size_bytes": 1619,
+    "size_bytes": 1608,
     "size_human": "1.6 KB",
     "file_count": 1
   },
   "weekly-tech-digest": {
     "filename": "weekly-tech-digest.zip",
-    "size_bytes": 1887,
+    "size_bytes": 1877,
     "size_human": "1.8 KB",
     "file_count": 1
   },
   "agent-prompts": {
     "filename": "agent-prompts.zip",
-    "size_bytes": 1923,
+    "size_bytes": 1916,
     "size_human": "1.9 KB",
     "file_count": 1
   },
@@ -169,7 +169,7 @@
   },
   "hermes-agent": {
     "filename": "hermes-agent.zip",
-    "size_bytes": 9507,
+    "size_bytes": 9533,
     "size_human": "9.3 KB",
     "file_count": 1
   },
@@ -233,9 +233,15 @@
     "size_human": "2.6 KB",
     "file_count": 1
   },
+  "skill-security-audit": {
+    "filename": "skill-security-audit.zip",
+    "size_bytes": 1187,
+    "size_human": "1.2 KB",
+    "file_count": 1
+  },
   "webhook-subscriptions": {
     "filename": "webhook-subscriptions.zip",
-    "size_bytes": 2537,
+    "size_bytes": 2540,
     "size_human": "2.5 KB",
     "file_count": 1
   },
@@ -271,8 +277,8 @@
   },
   "github-auth": {
     "filename": "github-auth.zip",
-    "size_bytes": 4351,
-    "size_human": "4.2 KB",
+    "size_bytes": 4354,
+    "size_human": "4.3 KB",
     "file_count": 2
   },
   "github-code-review": {
@@ -283,25 +289,25 @@
   },
   "github-issues": {
     "filename": "github-issues.zip",
-    "size_bytes": 4054,
+    "size_bytes": 4056,
     "size_human": "4.0 KB",
     "file_count": 3
   },
   "github-pr-workflow": {
     "filename": "github-pr-workflow.zip",
-    "size_bytes": 9020,
+    "size_bytes": 9019,
     "size_human": "8.8 KB",
     "file_count": 5
   },
   "github-repo-management": {
     "filename": "github-repo-management.zip",
-    "size_bytes": 6249,
+    "size_bytes": 6241,
     "size_human": "6.1 KB",
     "file_count": 2
   },
   "github-trending-monitor": {
     "filename": "github-trending-monitor.zip",
-    "size_bytes": 1356,
+    "size_bytes": 1331,
     "size_human": "1.3 KB",
     "file_count": 1
   },
@@ -319,13 +325,13 @@
   },
   "native-mcp": {
     "filename": "native-mcp.zip",
-    "size_bytes": 4760,
-    "size_human": "4.6 KB",
+    "size_bytes": 4763,
+    "size_human": "4.7 KB",
     "file_count": 1
   },
   "gif-search": {
     "filename": "gif-search.zip",
-    "size_bytes": 1355,
+    "size_bytes": 1356,
     "size_human": "1.3 KB",
     "file_count": 1
   },
@@ -493,7 +499,7 @@
   },
   "skillsmp-search": {
     "filename": "skillsmp-search.zip",
-    "size_bytes": 6787,
+    "size_bytes": 6789,
     "size_human": "6.6 KB",
     "file_count": 3
   },
@@ -523,7 +529,7 @@
   },
   "notion": {
     "filename": "notion.zip",
-    "size_bytes": 3533,
+    "size_bytes": 3534,
     "size_human": "3.5 KB",
     "file_count": 2
   },
@@ -541,7 +547,7 @@
   },
   "godmode": {
     "filename": "godmode.zip",
-    "size_bytes": 37805,
+    "size_bytes": 37804,
     "size_human": "36.9 KB",
     "file_count": 9
   },
@@ -559,7 +565,7 @@
   },
   "llm-wiki": {
     "filename": "llm-wiki.zip",
-    "size_bytes": 7385,
+    "size_bytes": 7389,
     "size_human": "7.2 KB",
     "file_count": 1
   },
@@ -583,7 +589,7 @@
   },
   "xitter": {
     "filename": "xitter.zip",
-    "size_bytes": 2696,
+    "size_bytes": 2702,
     "size_human": "2.6 KB",
     "file_count": 1
   },
@@ -625,7 +631,7 @@
   },
   "telegram-commands": {
     "filename": "telegram-commands.zip",
-    "size_bytes": 1338,
+    "size_bytes": 1350,
     "size_human": "1.3 KB",
     "file_count": 1
   }
