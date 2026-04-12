@@ -105,7 +105,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       }
 
       // Global language toggle
-      function toggleLang() {
+      window.toggleLang = function() {
         const koEls = document.querySelectorAll('.lang-ko');
         const enEls = document.querySelectorAll('.lang-en');
         const label = document.getElementById('lang-label');
@@ -113,7 +113,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         koEls.forEach(el => el.classList.toggle('hidden', isKo));
         enEls.forEach(el => el.classList.toggle('hidden', !isKo));
         if (label) label.textContent = isKo ? '한국어' : 'English';
-      }
+      };
     </script>
   </body>
 </html>
