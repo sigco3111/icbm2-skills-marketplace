@@ -78,24 +78,20 @@ const showToggle = !!descriptionEn;
       </h3>
 
       <!-- Description -->
-      <div>
+      <div class="lang-ko">
         <p class:list={[
-          'desc-ko text-dark-muted text-sm leading-relaxed',
+          'text-dark-muted text-sm leading-relaxed',
           compact ? 'line-clamp-2' : 'line-clamp-3'
         ]}>
           {description}
         </p>
-        {showToggle && (
-          <button
-            class="inline-flex items-center gap-1 mt-1 text-[11px] text-accent/60 hover:text-accent transition-colors cursor-pointer border border-accent/20 rounded px-1.5 py-0.5"
-            onclick={`event.stopPropagation(); const ko = this.parentElement.querySelector('.desc-ko'); const en = this.parentElement.querySelector('.desc-en'); const isKo = !ko.classList.contains('hidden'); ko.classList.toggle('hidden'); en.classList.toggle('hidden'); this.textContent = isKo ? '한국어' : 'English';`}
-          >English</button>
-        )}
+      </div>
+      <div class="lang-en hidden">
         <p class:list={[
-          'desc-en text-dark-muted text-sm leading-relaxed hidden',
+          'text-dark-muted text-sm leading-relaxed',
           compact ? 'line-clamp-2' : 'line-clamp-3'
         ]}>
-          {descriptionEn}
+          {descriptionEn || description}
         </p>
       </div>
 

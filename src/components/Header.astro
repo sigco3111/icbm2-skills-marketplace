@@ -37,19 +37,34 @@ const navLinks = [
       </nav>
 
       <!-- Search trigger -->
-      <button
-        id="search-trigger"
-        class="flex items-center gap-2 px-3 py-2 rounded-lg border border-dark-border/50 bg-dark-surface/30 text-dark-muted hover:text-dark-text hover:border-dark-border hover:bg-dark-surface/50 transition-all duration-200 text-sm cursor-pointer"
-        aria-label="Search skills (Cmd+K)"
-      >
-        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-        </svg>
-        <span class="hidden sm:inline">Search skills...</span>
-        <kbd class="hidden sm:inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded border border-dark-border/50 bg-dark-bg/50 text-[10px] font-mono text-dark-muted">
-          <span class="text-xs">⌘</span>K
-        </kbd>
-      </button>
+      <div class="flex items-center gap-2">
+        <!-- Language toggle -->
+        <button
+          id="lang-toggle"
+          class="flex items-center gap-1.5 px-3 py-2 rounded-lg border border-accent/20 bg-accent/5 text-accent hover:bg-accent/10 hover:border-accent/30 transition-all duration-200 text-sm font-medium cursor-pointer"
+          onclick="toggleLang()"
+        >
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+          </svg>
+          <span id="lang-label">English</span>
+        </button>
+
+        <!-- Search -->
+        <button
+          id="search-trigger"
+          class="flex items-center gap-2 px-3 py-2 rounded-lg border border-dark-border/50 bg-dark-surface/30 text-dark-muted hover:text-dark-text hover:border-dark-border hover:bg-dark-surface/50 transition-all duration-200 text-sm cursor-pointer"
+          aria-label="Search skills (Cmd+K)"
+        >
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <span class="hidden sm:inline">Search skills...</span>
+          <kbd class="hidden sm:inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded border border-dark-border/50 bg-dark-bg/50 text-[10px] font-mono text-dark-muted">
+            <span class="text-xs">⌘</span>K
+          </kbd>
+        </button>
+      </div>
     </div>
   </div>
 </header>
