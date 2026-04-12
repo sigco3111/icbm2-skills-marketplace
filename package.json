@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "node scripts/copy-data.mjs",
+    "prebuild": "node scripts/copy-data.mjs && python3 scripts/generate-skill-zips.py -o public/downloads -d src/data/skills.json",
     "build": "astro build",
     "preview": "astro preview",
     "copy-data": "node scripts/copy-data.mjs",

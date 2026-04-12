@@ -9,6 +9,7 @@ interface Props {
   tags?: string[];
   author?: string;
   compact?: boolean;
+  hasDownload?: boolean;
 }
 
 const {
@@ -21,6 +22,7 @@ const {
   tags = [],
   author,
   compact = false,
+  hasDownload = false,
 } = Astro.props;
 
 const baseUrl = '/icbm2-skills-marketplace';
@@ -32,19 +34,34 @@ const baseUrl = '/icbm2-skills-marketplace';
     <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
     <div class:list={['p-5', compact && 'p-4']}>
-      <!-- Header: category badge + version -->
+      <!-- Header: category badge + version + download -->
       <div class="flex items-center justify-between mb-3">
-        <a
-          href={`${baseUrl}/category/${categorySlug}`}
-          class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-accent/10 text-accent border border-accent/20 hover:bg-accent/20 transition-colors"
-          onclick="event.stopPropagation()"
-        >
-          {category}
-        </a>
-        {version && (
-          <span class="text-[11px] font-mono text-dark-muted/60 bg-dark-bg/50 px-2 py-0.5 rounded">
-            v{version}
-          </span>
+        <div class="flex items-center gap-2">
+          <a
+            href={`${baseUrl}/category/${categorySlug}`}
+            class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-accent/10 text-accent border border-accent/20 hover:bg-accent/20 transition-colors"
+            onclick="event.stopPropagation()"
+          >
+            {category}
+          </a>
+          {version && (
+            <span class="text-[11px] font-mono text-dark-muted/60 bg-dark-bg/50 px-2 py-0.5 rounded">
+              v{version}
+            </span>
+          )}
+        </div>
+        {hasDownload && (
+          <a
+            href={`${baseUrl}/downloads/${slug}.zip`}
+            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 hover:bg-emerald-500/20 transition-colors"
+            onclick="event.stopPropagation()"
+            title={`Download ${name}`}
+          >
+            <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            <span class="hidden sm:inline">ZIP</span>
+          </a>
         )}
       </div>
 

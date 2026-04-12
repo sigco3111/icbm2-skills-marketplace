@@ -2,6 +2,14 @@
 import Layout from '../../layouts/Layout.astro';
 import SkillCard from '../../components/SkillCard.astro';
 import skillsData from '../../data/skills.json';
+import { readFileSync } from 'node:fs';
+
+// Load download manifest
+let downloadableSlugs: Set<string> = new Set();
+try {
+  const dl = JSON.parse(readFileSync('./public/downloads/downloads.json', 'utf-8'));
+  downloadableSlugs = new Set(Object.keys(dl));
+} catch {}
 
 export function getStaticPaths() {
   const { categories, skills } = skillsData;
@@ -16,6 +24,7 @@ export function getStaticPaths() {
 
 const { slug } = Astro.params;
 const { skill, catSlug, categories, skills } = Astro.props;
+const canDownload = downloadableSlugs.has(skill.slug);
 
 // Find related skills
 const relatedSkills = (skill.related_skills || [])
@@ -139,6 +148,21 @@ const contentHtml = markdownToHtml(skill.content || 'No content available.');
 
       <h1 class="text-3xl sm:text-4xl font-bold text-dark-text mb-4">{skill.name}</h1>
       <p class="text-lg text-dark-muted leading-relaxed max-w-3xl">{skill.description}</p>
+
+      <!-- Download button -->
+      {canDownload && (
+        <div class="mt-6">
+          <a
+            href={`${baseUrl}/downloads/${skill.slug}.zip`}
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/20 hover:border-emerald-500/50 transition-all duration-200 font-medium text-sm"
+          >
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Download ZIP
+          </a>
+        </div>
+      )}
 
       <!-- Meta info -->
       <div class="flex flex-wrap items-center gap-4 mt-6 pt-6 border-t border-dark-border/30">

@@ -8,6 +8,16 @@ const { categories, skills } = skillsData;
 
 const baseUrl = '/icbm2-skills-marketplace';
 
+// Load download manifest
+import { readFileSync } from 'node:fs';
+let downloadableSlugs: Set<string> = new Set();
+try {
+  const dl = JSON.parse(readFileSync('./public/downloads/downloads.json', 'utf-8'));
+  downloadableSlugs = new Set(Object.keys(dl));
+} catch {}
+
+const hasDownload = (slug: string) => downloadableSlugs.has(slug);
+
 // Sort categories by count descending
 const sortedCategories = [...categories].sort((a, b) => b.count - a.count);
 
@@ -153,6 +163,7 @@ const categoryIcons: Record<string, string> = {
           version={skill.version}
           tags={skill.tags}
           author={skill.author}
+          hasDownload={hasDownload(skill.slug)}
         />
       ))}
     </div>
@@ -178,6 +189,7 @@ const categoryIcons: Record<string, string> = {
           version={skill.version}
           tags={skill.tags}
           author={skill.author}
+          hasDownload={hasDownload(skill.slug)}
         />
       ))}
     </div>
@@ -208,6 +220,7 @@ const categoryIcons: Record<string, string> = {
           tags={skill.tags}
           author={skill.author}
           compact={true}
+          hasDownload={hasDownload(skill.slug)}
         />
       ))}
     </div>

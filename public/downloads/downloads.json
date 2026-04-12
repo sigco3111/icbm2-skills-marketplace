@@ -1,0 +1,482 @@
+{
+  "apple-notes": {
+    "filename": "apple-notes.zip",
+    "size_bytes": 1113,
+    "size_human": "1.1 KB",
+    "file_count": 1
+  },
+  "apple-reminders": {
+    "filename": "apple-reminders.zip",
+    "size_bytes": 1299,
+    "size_human": "1.3 KB",
+    "file_count": 1
+  },
+  "findmy": {
+    "filename": "findmy.zip",
+    "size_bytes": 1740,
+    "size_human": "1.7 KB",
+    "file_count": 1
+  },
+  "imessage": {
+    "filename": "imessage.zip",
+    "size_bytes": 1289,
+    "size_human": "1.3 KB",
+    "file_count": 1
+  },
+  "agentnews-monitor": {
+    "filename": "agentnews-monitor.zip",
+    "size_bytes": 1691,
+    "size_human": "1.7 KB",
+    "file_count": 1
+  },
+  "ai-model-tracker": {
+    "filename": "ai-model-tracker.zip",
+    "size_bytes": 1653,
+    "size_human": "1.6 KB",
+    "file_count": 1
+  },
+  "automation-healthcheck": {
+    "filename": "automation-healthcheck.zip",
+    "size_bytes": 1461,
+    "size_human": "1.4 KB",
+    "file_count": 1
+  },
+  "botmadang": {
+    "filename": "botmadang.zip",
+    "size_bytes": 2080,
+    "size_human": "2.0 KB",
+    "file_count": 1
+  },
+  "colab-image-gen": {
+    "filename": "colab-image-gen.zip",
+    "size_bytes": 1398,
+    "size_human": "1.4 KB",
+    "file_count": 1
+  },
+  "daily-self-review": {
+    "filename": "daily-self-review.zip",
+    "size_bytes": 2619,
+    "size_human": "2.6 KB",
+    "file_count": 1
+  },
+  "dev-news-to-wiki": {
+    "filename": "dev-news-to-wiki.zip",
+    "size_bytes": 852,
+    "size_human": "0.8 KB",
+    "file_count": 1
+  },
+  "feedback-loop": {
+    "filename": "feedback-loop.zip",
+    "size_bytes": 1736,
+    "size_human": "1.7 KB",
+    "file_count": 1
+  },
+  "invest-memo": {
+    "filename": "invest-memo.zip",
+    "size_bytes": 1609,
+    "size_human": "1.6 KB",
+    "file_count": 1
+  },
+  "ios-trend-digest": {
+    "filename": "ios-trend-digest.zip",
+    "size_bytes": 1782,
+    "size_human": "1.7 KB",
+    "file_count": 1
+  },
+  "knowledge-graph": {
+    "filename": "knowledge-graph.zip",
+    "size_bytes": 1869,
+    "size_human": "1.8 KB",
+    "file_count": 1
+  },
+  "learning-log": {
+    "filename": "learning-log.zip",
+    "size_bytes": 1671,
+    "size_human": "1.6 KB",
+    "file_count": 1
+  },
+  "morning-briefing": {
+    "filename": "morning-briefing.zip",
+    "size_bytes": 4960,
+    "size_human": "4.8 KB",
+    "file_count": 1
+  },
+  "notion-dashboard": {
+    "filename": "notion-dashboard.zip",
+    "size_bytes": 2543,
+    "size_human": "2.5 KB",
+    "file_count": 1
+  },
+  "notion-idea-note": {
+    "filename": "notion-idea-note.zip",
+    "size_bytes": 3824,
+    "size_human": "3.7 KB",
+    "file_count": 1
+  },
+  "shiporslop-kr": {
+    "filename": "shiporslop-kr.zip",
+    "size_bytes": 6632,
+    "size_human": "6.5 KB",
+    "file_count": 1
+  },
+  "stock-market-tracker": {
+    "filename": "stock-market-tracker.zip",
+    "size_bytes": 2740,
+    "size_human": "2.7 KB",
+    "file_count": 1
+  },
+  "tistory-publisher": {
+    "filename": "tistory-publisher.zip",
+    "size_bytes": 5671,
+    "size_human": "5.5 KB",
+    "file_count": 1
+  },
+  "weekly-automation-report": {
+    "filename": "weekly-automation-report.zip",
+    "size_bytes": 1666,
+    "size_human": "1.6 KB",
+    "file_count": 1
+  },
+  "weekly-self-report": {
+    "filename": "weekly-self-report.zip",
+    "size_bytes": 1619,
+    "size_human": "1.6 KB",
+    "file_count": 1
+  },
+  "weekly-tech-digest": {
+    "filename": "weekly-tech-digest.zip",
+    "size_bytes": 1887,
+    "size_human": "1.8 KB",
+    "file_count": 1
+  },
+  "agent-prompts": {
+    "filename": "agent-prompts.zip",
+    "size_bytes": 1923,
+    "size_human": "1.9 KB",
+    "file_count": 1
+  },
+  "claude-code": {
+    "filename": "claude-code.zip",
+    "size_bytes": 12817,
+    "size_human": "12.5 KB",
+    "file_count": 1
+  },
+  "codex": {
+    "filename": "codex.zip",
+    "size_bytes": 1769,
+    "size_human": "1.7 KB",
+    "file_count": 1
+  },
+  "hermes-agent": {
+    "filename": "hermes-agent.zip",
+    "size_bytes": 9507,
+    "size_human": "9.3 KB",
+    "file_count": 1
+  },
+  "opencode": {
+    "filename": "opencode.zip",
+    "size_bytes": 3837,
+    "size_human": "3.7 KB",
+    "file_count": 1
+  },
+  "ascii-art": {
+    "filename": "ascii-art.zip",
+    "size_bytes": 4578,
+    "size_human": "4.5 KB",
+    "file_count": 1
+  },
+  "ascii-video": {
+    "filename": "ascii-video.zip",
+    "size_bytes": 117467,
+    "size_human": "114.7 KB",
+    "file_count": 10
+  },
+  "excalidraw": {
+    "filename": "excalidraw.zip",
+    "size_bytes": 10079,
+    "size_human": "9.8 KB",
+    "file_count": 5
+  },
+  "manim-video": {
+    "filename": "manim-video.zip",
+    "size_bytes": 45931,
+    "size_human": "44.9 KB",
+    "file_count": 17
+  },
+  "p5js": {
+    "filename": "p5js.zip",
+    "size_bytes": 64687,
+    "size_human": "63.2 KB",
+    "file_count": 17
+  },
+  "popular-web-designs": {
+    "filename": "popular-web-designs.zip",
+    "size_bytes": 345845,
+    "size_human": "337.7 KB",
+    "file_count": 55
+  },
+  "songwriting-and-ai-music": {
+    "filename": "songwriting-and-ai-music.zip",
+    "size_bytes": 5321,
+    "size_human": "5.2 KB",
+    "file_count": 1
+  },
+  "jupyter-live-kernel": {
+    "filename": "jupyter-live-kernel.zip",
+    "size_bytes": 2665,
+    "size_human": "2.6 KB",
+    "file_count": 1
+  },
+  "webhook-subscriptions": {
+    "filename": "webhook-subscriptions.zip",
+    "size_bytes": 2537,
+    "size_human": "2.5 KB",
+    "file_count": 1
+  },
+  "himalaya": {
+    "filename": "himalaya.zip",
+    "size_bytes": 5446,
+    "size_human": "5.3 KB",
+    "file_count": 3
+  },
+  "minecraft-modpack-server": {
+    "filename": "minecraft-modpack-server.zip",
+    "size_bytes": 3250,
+    "size_human": "3.2 KB",
+    "file_count": 1
+  },
+  "pokemon-player": {
+    "filename": "pokemon-player.zip",
+    "size_bytes": 4320,
+    "size_human": "4.2 KB",
+    "file_count": 1
+  },
+  "codebase-inspection": {
+    "filename": "codebase-inspection.zip",
+    "size_bytes": 1809,
+    "size_human": "1.8 KB",
+    "file_count": 1
+  },
+  "github-auth": {
+    "filename": "github-auth.zip",
+    "size_bytes": 4351,
+    "size_human": "4.2 KB",
+    "file_count": 2
+  },
+  "github-code-review": {
+    "filename": "github-code-review.zip",
+    "size_bytes": 6633,
+    "size_human": "6.5 KB",
+    "file_count": 2
+  },
+  "github-issues": {
+    "filename": "github-issues.zip",
+    "size_bytes": 4054,
+    "size_human": "4.0 KB",
+    "file_count": 3
+  },
+  "github-pr-workflow": {
+    "filename": "github-pr-workflow.zip",
+    "size_bytes": 9020,
+    "size_human": "8.8 KB",
+    "file_count": 5
+  },
+  "github-repo-management": {
+    "filename": "github-repo-management.zip",
+    "size_bytes": 6249,
+    "size_human": "6.1 KB",
+    "file_count": 2
+  },
+  "find-nearby": {
+    "filename": "find-nearby.zip",
+    "size_bytes": 4259,
+    "size_human": "4.2 KB",
+    "file_count": 2
+  },
+  "mcporter": {
+    "filename": "mcporter.zip",
+    "size_bytes": 1527,
+    "size_human": "1.5 KB",
+    "file_count": 1
+  },
+  "native-mcp": {
+    "filename": "native-mcp.zip",
+    "size_bytes": 4760,
+    "size_human": "4.6 KB",
+    "file_count": 1
+  },
+  "gif-search": {
+    "filename": "gif-search.zip",
+    "size_bytes": 1355,
+    "size_human": "1.3 KB",
+    "file_count": 1
+  },
+  "heartmula": {
+    "filename": "heartmula.zip",
+    "size_bytes": 3213,
+    "size_human": "3.1 KB",
+    "file_count": 1
+  },
+  "songsee": {
+    "filename": "songsee.zip",
+    "size_bytes": 1291,
+    "size_human": "1.3 KB",
+    "file_count": 1
+  },
+  "youtube-content": {
+    "filename": "youtube-content.zip",
+    "size_bytes": 4292,
+    "size_human": "4.2 KB",
+    "file_count": 3
+  },
+  "huggingface-hub": {
+    "filename": "huggingface-hub.zip",
+    "size_bytes": 1926,
+    "size_human": "1.9 KB",
+    "file_count": 1
+  },
+  "obsidian": {
+    "filename": "obsidian.zip",
+    "size_bytes": 674,
+    "size_human": "0.7 KB",
+    "file_count": 1
+  },
+  "llm-rpg": {
+    "filename": "llm-rpg.zip",
+    "size_bytes": 20945,
+    "size_human": "20.5 KB",
+    "file_count": 5
+  },
+  "skillsmp-search": {
+    "filename": "skillsmp-search.zip",
+    "size_bytes": 6787,
+    "size_human": "6.6 KB",
+    "file_count": 3
+  },
+  "strategy-sim": {
+    "filename": "strategy-sim.zip",
+    "size_bytes": 12070,
+    "size_human": "11.8 KB",
+    "file_count": 4
+  },
+  "google-workspace": {
+    "filename": "google-workspace.zip",
+    "size_bytes": 13145,
+    "size_human": "12.8 KB",
+    "file_count": 5
+  },
+  "linear": {
+    "filename": "linear.zip",
+    "size_bytes": 2959,
+    "size_human": "2.9 KB",
+    "file_count": 1
+  },
+  "nano-pdf": {
+    "filename": "nano-pdf.zip",
+    "size_bytes": 954,
+    "size_human": "0.9 KB",
+    "file_count": 1
+  },
+  "notion": {
+    "filename": "notion.zip",
+    "size_bytes": 3533,
+    "size_human": "3.5 KB",
+    "file_count": 2
+  },
+  "ocr-and-documents": {
+    "filename": "ocr-and-documents.zip",
+    "size_bytes": 5175,
+    "size_human": "5.1 KB",
+    "file_count": 4
+  },
+  "powerpoint": {
+    "filename": "powerpoint.zip",
+    "size_bytes": 140677,
+    "size_human": "137.4 KB",
+    "file_count": 50
+  },
+  "godmode": {
+    "filename": "godmode.zip",
+    "size_bytes": 37805,
+    "size_human": "36.9 KB",
+    "file_count": 9
+  },
+  "arxiv": {
+    "filename": "arxiv.zip",
+    "size_bytes": 5408,
+    "size_human": "5.3 KB",
+    "file_count": 2
+  },
+  "blogwatcher": {
+    "filename": "blogwatcher.zip",
+    "size_bytes": 1961,
+    "size_human": "1.9 KB",
+    "file_count": 1
+  },
+  "llm-wiki": {
+    "filename": "llm-wiki.zip",
+    "size_bytes": 7385,
+    "size_human": "7.2 KB",
+    "file_count": 1
+  },
+  "polymarket": {
+    "filename": "polymarket.zip",
+    "size_bytes": 6820,
+    "size_human": "6.7 KB",
+    "file_count": 3
+  },
+  "research-paper-writing": {
+    "filename": "research-paper-writing.zip",
+    "size_bytes": 798700,
+    "size_human": "780.0 KB",
+    "file_count": 55
+  },
+  "openhue": {
+    "filename": "openhue.zip",
+    "size_bytes": 1254,
+    "size_human": "1.2 KB",
+    "file_count": 1
+  },
+  "xitter": {
+    "filename": "xitter.zip",
+    "size_bytes": 2696,
+    "size_human": "2.6 KB",
+    "file_count": 1
+  },
+  "plan": {
+    "filename": "plan.zip",
+    "size_bytes": 1178,
+    "size_human": "1.2 KB",
+    "file_count": 1
+  },
+  "requesting-code-review": {
+    "filename": "requesting-code-review.zip",
+    "size_bytes": 4018,
+    "size_human": "3.9 KB",
+    "file_count": 1
+  },
+  "subagent-driven-development": {
+    "filename": "subagent-driven-development.zip",
+    "size_bytes": 3944,
+    "size_human": "3.9 KB",
+    "file_count": 1
+  },
+  "systematic-debugging": {
+    "filename": "systematic-debugging.zip",
+    "size_bytes": 4726,
+    "size_human": "4.6 KB",
+    "file_count": 1
+  },
+  "test-driven-development": {
+    "filename": "test-driven-development.zip",
+    "size_bytes": 4244,
+    "size_human": "4.1 KB",
+    "file_count": 1
+  },
+  "writing-plans": {
+    "filename": "writing-plans.zip",
+    "size_bytes": 3182,
+    "size_human": "3.1 KB",
+    "file_count": 1
+  }
+}
