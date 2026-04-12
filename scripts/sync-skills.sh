@@ -24,8 +24,9 @@ cd "$REPO_DIR"
 
 python3 scripts/generate-skills-data.py
 node scripts/copy-data.mjs
+python3 scripts/generate-skill-zips.py -o public/downloads -d src/data/skills.json
 
-git add src/data/skills.json public/skills-data.json
+git add src/data/skills.json public/skills-data.json public/downloads/
 CHANGES=$(git diff --cached --stat)
 
 if [ -z "$CHANGES" ]; then
