@@ -22,6 +22,10 @@ const categorySkills = skills.filter(s => {
   return catSlug === slug;
 });
 
+// Use Korean description by default, English for toggle
+const getDesc = (skill: any) => skill.description_ko || skill.description;
+const getDescEn = (skill: any) => skill.description_en || skill.description || '';
+
 const baseUrl = '/icbm2-skills-marketplace';
 ---
 
@@ -53,7 +57,8 @@ const baseUrl = '/icbm2-skills-marketplace';
             slug={skill.slug}
             category={skill.category}
             categorySlug={slug}
-            description={skill.description_ko || skill.description}
+            description={getDesc(skill)}
+            descriptionEn={getDescEn(skill)}
             version={skill.version}
             tags={skill.tags}
             author={skill.author}

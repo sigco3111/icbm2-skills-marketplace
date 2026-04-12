@@ -14,22 +14,15 @@ const downloadableSlugs: Set<string> = new Set(Object.keys(downloadsData));
 
 const hasDownload = (slug: string) => downloadableSlugs.has(slug);
 
-// Use Korean description by default
+// Use Korean description by default, English description for toggle
 const getDesc = (skill: any) => skill.description_ko || skill.description;
-const getDescEn = (skill: any) => {
-  const ko = skill.description_ko;
-  const en = skill.description;
-  return (ko && en && ko !== en) ? en : '';
-};
+const getDescEn = (skill: any) => skill.description_en || skill.description || '';
 
-// Sort categories by count descending
-const sortedCategories = [...categories].sort((a, b) => b.count - a.count);
-
-// Featured skills (first 6)
+// Featured skills (first 6 by default order)
 const featuredSkills = skills.slice(0, 6);
 
-// Recent skills (last 6)
-const recentSkills = skills.slice(-6).reverse();
+// Recent skills (last 6 by default order = newest by file mtime)
+const recentSkills = [...skills].sort((a, b) => (b.created_at || 0) - (a.created_at || 0)).slice(0, 6);
 
 // Category icon mapping
 const categoryIcons: Record<string, string> = {
@@ -134,7 +127,7 @@ const categoryIcons: Record<string, string> = {
     </div>
 
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
-      {sortedCategories.map(cat => (
+      {categories.map(cat => (
         <a
           href={`${baseUrl}/category/${cat.slug}`}
           class="group flex flex-col items-center gap-2 p-4 rounded-xl border border-dark-border/40 bg-dark-surface/20 hover:bg-dark-surface/50 hover:border-accent/30 transition-all duration-300 text-center"
@@ -203,33 +196,146 @@ const categoryIcons: Record<string, string> = {
 
   <!-- All Skills -->
   <section id="skills" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <div class="mb-8">
-      <h2 class="text-2xl font-bold text-dark-text">All Skills</h2>
-      <p class="text-dark-muted text-sm mt-1">전체 스킬 목록 ({skills.length}개)</p>
+    <div class="flex items-center justify-between mb-8">
+      <div>
+        <h2 class="text-2xl font-bold text-dark-text">All Skills</h2>
+        <p class="text-dark-muted text-sm mt-1">전체 스킬 목록 ({skills.length}개)</p>
+      </div>
     </div>
 
     <!-- Category filter -->
-    <div class="mb-8">
-      <CategoryFilter categories={sortedCategories} />
+    <div class="mb-6">
+      <CategoryFilter categories={categories} />
+    </div>
+
+    <!-- Sort controls -->
+    <div class="flex items-center gap-2 mb-6">
+      <span class="text-sm text-dark-muted mr-1">정렬:</span>
+      <button
+        data-sort="default"
+        class="sort-btn active-sort inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium border transition-all duration-200 cursor-pointer bg-accent text-dark-bg border-accent"
+      >
+        기본
+      </button>
+      <button
+        data-sort="name-asc"
+        class="sort-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium border transition-all duration-200 cursor-pointer bg-dark-surface/30 text-dark-muted border-dark-border/50 hover:text-dark-text hover:border-dark-border"
+      >
+        이름 A→Z
+        <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <button
+        data-sort="name-desc"
+        class="sort-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium border transition-all duration-200 cursor-pointer bg-dark-surface/30 text-dark-muted border-dark-border/50 hover:text-dark-text hover:border-dark-border"
+      >
+        이름 Z→A
+        <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+      </button>
+      <button
+        data-sort="newest"
+        class="sort-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium border transition-all duration-200 cursor-pointer bg-dark-surface/30 text-dark-muted border-dark-border/50 hover:text-dark-text hover:border-dark-border"
+      >
+        최신순
+        <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </button>
+      <button
+        data-sort="oldest"
+        class="sort-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium border transition-all duration-200 cursor-pointer bg-dark-surface/30 text-dark-muted border-dark-border/50 hover:text-dark-text hover:border-dark-border"
+      >
+        오래된순
+        <svg class="w-3 h-3 rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </button>
     </div>
 
     <!-- Skills grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-      {skills.map(skill => (
-        <SkillCard
-          name={skill.name}
-          slug={skill.slug}
-          category={skill.category}
-          categorySlug={categories.find(c => c.name === skill.category)?.slug || ''}
-          description={getDesc(skill)}
-          descriptionEn={getDescEn(skill)}
-          version={skill.version}
-          tags={skill.tags}
-          author={skill.author}
-          compact={true}
-          hasDownload={hasDownload(skill.slug)}
-        />
+    <div id="skills-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      {skills.map((skill, index) => (
+        <div
+          class="skill-card-wrapper"
+          data-name={skill.name.toLowerCase()}
+          data-created-at={skill.created_at || 0}
+          data-default-index={index}
+        >
+          <SkillCard
+            name={skill.name}
+            slug={skill.slug}
+            category={skill.category}
+            categorySlug={categories.find(c => c.name === skill.category)?.slug || ''}
+            description={getDesc(skill)}
+            descriptionEn={getDescEn(skill)}
+            version={skill.version}
+            tags={skill.tags}
+            author={skill.author}
+            compact={true}
+            hasDownload={hasDownload(skill.slug)}
+          />
+        </div>
       ))}
     </div>
   </section>
 </Layout>
+
+<script>
+  // Sort functionality for All Skills grid
+  const grid = document.getElementById('skills-grid');
+  const sortBtns = document.querySelectorAll('.sort-btn');
+
+  function sortGrid(method: string) {
+    if (!grid) return;
+    const cards = Array.from(grid.querySelectorAll('.skill-card-wrapper')) as HTMLElement[];
+
+    cards.sort((a, b) => {
+      switch (method) {
+        case 'name-asc':
+          return (a.dataset.name || '').localeCompare(b.dataset.name || '');
+        case 'name-desc':
+          return (b.dataset.name || '').localeCompare(a.dataset.name || '');
+        case 'newest':
+          return parseInt(b.dataset.created_at || '0') - parseInt(a.dataset.created_at || '0');
+        case 'oldest':
+          return parseInt(a.dataset.created_at || '0') - parseInt(b.dataset.created_at || '0');
+        default:
+          return parseInt(a.dataset.defaultIndex || '0') - parseInt(b.dataset.defaultIndex || '0');
+      }
+    });
+
+    // Re-append in sorted order with animation
+    cards.forEach((card, i) => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(8px)';
+      grid.appendChild(card);
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, i * 20);
+      });
+    });
+  }
+
+  sortBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const method = btn.getAttribute('data-sort');
+      if (!method) return;
+
+      // Update active state
+      sortBtns.forEach(b => {
+        b.classList.remove('active-sort', 'bg-accent', 'text-dark-bg', 'border-accent');
+        b.classList.add('bg-dark-surface/30', 'text-dark-muted', 'border-dark-border/50');
+      });
+      btn.classList.add('active-sort', 'bg-accent', 'text-dark-bg', 'border-accent');
+      btn.classList.remove('bg-dark-surface/30', 'text-dark-muted', 'border-dark-border/50');
+
+      sortGrid(method);
+    });
+  });
+</script>

@@ -28,7 +28,6 @@ const {
 } = Astro.props;
 
 const baseUrl = '/icbm2-skills-marketplace';
-const displayDesc = compact ? description : description;
 const showToggle = !!descriptionEn;
 ---
 
@@ -38,7 +37,7 @@ const showToggle = !!descriptionEn;
     <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
     <div class:list={['p-5', compact && 'p-4']}>
-      <!-- Header: category badge + version + download -->
+      <!-- Header: category badge + version + download + lang toggle -->
       <div class="flex items-center justify-between mb-3">
         <div class="flex items-center gap-2">
           <a
@@ -54,19 +53,30 @@ const showToggle = !!descriptionEn;
             </span>
           )}
         </div>
-        {hasDownload && (
-          <a
-            href={`${baseUrl}/downloads/${slug}.zip`}
-            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 hover:bg-emerald-500/20 transition-colors"
-            onclick="event.stopPropagation()"
-            title={`Download ${name}`}
-          >
-            <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-            </svg>
-            <span class="inline">ZIP</span>
-          </a>
-        )}
+        <div class="flex items-center gap-1.5">
+          {showToggle && (
+            <button
+              class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-dark-bg/50 text-dark-muted border border-dark-border/30 hover:text-accent hover:border-accent/30 transition-colors cursor-pointer"
+              onclick="event.preventDefault(); event.stopPropagation(); this.closest('.group').querySelector('.lang-ko')?.classList.toggle('hidden'); this.closest('.group').querySelector('.lang-en')?.classList.toggle('hidden'); const l = this.querySelector('.lang-label'); if(l) l.textContent = l.textContent === 'EN' ? 'KO' : 'EN';"
+              title="Toggle Korean/English"
+            >
+              <span class="lang-label">EN</span>
+            </button>
+          )}
+          {hasDownload && (
+            <a
+              href={`${baseUrl}/downloads/${slug}.zip`}
+              class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 hover:bg-emerald-500/20 transition-colors"
+              onclick="event.stopPropagation()"
+              title={`Download ${name}`}
+            >
+              <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              <span class="inline">ZIP</span>
+            </a>
+          )}
+        </div>
       </div>
 
       <!-- Title -->
@@ -86,14 +96,16 @@ const showToggle = !!descriptionEn;
           {description}
         </p>
       </div>
-      <div class="lang-en hidden">
-        <p class:list={[
-          'text-dark-muted text-sm leading-relaxed',
-          compact ? 'line-clamp-2' : 'line-clamp-3'
-        ]}>
-          {descriptionEn || description}
-        </p>
-      </div>
+      {showToggle && (
+        <div class="lang-en hidden">
+          <p class:list={[
+            'text-dark-muted text-sm leading-relaxed',
+            compact ? 'line-clamp-2' : 'line-clamp-3'
+          ]}>
+            {descriptionEn}
+          </p>
+        </div>
+      )}
 
       <!-- Tags -->
       {tags.length > 0 && (

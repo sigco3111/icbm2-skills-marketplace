@@ -24,7 +24,7 @@ const canDownload = downloadableSlugs.has(skill.slug);
 
 // Korean description as default, English as secondary
 const descKo = skill.description_ko || skill.description;
-const descEn = (skill.description_ko && skill.description && skill.description_ko !== skill.description) ? skill.description : '';
+const descEn = skill.description_en || skill.description || '';
 
 // Find related skills
 const relatedSkills = (skill.related_skills || [])
@@ -236,6 +236,7 @@ const contentHtml = markdownToHtml(skill.content || 'No content available.');
               category={related.category}
               categorySlug={categories.find(c => c.name === related.category)?.slug || ''}
               description={related.description_ko || related.description}
+              descriptionEn={related.description_en || related.description || ''}
               version={related.version}
               tags={related.tags}
               author={related.author}

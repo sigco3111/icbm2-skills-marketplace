@@ -307,9 +307,18 @@ def process_skill_file(filepath: Path) -> Optional[dict]:
     skill_slug = slugify(name)
     ko_desc = KO_TRANSLATIONS.get(skill_slug, "")
 
+    # description_en: keep original English description (or whatever was in SKILL.md)
+    description_en = description if description else ""
+
     # If description is empty but we have a Korean translation, use it as primary
     if not description and ko_desc:
         description = ko_desc
+
+    # File modification time for sorting
+    try:
+        mtime = int(filepath.stat().st_mtime)
+    except Exception:
+        mtime = 0
 
     return {
         "name": name,
@@ -319,6 +328,7 @@ def process_skill_file(filepath: Path) -> Optional[dict]:
         "dir_name": skill_dir_name,
         "description": description,
         "description_ko": ko_desc,
+        "description_en": description_en,
         "version": version,
         "author": author,
         "license": license_val,
@@ -328,6 +338,7 @@ def process_skill_file(filepath: Path) -> Optional[dict]:
         "content": body,
         "reading_time_minutes": reading_time,
         "line_count": line_count,
+        "created_at": mtime,
     }
 
 
