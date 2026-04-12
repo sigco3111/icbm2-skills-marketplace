@@ -121,8 +121,8 @@
   },
   "morning-briefing": {
     "filename": "morning-briefing.zip",
-    "size_bytes": 4896,
-    "size_human": "4.8 KB",
+    "size_bytes": 4664,
+    "size_human": "4.6 KB",
     "file_count": 1
   },
   "notion-dashboard": {
@@ -279,6 +279,12 @@
     "filename": "skill-security-audit.zip",
     "size_bytes": 1187,
     "size_human": "1.2 KB",
+    "file_count": 1
+  },
+  "skills-showcase": {
+    "filename": "skills-showcase.zip",
+    "size_bytes": 1530,
+    "size_human": "1.5 KB",
     "file_count": 1
   },
   "webhook-subscriptions": {
