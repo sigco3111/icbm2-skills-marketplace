@@ -293,8 +293,8 @@ const categoryIcons: Record<string, string> = {
       var cards = Array.from(grid.querySelectorAll('.skill-card-wrapper'));
 
       cards.sort(function(a, b) {
-        var aTime = parseInt(a.dataset.created_at || '0');
-        var bTime = parseInt(b.dataset.created_at || '0');
+        var aTime = parseInt(a.dataset.createdAt || '0');
+        var bTime = parseInt(b.dataset.createdAt || '0');
         switch (method) {
           case 'name-asc':
             return (a.dataset.name || '').localeCompare(b.dataset.name || '');
