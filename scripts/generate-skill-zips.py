@@ -10,6 +10,15 @@ SKILLS_DIR = os.path.expanduser("~/.hermes/skills")
 OUTPUT_DIR = None  # set via args
 
 
+def find_skill_dir(dir_name):
+    """Find a skill directory by name, searching recursively."""
+    for root, dirs, files in os.walk(SKILLS_DIR):
+        dirs[:] = [d for d in dirs if not d.startswith('.') and d != '__pycache__']
+        if os.path.basename(root) == dir_name and 'SKILL.md' in files:
+            return root
+    return None
+
+
 def get_skill_files(skill_dir):
     """Get all files in a skill directory recursively."""
     files = []
@@ -25,29 +34,29 @@ def get_skill_files(skill_dir):
     return files
 
 
-def create_skill_zip(skill_dir_name, category, output_dir):
+def create_skill_zip(slug, dir_name, output_dir):
     """Create a zip file for a single skill."""
-    skill_dir = os.path.join(SKILLS_DIR, category, skill_dir_name)
-    if not os.path.isdir(skill_dir):
+    skill_dir = find_skill_dir(dir_name)
+    if not skill_dir:
         return None
 
     files = get_skill_files(skill_dir)
     if not files:
         return None
 
-    zip_filename = f"{skill_dir_name}.zip"
+    zip_filename = f"{slug}.zip"
     zip_path = os.path.join(output_dir, zip_filename)
 
     with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zf:
         # Put files under skill-name/ directory in the zip
         for full_path, rel_path in files:
-            arcname = os.path.join(skill_dir_name, rel_path)
+            arcname = os.path.join(dir_name, rel_path)
             zf.write(full_path, arcname)
 
         # Add a README if SKILL.md exists
         skillmd_path = os.path.join(skill_dir, 'SKILL.md')
         if os.path.exists(skillmd_path) and 'SKILL.md' not in [r for _, r in files]:
-            zf.write(skillmd_path, os.path.join(skill_dir_name, 'SKILL.md'))
+            zf.write(skillmd_path, os.path.join(dir_name, 'SKILL.md'))
 
     size = os.path.getsize(zip_path)
     return {
@@ -75,9 +84,11 @@ def main():
     download_info = {}
     for skill in data["skills"]:
         dir_name = skill.get("dir_name", skill["slug"])
-        info = create_skill_zip(dir_name, skill["category"], output_dir)
+        info = create_skill_zip(skill["slug"], dir_name, output_dir)
         if info:
             download_info[skill["slug"]] = info
+        else:
+            print(f"  Warning: could not find skill dir for {skill['slug']} (dir_name={dir_name})")
 
     # Write download manifest
     manifest_path = os.path.join(output_dir, "downloads.json")

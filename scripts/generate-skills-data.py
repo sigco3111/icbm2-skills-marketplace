@@ -166,11 +166,12 @@ def process_skill_file(filepath: Path) -> Optional[dict]:
     metadata, body = parse_frontmatter(content)
 
     # Determine category and skill name from path
-    # Path: .../skills/category/skill-name/SKILL.md
+    # Path: .../skills/category/skill-name/SKILL.md (2 levels)
+    #   or: .../skills/category/subcategory/skill-name/SKILL.md (3 levels)
     rel_path = filepath.relative_to(SKILLS_DIR)
     parts = rel_path.parts
     category = parts[0] if len(parts) >= 2 else "uncategorized"
-    skill_dir_name = parts[1] if len(parts) >= 2 else filepath.parent.name
+    skill_dir_name = parts[-2] if len(parts) >= 2 else filepath.parent.name
 
     name = metadata.get("name", skill_dir_name)
     description = metadata.get("description", "")

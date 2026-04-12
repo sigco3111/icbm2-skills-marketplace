@@ -192,7 +192,7 @@
     "file_count": 10
   },
   "ideation": {
-    "filename": "creative-ideation.zip",
+    "filename": "ideation.zip",
     "size_bytes": 5210,
     "size_human": "5.1 KB",
     "file_count": 2
@@ -238,6 +238,12 @@
     "size_bytes": 2537,
     "size_human": "2.5 KB",
     "file_count": 1
+  },
+  "dogfood": {
+    "filename": "dogfood.zip",
+    "size_bytes": 5595,
+    "size_human": "5.5 KB",
+    "file_count": 3
   },
   "himalaya": {
     "filename": "himalaya.zip",
@@ -293,6 +299,12 @@
     "size_human": "6.1 KB",
     "file_count": 2
   },
+  "github-trending-monitor": {
+    "filename": "github-trending-monitor.zip",
+    "size_bytes": 1356,
+    "size_human": "1.3 KB",
+    "file_count": 1
+  },
   "find-nearby": {
     "filename": "find-nearby.zip",
     "size_bytes": 4259,
@@ -336,22 +348,22 @@
     "file_count": 3
   },
   "modal-serverless-gpu": {
-    "filename": "cloud.zip",
-    "size_bytes": 12120,
-    "size_human": "11.8 KB",
-    "file_count": 4
+    "filename": "modal-serverless-gpu.zip",
+    "size_bytes": 11883,
+    "size_human": "11.6 KB",
+    "file_count": 3
   },
   "evaluating-llms-harness": {
-    "filename": "evaluation.zip",
-    "size_bytes": 38209,
-    "size_human": "37.3 KB",
-    "file_count": 10
+    "filename": "evaluating-llms-harness.zip",
+    "size_bytes": 20061,
+    "size_human": "19.6 KB",
+    "file_count": 5
   },
   "weights-and-biases": {
-    "filename": "evaluation.zip",
-    "size_bytes": 38209,
-    "size_human": "37.3 KB",
-    "file_count": 10
+    "filename": "weights-and-biases.zip",
+    "size_bytes": 17742,
+    "size_human": "17.3 KB",
+    "file_count": 4
   },
   "huggingface-hub": {
     "filename": "huggingface-hub.zip",
@@ -360,112 +372,112 @@
     "file_count": 1
   },
   "gguf-quantization": {
-    "filename": "inference.zip",
-    "size_bytes": 89042,
-    "size_human": "87.0 KB",
-    "file_count": 27
+    "filename": "gguf-quantization.zip",
+    "size_bytes": 11478,
+    "size_human": "11.2 KB",
+    "file_count": 3
   },
   "guidance": {
-    "filename": "inference.zip",
-    "size_bytes": 89042,
-    "size_human": "87.0 KB",
-    "file_count": 27
+    "filename": "guidance.zip",
+    "size_bytes": 19200,
+    "size_human": "18.8 KB",
+    "file_count": 4
   },
   "llama-cpp": {
-    "filename": "inference.zip",
-    "size_bytes": 89042,
-    "size_human": "87.0 KB",
-    "file_count": 27
+    "filename": "llama-cpp.zip",
+    "size_bytes": 6986,
+    "size_human": "6.8 KB",
+    "file_count": 4
   },
   "obliteratus": {
-    "filename": "inference.zip",
-    "size_bytes": 89042,
-    "size_human": "87.0 KB",
-    "file_count": 27
+    "filename": "obliteratus.zip",
+    "size_bytes": 14659,
+    "size_human": "14.3 KB",
+    "file_count": 6
   },
   "outlines": {
-    "filename": "inference.zip",
-    "size_bytes": 89042,
-    "size_human": "87.0 KB",
-    "file_count": 27
+    "filename": "outlines.zip",
+    "size_bytes": 21470,
+    "size_human": "21.0 KB",
+    "file_count": 4
   },
   "serving-llms-vllm": {
-    "filename": "inference.zip",
-    "size_bytes": 89042,
-    "size_human": "87.0 KB",
-    "file_count": 27
-  },
-  "audiocraft-audio-generation": {
-    "filename": "models.zip",
-    "size_bytes": 53797,
-    "size_human": "52.5 KB",
-    "file_count": 14
-  },
-  "clip": {
-    "filename": "models.zip",
-    "size_bytes": 53797,
-    "size_human": "52.5 KB",
-    "file_count": 14
-  },
-  "segment-anything-model": {
-    "filename": "models.zip",
-    "size_bytes": 53797,
-    "size_human": "52.5 KB",
-    "file_count": 14
-  },
-  "stable-diffusion-image-generation": {
-    "filename": "models.zip",
-    "size_bytes": 53797,
-    "size_human": "52.5 KB",
-    "file_count": 14
-  },
-  "whisper": {
-    "filename": "models.zip",
-    "size_bytes": 53797,
-    "size_human": "52.5 KB",
-    "file_count": 14
-  },
-  "dspy": {
-    "filename": "research.zip",
-    "size_bytes": 19744,
-    "size_human": "19.3 KB",
+    "filename": "serving-llms-vllm.zip",
+    "size_bytes": 14584,
+    "size_human": "14.2 KB",
     "file_count": 5
   },
+  "audiocraft-audio-generation": {
+    "filename": "audiocraft-audio-generation.zip",
+    "size_bytes": 14607,
+    "size_human": "14.3 KB",
+    "file_count": 3
+  },
+  "clip": {
+    "filename": "clip.zip",
+    "size_bytes": 4810,
+    "size_human": "4.7 KB",
+    "file_count": 2
+  },
+  "segment-anything-model": {
+    "filename": "segment-anything-model.zip",
+    "size_bytes": 14382,
+    "size_human": "14.0 KB",
+    "file_count": 3
+  },
+  "stable-diffusion-image-generation": {
+    "filename": "stable-diffusion-image-generation.zip",
+    "size_bytes": 14308,
+    "size_human": "14.0 KB",
+    "file_count": 3
+  },
+  "whisper": {
+    "filename": "whisper.zip",
+    "size_bytes": 5321,
+    "size_human": "5.2 KB",
+    "file_count": 2
+  },
+  "dspy": {
+    "filename": "dspy.zip",
+    "size_bytes": 19449,
+    "size_human": "19.0 KB",
+    "file_count": 4
+  },
   "axolotl": {
-    "filename": "training.zip",
-    "size_bytes": 742002,
-    "size_human": "724.6 KB",
-    "file_count": 25
+    "filename": "axolotl.zip",
+    "size_bytes": 80981,
+    "size_human": "79.1 KB",
+    "file_count": 5
   },
   "grpo-rl-training": {
-    "filename": "training.zip",
-    "size_bytes": 742002,
-    "size_human": "724.6 KB",
-    "file_count": 25
+    "filename": "grpo-rl-training.zip",
+    "size_bytes": 11080,
+    "size_human": "10.8 KB",
+    "file_count": 3
   },
   "peft-fine-tuning": {
-    "filename": "training.zip",
-    "size_bytes": 742002,
-    "size_human": "724.6 KB",
-    "file_count": 25
+    "filename": "peft-fine-tuning.zip",
+    "size_bytes": 12640,
+    "size_human": "12.3 KB",
+    "file_count": 3
   },
   "pytorch-fsdp": {
-    "filename": "training.zip",
-    "size_bytes": 742002,
-    "size_human": "724.6 KB",
-    "file_count": 25
+    "filename": "pytorch-fsdp.zip",
+    "size_bytes": 126493,
+    "size_human": "123.5 KB",
+    "file_count": 3
   },
   "fine-tuning-with-trl": {
-    "filename": "training.zip",
-    "size_bytes": 742002,
-    "size_human": "724.6 KB",
-    "file_count": 25
+    "filename": "fine-tuning-with-trl.zip",
+    "size_bytes": 9841,
+    "size_human": "9.6 KB",
+    "file_count": 5
   },
   "unsloth": {
-    "filename": "training.zip",
-    "size_bytes": 742002,
-    "size_human": "724.6 KB",
-    "file_count": 25
+    "filename": "unsloth.zip",
+    "size_bytes": 500405,
+    "size_human": "488.7 KB",
+    "file_count": 5
   },
   "obsidian": {
     "filename": "obsidian.zip",
@@ -609,6 +621,12 @@
     "filename": "writing-plans.zip",
     "size_bytes": 3182,
     "size_human": "3.1 KB",
+    "file_count": 1
+  },
+  "telegram-commands": {
+    "filename": "telegram-commands.zip",
+    "size_bytes": 1338,
+    "size_human": "1.3 KB",
     "file_count": 1
   }
 }
