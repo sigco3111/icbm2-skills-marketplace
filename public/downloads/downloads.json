@@ -65,10 +65,10 @@
     "size_human": "4.1 KB",
     "file_count": 2
   },
-  "colab-image-gen": {
-    "filename": "colab-image-gen.zip",
-    "size_bytes": 1389,
-    "size_human": "1.4 KB",
+  "cloud-image-gen": {
+    "filename": "cloud-image-gen.zip",
+    "size_bytes": 2608,
+    "size_human": "2.5 KB",
     "file_count": 1
   },
   "daily-self-review": {
@@ -105,6 +105,12 @@
     "filename": "ios-trend-digest.zip",
     "size_bytes": 1772,
     "size_human": "1.7 KB",
+    "file_count": 1
+  },
+  "kaggle-model-guide": {
+    "filename": "kaggle-model-guide.zip",
+    "size_bytes": 3099,
+    "size_human": "3.0 KB",
     "file_count": 1
   },
   "knowledge-graph": {
@@ -284,6 +290,12 @@
   "skills-showcase": {
     "filename": "skills-showcase.zip",
     "size_bytes": 1530,
+    "size_human": "1.5 KB",
+    "file_count": 1
+  },
+  "vercel": {
+    "filename": "vercel.zip",
+    "size_bytes": 1499,
     "size_human": "1.5 KB",
     "file_count": 1
   },
@@ -559,8 +571,8 @@
   },
   "google-workspace": {
     "filename": "google-workspace.zip",
-    "size_bytes": 13145,
-    "size_human": "12.8 KB",
+    "size_bytes": 13629,
+    "size_human": "13.3 KB",
     "file_count": 5
   },
   "linear": {
