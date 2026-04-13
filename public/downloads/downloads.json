@@ -175,8 +175,8 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 5679,
-    "size_human": "5.5 KB",
+    "size_bytes": 6151,
+    "size_human": "6.0 KB",
     "file_count": 1
   },
   "weekly-automation-report": {
@@ -657,6 +657,12 @@
     "filename": "xitter.zip",
     "size_bytes": 2702,
     "size_human": "2.6 KB",
+    "file_count": 1
+  },
+  "d3-layout-debugging": {
+    "filename": "d3-layout-debugging.zip",
+    "size_bytes": 1072,
+    "size_human": "1.0 KB",
     "file_count": 1
   },
   "plan": {
