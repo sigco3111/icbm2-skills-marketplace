@@ -119,6 +119,12 @@
     "size_human": "3.0 KB",
     "file_count": 1
   },
+  "kaggle-music-voice-gen": {
+    "filename": "kaggle-music-voice-gen.zip",
+    "size_bytes": 2316,
+    "size_human": "2.3 KB",
+    "file_count": 1
+  },
   "knowledge-graph": {
     "filename": "knowledge-graph.zip",
     "size_bytes": 1784,
@@ -233,6 +239,12 @@
     "size_human": "3.7 KB",
     "file_count": 1
   },
+  "ace-step-music": {
+    "filename": "ace-step-music.zip",
+    "size_bytes": 2413,
+    "size_human": "2.4 KB",
+    "file_count": 1
+  },
   "ascii-art": {
     "filename": "ascii-art.zip",
     "size_bytes": 4578,
@@ -274,6 +286,12 @@
     "size_bytes": 345845,
     "size_human": "337.7 KB",
     "file_count": 55
+  },
+  "qwen3-tts": {
+    "filename": "qwen3-tts.zip",
+    "size_bytes": 2036,
+    "size_human": "2.0 KB",
+    "file_count": 1
   },
   "songwriting-and-ai-music": {
     "filename": "songwriting-and-ai-music.zip",

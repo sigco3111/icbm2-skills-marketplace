@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-14T03:00:32.807478+00:00",
-  "total_skills": 119,
+  "generated_at": "2026-04-14T09:00:22.288943+00:00",
+  "total_skills": 122,
   "total_categories": 24,
   "categories": [
     {
       "name": "automation",
       "slug": "automation",
-      "count": 30
+      "count": 31
     },
     {
       "name": "mlops",
@@ -16,7 +16,7 @@
     {
       "name": "creative",
       "slug": "creative",
-      "count": 8
+      "count": 10
     },
     {
       "name": "productivity",
@@ -558,6 +558,26 @@
       "created_at": 1776036241
     },
     {
+      "name": "kaggle-music-voice-gen",
+      "slug": "kaggle-music-voice-gen",
+      "category": "automation",
+      "category_slug": "automation",
+      "dir_name": "kaggle-music-voice-gen",
+      "description": "Kaggle T4 GPU에서 ACE-Step 1.5 (음악 생성) + Qwen3-TTS (음성 생성) 실행 가이드",
+      "description_ko": "",
+      "description_en": "Kaggle T4 GPU에서 ACE-Step 1.5 (음악 생성) + Qwen3-TTS (음성 생성) 실행 가이드",
+      "version": "",
+      "author": "",
+      "license": "",
+      "tags": [],
+      "related_skills": [],
+      "prerequisites": {},
+      "content": "# Kaggle 음악/음성 생성 노트북\n\n## 모델\n- **ACE-Step 1.5** — Text-to-Music (인스트 + 보이스 포함 가능)\n- **Qwen3-TTS-12Hz-1.7B-CustomVoice** — Text-to-Speech (한국어 Sohee 보이스 포함)\n\n## 필수 조건\n- **GPU:** T4 (P100 불가 — bfloat16 미지원)\n- **Internet:** ON\n- **HuggingFace 토큰:** Read 권한\n\n## 주의사항 (T4)\n- `ACESTEP_DTYPE=float32` 필수 (float16에서 NaN 발생)\n- 두 모델 동시 로드 불가 → 함수 분리 후 사용 시 로드/해제\n- MP3 직접 인코딩 불가 → wav 후 ffmpeg 변환\n- `MPLBACKEND` 환경변수 제거 필수\n- uv venv 패키지를 Jupyter에서 사용하려면 sys.path 추가\n\n## 셀1 — 설치\n\n```python\n!git clone https://github.com/ACE-Step/ACE-Step-1.5.git\n%cd ACE-Step-1.5\n!pip install uv qwen-tts\n!uv sync\nimport os\nos.environ[\"PATH\"] = os.getcwd() + \"/.venv/bin:\" + os.environ[\"PATH\"]\n!apt-get install -y ffmpeg\n```\n\n## 셀2 — 함수 정의\n\n```python\nimport os, sys, subprocess, torch, gc\n\nos.environ.pop(\"MPLBACKEND\", None)\nvenv_site = \"/kaggle/working/ACE-Step-1.5/.venv/lib/python3.12/site-packages\"\nsys.path.insert(0, venv_site)\n\ndef generate_music(prompt, duration=30, lyrics=None, vocal_language=\"en\", output_path=\"/kaggle/working/output/music.mp3\"):\n    gc.collect()\n    torch.cuda.empty_cache()\n    \n    # T4용 float32 설정 (필수)\n    os.environ[\"ACESTEP_DTYPE\"] = \"float32\"\n    \n    from acestep.handler import AceStepHandler\n    from acestep.inference import GenerationParams, GenerationConfig, generate_music as gm\n    \n    dit = AceStepHandler()\n    dit.initialize_service(\n        project_root=\"/kaggle/working/ACE-Step-1.5\",\n        config_path=\"acestep-v15-turbo\",\n        device=\"cuda\"\n    )\n    \n    params = GenerationParams(\n        caption=prompt,\n        duration=duration,\n        lyrics=lyrics,\n        vocal_language=vocal_language,\n    )\n    config = GenerationConfig(audio_format=\"wav\")\n    result = gm(dit, None, params, config, save_dir=\"/kaggle/working/output\")\n    \n    if result.success:\n        for audio in result.audios:\n            fixed_wav = \"/kaggle/working/output/music.wav\"\n            os.rename(audio['path'], fixed_wav)\n            subprocess.run([\"ffmpeg\", \"-y\", \"-i\", fixed_wav, \"-codec:a\", \"libmp3lame\", \"-q:a\", \"2\", output_path])\n            print(f\"✅ 음악 생성 완료: {output_path}\")\n    else:\n        print(f\"❌ 실패: {result.error}\")\n    \n    del dit\n    gc.collect()\n    torch.cuda.empty_cache()\n\ndef generate_voice(text, language=\"Korean\", speaker=\"Sohee\", output_path=\"/kaggle/working/output/voice.mp3\"):\n    gc.collect()\n    torch.cuda.empty_cache()\n    \n    from qwen_tts import Qwen3TTSModel\n    import torchaudio\n    \n    tts = Qwen3TTSModel.from_pretrained(\n        \"Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice\",\n        device_map=\"cuda:0\",\n        dtype=torch.float16,\n    )\n    \n    wavs, sr = tts.generate_custom_voice(text=text, language=language, speaker=speaker)\n    fixed_wav = \"/kaggle/working/output/voice.wav\"\n    tensor = torch.tensor(wavs[0]).unsqueeze(0)\n    torchaudio.save(fixed_wav, tensor, sr)\n    subprocess.run([\"ffmpeg\", \"-y\", \"-i\", fixed_wav, \"-codec:a\", \"libmp3lame\", \"-q:a\", \"2\", output_path])\n    print(f\"✅ 음성 생성 완료: {output_path}\")\n    \n    del tts\n    gc.collect()\n    torch.cuda.empty_cache()\n```\n\n## 사용법\n\n```python\n# 인스트\ngenerate_music(\"upbeat K-pop instrumental with synth hooks\")\n\n# 보이스 포함 음악\ngenerate_music(\n    \"emotional K-pop ballad with piano and strings\",\n    lyrics=\"[Verse 1]\\n별이 빛나는 밤이면\\n너의 생각에 잠기곤 해\",\n    vocal_language=\"ko\"\n)\n\n# 음성 생성\ngenerate_voice(\"안녕하세요! 이것은 테스트 음성입니다.\")\n```\n\n## 지원 스피커 (Qwen3-TTS)\n한국어: Sohee (여성)\n전체: tts.get_supported_speakers()로 확인\n\n## 트러블슈팅\n| 문제 | 해결 |\n|------|------|\n| NaN/Inf latents | `ACESTEP_DTYPE=float32` 설정 |\n| OOM | 커널 재시작, 한 모델씩만 실행 |\n| ModuleNotFoundError (loguru 등) | sys.path에 venv site-packages 추가 |\n| MPLBACKEND ValueError | `os.environ.pop(\"MPLBACKEND\", None)` |\n| soundfile LibsndfileError | torchaudio.save 대신 사용 |\n| MP3 인코딩 실패 | wav로 생성 후 ffmpeg CLI 변환 |\n| REST API 서버 타임아웃 | Python API 직접 호출 사용 |\n| 백그라운드 프로세스 불가 | subprocess.Popen 사용 (Kaggle 제약) |",
+      "reading_time_minutes": 2.1,
+      "line_count": 140,
+      "created_at": 1776151142
+    },
+    {
       "name": "knowledge-graph",
       "slug": "knowledge-graph",
       "category": "automation",
@@ -960,6 +980,26 @@
       "created_at": 1775847745
     },
     {
+      "name": "ace-step-music",
+      "slug": "ace-step-music",
+      "category": "creative",
+      "category_slug": "creative",
+      "dir_name": "ace-step-music",
+      "description": "Kaggle T4 GPU에서 ACE-Step 1.5 터보로 가사 없는 인스트루멘탈 음악 생성 — 30초~60초 곡, 프롬프트 기반",
+      "description_ko": "",
+      "description_en": "Kaggle T4 GPU에서 ACE-Step 1.5 터보로 가사 없는 인스트루멘탈 음악 생성 — 30초~60초 곡, 프롬프트 기반",
+      "version": "",
+      "author": "",
+      "license": "",
+      "tags": [],
+      "related_skills": [],
+      "prerequisites": {},
+      "content": "# ACE-Step 1.5 Instrumental Music Generation\n\nKaggle 무료 T4 GPU에서 ACE-Step 1.5 터보 모델로 인스트루멘탈 음악을 생성합니다. 프롬프트만으로 장르/무드/악기를 지정할 수 있으며, 가사 없이 음악만 생성합니다.\n\n## ⚠️ 제한사항\n\n- **가사(lyrics) 입력 불가**: T4 GPU에서 `ACESTEP_DTYPE=float32` + 가사 조합 시 OOM/에러 발생\n- **보컬 불가**: `lyrics=None`으로만 동작\n- 음성(TTS)이 필요한 경우 → `qwen3-tts` 스킬 사용\n\n## 모델 정보\n\n| 항목 | 값 |\n|---|---|\n| 모델 | ACE-Step 1.5 Turbo |\n| 형식 | wav → ffmpeg로 mp3 변환 |\n| 기본 길이 | 30초 |\n| 최대 길이 | ~60초 (T4 메모리 제한) |\n| GPU 요구 | T4 16GB 이상 |\n\n## 전제 조건\n\n- Kaggle 계정\n- Kaggle 노트북 설정: Settings → **Internet: On** → **Accelerator: GPU T4 x2**\n\n## Kaggle 노트북\n\n스크립트: `~/.hermes/scripts/kaggle/ace-step-music.ipynb`\n\n### 사용법\n\n1. Kaggle에 새 노트북 생성\n2. Settings → Internet: On, Accelerator: GPU T4 x2\n3. 아래 셀들을 순서대로 실행\n\n### 셀 1 — FFmpeg + 저장소 클론 + 의존성 설치\n\n```python\n!apt-get install -y ffmpeg\n\n# ACE-Step 저장소 클론\n!git clone https://github.com/ACE-Step/ACE-Step-1.5.git\n%cd ACE-Step-1.5\n\n# 패키지 설치\n!pip install uv\n!uv sync\n\n# 가상환경 PATH 추가\nimport os\nos.environ[\"PATH\"] = os.getcwd() + \"/.venv/bin:\" + os.environ[\"PATH\"]\n```\n\n### 셀 2 — 음악 생성 함수 정의\n\n```python\nimport os, sys, subprocess, torch, gc\n\nos.environ.pop(\"MPLBACKEND\", None)\nvenv_site = \"/kaggle/working/ACE-Step-1.5/.venv/lib/python3.12/site-packages\"\nsys.path.insert(0, venv_site)\n\ndef generate_music(prompt, duration=30, output_path=\"/kaggle/working/output/music.mp3\"):\n    \"\"\"가사 없는 인스트루멘탈 음악 생성 (T4 최적화)\n\n    Args:\n        prompt: 음악 설명 프롬프트 (예: \"emotional K-pop ballad with piano and strings\")\n        duration: 생성 길이 (초). 기본 30, 최대 ~60\n        output_path: 출력 mp3 경로\n    \"\"\"\n    gc.collect()\n    torch.cuda.empty_cache()\n\n    os.environ[\"ACESTEP_DTYPE\"] = \"float32\"\n\n    from acestep.handler import AceStepHandler\n    from acestep.inference import GenerationParams, GenerationConfig, generate_music as gm\n\n    dit = AceStepHandler()\n    dit.initialize_service(\n        project_root=\"/kaggle/working/ACE-Step-1.5\",\n        config_path=\"acestep-v15-turbo\",\n        device=\"cuda\"\n    )\n\n    # 가사 없이 프롬프트로만 생성\n    params = GenerationParams(\n        caption=prompt,\n        duration=duration,\n        lyrics=None,          # ← 반드시 None\n        vocal_language=\"en\",\n    )\n    config = GenerationConfig(audio_format=\"wav\")\n    result = gm(dit, None, params, config, save_dir=\"/kaggle/working/output\")\n\n    if result.success:\n        for audio in result.audios:\n            fixed_wav = \"/kaggle/working/output/music.wav\"\n            os.rename(audio['path'], fixed_wav)\n            os.makedirs(os.path.dirname(output_path), exist_ok=True)\n            subprocess.run([\"ffmpeg\", \"-y\", \"-i\", fixed_wav,\n                          \"-codec:a\", \"libmp3lame\", \"-q:a\", \"2\", output_path])\n            print(f\"✅ 음악 생성 완료: {output_path}\")\n    else:\n        print(f\"❌ 실패: {result.error}\")\n\n    del dit\n    gc.collect()\n    torch.cuda.empty_cache()\n```\n\n### 셀 3 — 음악 생성 실행\n\n```python\ngenerate_music(\n    prompt=\"emotional K-pop ballad with piano and strings\",\n    duration=30\n)\n```\n\n## 프롬프트 예시\n\n```\n\"upbeat electronic dance music with synth pads and heavy bass\"\n\"calm lo-fi hip hop with jazz piano and vinyl crackle\"\n\"epic orchestral cinematic score with brass and timpani\"\n\"acoustic guitar fingerpicking folk melody\"\n\"dark ambient synthwave with retro pads\"\n\"energetic rock with distorted guitar riffs and drums\"\n\"smooth jazz with saxophone and upright bass\"\n\"minimal techno with deep bass and atmospheric pads\"\n```\n\n## 주의사항\n\n- **가사 넣으면 에러남**: 반드시 `lyrics=None` 사용\n- **OOM 시**: `duration`을 15~20초로 줄이거나, 세션을 재시작\n- **초기 실행**: 모델 다운로드로 ~1분 소요 (이후 캐시됨)\n- **cuFFT/cuDNN 경고**: 무시해도 정상 동작",
+      "reading_time_minutes": 2.3,
+      "line_count": 145,
+      "created_at": 1776153843
+    },
+    {
       "name": "ascii-art",
       "slug": "ascii-art",
       "category": "creative",
@@ -1098,6 +1138,26 @@
       "reading_time_minutes": 6.6,
       "line_count": 207,
       "created_at": 1775442712
+    },
+    {
+      "name": "qwen3-tts",
+      "slug": "qwen3-tts",
+      "category": "creative",
+      "category_slug": "creative",
+      "dir_name": "qwen3-tts",
+      "description": "Kaggle T4 GPU에서 Qwen3-TTS-12Hz로 한국어 음성(TTS) 생성 — 커스텀 보이스 지원, torchcodec 우회",
+      "description_ko": "",
+      "description_en": "Kaggle T4 GPU에서 Qwen3-TTS-12Hz로 한국어 음성(TTS) 생성 — 커스텀 보이스 지원, torchcodec 우회",
+      "version": "",
+      "author": "",
+      "license": "",
+      "tags": [],
+      "related_skills": [],
+      "prerequisites": {},
+      "content": "# Qwen3-TTS Korean Voice Generation\n\nKaggle 무료 T4 GPU에서 Qwen3-TTS-12Hz 모델로 한국어 음성을 생성합니다. 커스텀 보이스(Sohee, Chelsie, Nick 등)를 지원하며, scipy로 WAV를 저장해 torchcodec 호환성 문제를 우회합니다.\n\n## 모델 정보\n\n| 항목 | 값 |\n|---|---|\n| 모델 | Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice |\n| 언어 | 한국어, 영어 등 다국어 |\n| 보이스 | Sohee, Chelsie, Nick 등 |\n| 출력 | wav → ffmpeg로 mp3 변환 |\n| GPU 요구 | T4 16GB 이상 |\n\n## 전제 조건\n\n- Kaggle 계정\n- Kaggle 노트북 설정: Settings → **Internet: On** → **Accelerator: GPU T4 x2**\n\n## Kaggle 노트북\n\n스크립트: `~/.hermes/scripts/kaggle/qwen3-tts.ipynb`\n\n### 사용법\n\n1. Kaggle에 새 노트북 생성\n2. Settings → Internet: On, Accelerator: GPU T4 x2\n3. 아래 셀들을 순서대로 실행\n\n### 셀 1 — FFmpeg + 패키지 설치\n\n```python\n!apt-get install -y ffmpeg\n!pip install uv qwen-tts scipy\n```\n\n### 셀 2 — 음성 생성 함수 정의\n\n```python\nimport os, subprocess, torch, gc, numpy as np\nimport scipy.io.wavfile as wavfile\n\ndef generate_voice(text, language=\"Korean\", speaker=\"Sohee\",\n                   output_path=\"/kaggle/working/output/voice.mp3\"):\n    \"\"\"Qwen3-TTS로 음성 생성 (torchcodec 우회)\n\n    Args:\n        text: 음성으로 변환할 텍스트\n        language: 언어 (\"Korean\", \"English\", \"Japanese\" 등)\n        speaker: 보이스 이름 (\"Sohee\", \"Chelsie\", \"Nick\" 등)\n        output_path: 출력 mp3 경로\n    \"\"\"\n    gc.collect()\n    torch.cuda.empty_cache()\n\n    from qwen_tts import Qwen3TTSModel\n\n    tts = Qwen3TTSModel.from_pretrained(\n        \"Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice\",\n        device_map=\"cuda:0\",\n        dtype=torch.float16,\n    )\n\n    wavs, sr = tts.generate_custom_voice(text=text, language=language, speaker=speaker)\n    fixed_wav = \"/kaggle/working/output/voice.wav\"\n\n    # scipy로 WAV 저장 (torchaudio.save 대신 — torchcodec 에러 우회)\n    audio_np = np.array(wavs[0], dtype=np.float32)\n    wavfile.write(fixed_wav, sr, audio_np)\n\n    os.makedirs(os.path.dirname(output_path), exist_ok=True)\n    subprocess.run([\"ffmpeg\", \"-y\", \"-i\", fixed_wav,\n                   \"-codec:a\", \"libmp3lame\", \"-q:a\", \"2\", output_path])\n    print(f\"✅ 음성 생성 완료: {output_path}\")\n\n    del tts\n    gc.collect()\n    torch.cuda.empty_cache()\n```\n\n### 셀 3 — 음성 생성 실행\n\n```python\ngenerate_voice(\n    text=\"안녕하십니까? 보이스 테스트 중입니다.\",\n    language=\"Korean\",\n    speaker=\"Sohee\"\n)\n```\n\n## 사용 예시\n\n```python\n# 한국어\ngenerate_voice(\"오늘 날씨가 정말 좋네요.\", language=\"Korean\", speaker=\"Sohee\")\n\n# 영어\ngenerate_voice(\"Hello! This is a voice test.\", language=\"English\", speaker=\"Chelsie\")\n\n# 긴 텍스트\ngenerate_voice(\"안녕하세요. 오늘은 인공지능에 대해 이야기해볼까요? \"\n               \"최근 AI 기술은 정말 놀라운 속도로 발전하고 있습니다.\",\n               language=\"Korean\", speaker=\"Sohee\")\n```\n\n## 지원 보이스\n\n| 보이스 | 언어 | 특징 |\n|---|---|---|\n| Sohee | 한국어 | 한국어 여성 보이스 |\n| Chelsie | 영어 | 영어 여성 보이스 |\n| Nick | 영어 | 영어 남성 보이스 |\n\n## 주의사항\n\n- **torchaudio.save() 에러**: Kaggle T4에서 torchcodec과 PyTorch 버전 호환성 문제로 `torchaudio.save()` 사용 불가. 반드시 `scipy.io.wavfile` 사용\n- **pad_token_id 경고**: \"Setting `pad_token_id` to `eos_token_id`:2150\" 경고는 무시해도 정상 동작\n- **긴 텍스트**: 너무 긴 텍스트는 생성 시간이 길어짐. 500자 이하 권장\n- **OOM 시**: 세션 재시작 후 다른 작업 없이 바로 음성 생성 실행",
+      "reading_time_minutes": 2.0,
+      "line_count": 125,
+      "created_at": 1776153883
     },
     {
       "name": "songwriting-and-ai-music",
