@@ -67,8 +67,8 @@
   },
   "cloud-image-gen": {
     "filename": "cloud-image-gen.zip",
-    "size_bytes": 2608,
-    "size_human": "2.5 KB",
+    "size_bytes": 2346,
+    "size_human": "2.3 KB",
     "file_count": 1
   },
   "daily-self-review": {
@@ -94,6 +94,12 @@
     "size_bytes": 1731,
     "size_human": "1.7 KB",
     "file_count": 1
+  },
+  "gemma4-vision": {
+    "filename": "gemma4-vision.zip",
+    "size_bytes": 3587,
+    "size_human": "3.5 KB",
+    "file_count": 2
   },
   "invest-memo": {
     "filename": "invest-memo.zip",
@@ -151,8 +157,8 @@
   },
   "shiporslop-kr": {
     "filename": "shiporslop-kr.zip",
-    "size_bytes": 6617,
-    "size_human": "6.5 KB",
+    "size_bytes": 6712,
+    "size_human": "6.6 KB",
     "file_count": 1
   },
   "smart-summary": {
