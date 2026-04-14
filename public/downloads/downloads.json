@@ -269,6 +269,12 @@
     "size_human": "9.8 KB",
     "file_count": 5
   },
+  "image-batch-processor": {
+    "filename": "image-batch-processor.zip",
+    "size_bytes": 3951,
+    "size_human": "3.9 KB",
+    "file_count": 1
+  },
   "manim-video": {
     "filename": "manim-video.zip",
     "size_bytes": 45931,
@@ -289,8 +295,8 @@
   },
   "qwen3-tts": {
     "filename": "qwen3-tts.zip",
-    "size_bytes": 2036,
-    "size_human": "2.0 KB",
+    "size_bytes": 2561,
+    "size_human": "2.5 KB",
     "file_count": 1
   },
   "songwriting-and-ai-music": {
@@ -303,6 +309,12 @@
     "filename": "jupyter-live-kernel.zip",
     "size_bytes": 2665,
     "size_human": "2.6 KB",
+    "file_count": 1
+  },
+  "smart-data-analyzer": {
+    "filename": "smart-data-analyzer.zip",
+    "size_bytes": 4446,
+    "size_human": "4.3 KB",
     "file_count": 1
   },
   "skill-security-audit": {
@@ -357,6 +369,12 @@
     "filename": "codebase-inspection.zip",
     "size_bytes": 1809,
     "size_human": "1.8 KB",
+    "file_count": 1
+  },
+  "github-actions": {
+    "filename": "github-actions.zip",
+    "size_bytes": 4210,
+    "size_human": "4.1 KB",
     "file_count": 1
   },
   "github-auth": {
@@ -628,6 +646,12 @@
     "size_bytes": 140677,
     "size_human": "137.4 KB",
     "file_count": 50
+  },
+  "snippet-manager": {
+    "filename": "snippet-manager.zip",
+    "size_bytes": 4366,
+    "size_human": "4.3 KB",
+    "file_count": 1
   },
   "word-document": {
     "filename": "word-document.zip",
