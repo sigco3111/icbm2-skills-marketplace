@@ -67,8 +67,8 @@
   },
   "cloud-image-gen": {
     "filename": "cloud-image-gen.zip",
-    "size_bytes": 2346,
-    "size_human": "2.3 KB",
+    "size_bytes": 3352,
+    "size_human": "3.3 KB",
     "file_count": 1
   },
   "daily-self-review": {
@@ -640,6 +640,12 @@
     "size_bytes": 5175,
     "size_human": "5.1 KB",
     "file_count": 4
+  },
+  "pdf-report": {
+    "filename": "pdf-report.zip",
+    "size_bytes": 1943,
+    "size_human": "1.9 KB",
+    "file_count": 1
   },
   "powerpoint": {
     "filename": "powerpoint.zip",
