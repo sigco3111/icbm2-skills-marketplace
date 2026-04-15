@@ -281,6 +281,12 @@
     "size_human": "44.9 KB",
     "file_count": 17
   },
+  "manim-video-with-narration": {
+    "filename": "manim-video-with-narration.zip",
+    "size_bytes": 6369,
+    "size_human": "6.2 KB",
+    "file_count": 2
+  },
   "p5js": {
     "filename": "p5js.zip",
     "size_bytes": 64687,
@@ -304,6 +310,12 @@
     "size_bytes": 5321,
     "size_human": "5.2 KB",
     "file_count": 1
+  },
+  "youtube-uploader": {
+    "filename": "youtube-uploader.zip",
+    "size_bytes": 6789,
+    "size_human": "6.6 KB",
+    "file_count": 4
   },
   "jupyter-live-kernel": {
     "filename": "jupyter-live-kernel.zip",
