@@ -67,8 +67,8 @@
   },
   "cloud-image-gen": {
     "filename": "cloud-image-gen.zip",
-    "size_bytes": 3352,
-    "size_human": "3.3 KB",
+    "size_bytes": 1104,
+    "size_human": "1.1 KB",
     "file_count": 1
   },
   "daily-self-review": {
@@ -97,8 +97,8 @@
   },
   "gemma4-vision": {
     "filename": "gemma4-vision.zip",
-    "size_bytes": 3587,
-    "size_human": "3.5 KB",
+    "size_bytes": 2715,
+    "size_human": "2.7 KB",
     "file_count": 2
   },
   "invest-memo": {
@@ -121,8 +121,8 @@
   },
   "kaggle-music-voice-gen": {
     "filename": "kaggle-music-voice-gen.zip",
-    "size_bytes": 2316,
-    "size_human": "2.3 KB",
+    "size_bytes": 708,
+    "size_human": "0.7 KB",
     "file_count": 1
   },
   "knowledge-graph": {
@@ -301,8 +301,8 @@
   },
   "qwen3-tts": {
     "filename": "qwen3-tts.zip",
-    "size_bytes": 2561,
-    "size_human": "2.5 KB",
+    "size_bytes": 1015,
+    "size_human": "1.0 KB",
     "file_count": 1
   },
   "songwriting-and-ai-music": {
