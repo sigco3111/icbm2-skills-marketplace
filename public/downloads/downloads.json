@@ -47,6 +47,12 @@
     "size_human": "2.5 KB",
     "file_count": 1
   },
+  "automation-audit-ops": {
+    "filename": "automation-audit-ops.zip",
+    "size_bytes": 2004,
+    "size_human": "2.0 KB",
+    "file_count": 1
+  },
   "automation-healthcheck": {
     "filename": "automation-healthcheck.zip",
     "size_bytes": 1462,
@@ -100,6 +106,12 @@
     "size_bytes": 2715,
     "size_human": "2.7 KB",
     "file_count": 2
+  },
+  "github-portfolio-planner": {
+    "filename": "github-portfolio-planner.zip",
+    "size_bytes": 2207,
+    "size_human": "2.2 KB",
+    "file_count": 1
   },
   "invest-memo": {
     "filename": "invest-memo.zip",
@@ -173,6 +185,12 @@
     "size_human": "1.9 KB",
     "file_count": 1
   },
+  "stock-market-pro": {
+    "filename": "stock-market-pro.zip",
+    "size_bytes": 13511,
+    "size_human": "13.2 KB",
+    "file_count": 6
+  },
   "stock-market-tracker": {
     "filename": "stock-market-tracker.zip",
     "size_bytes": 2734,
@@ -190,6 +208,12 @@
     "size_bytes": 6197,
     "size_human": "6.1 KB",
     "file_count": 1
+  },
+  "trading-strategy": {
+    "filename": "trading-strategy.zip",
+    "size_bytes": 4751,
+    "size_human": "4.6 KB",
+    "file_count": 2
   },
   "weekly-automation-report": {
     "filename": "weekly-automation-report.zip",
@@ -329,6 +353,12 @@
     "size_human": "6.6 KB",
     "file_count": 4
   },
+  "data-analysis": {
+    "filename": "data-analysis.zip",
+    "size_bytes": 3432,
+    "size_human": "3.4 KB",
+    "file_count": 1
+  },
   "jupyter-live-kernel": {
     "filename": "jupyter-live-kernel.zip",
     "size_bytes": 2665,
@@ -345,6 +375,18 @@
     "filename": "local-dashboard.zip",
     "size_bytes": 1333,
     "size_human": "1.3 KB",
+    "file_count": 1
+  },
+  "neon-drizzle": {
+    "filename": "neon-drizzle.zip",
+    "size_bytes": 1701,
+    "size_human": "1.7 KB",
+    "file_count": 1
+  },
+  "neon-serverless": {
+    "filename": "neon-serverless.zip",
+    "size_bytes": 1458,
+    "size_human": "1.4 KB",
     "file_count": 1
   },
   "skill-security-audit": {
@@ -441,6 +483,114 @@
     "filename": "github-trending-monitor.zip",
     "size_bytes": 1331,
     "size_human": "1.3 KB",
+    "file_count": 1
+  },
+  "impeccable": {
+    "filename": "impeccable.zip",
+    "size_bytes": 31870,
+    "size_human": "31.1 KB",
+    "file_count": 10
+  },
+  "adapt": {
+    "filename": "adapt.zip",
+    "size_bytes": 3263,
+    "size_human": "3.2 KB",
+    "file_count": 1
+  },
+  "animate": {
+    "filename": "animate.zip",
+    "size_bytes": 3607,
+    "size_human": "3.5 KB",
+    "file_count": 1
+  },
+  "audit": {
+    "filename": "audit.zip",
+    "size_bytes": 3520,
+    "size_human": "3.4 KB",
+    "file_count": 1
+  },
+  "bolder": {
+    "filename": "bolder.zip",
+    "size_bytes": 3300,
+    "size_human": "3.2 KB",
+    "file_count": 1
+  },
+  "clarify": {
+    "filename": "clarify.zip",
+    "size_bytes": 3230,
+    "size_human": "3.2 KB",
+    "file_count": 1
+  },
+  "colorize": {
+    "filename": "colorize.zip",
+    "size_bytes": 3245,
+    "size_human": "3.2 KB",
+    "file_count": 1
+  },
+  "critique": {
+    "filename": "critique.zip",
+    "size_bytes": 15615,
+    "size_human": "15.2 KB",
+    "file_count": 4
+  },
+  "delight": {
+    "filename": "delight.zip",
+    "size_bytes": 4575,
+    "size_human": "4.5 KB",
+    "file_count": 1
+  },
+  "distill": {
+    "filename": "distill.zip",
+    "size_bytes": 2986,
+    "size_human": "2.9 KB",
+    "file_count": 1
+  },
+  "harden": {
+    "filename": "harden.zip",
+    "size_bytes": 4907,
+    "size_human": "4.8 KB",
+    "file_count": 1
+  },
+  "layout": {
+    "filename": "layout.zip",
+    "size_bytes": 3445,
+    "size_human": "3.4 KB",
+    "file_count": 1
+  },
+  "optimize": {
+    "filename": "optimize.zip",
+    "size_bytes": 3694,
+    "size_human": "3.6 KB",
+    "file_count": 1
+  },
+  "overdrive": {
+    "filename": "overdrive.zip",
+    "size_bytes": 4534,
+    "size_human": "4.4 KB",
+    "file_count": 1
+  },
+  "polish": {
+    "filename": "polish.zip",
+    "size_bytes": 4294,
+    "size_human": "4.2 KB",
+    "file_count": 1
+  },
+  "quieter": {
+    "filename": "quieter.zip",
+    "size_bytes": 2548,
+    "size_human": "2.5 KB",
+    "file_count": 1
+  },
+  "shape": {
+    "filename": "shape.zip",
+    "size_bytes": 2517,
+    "size_human": "2.5 KB",
+    "file_count": 1
+  },
+  "typeset": {
+    "filename": "typeset.zip",
+    "size_bytes": 2860,
+    "size_human": "2.8 KB",
     "file_count": 1
   },
   "find-nearby": {
@@ -622,24 +772,6 @@
     "size_bytes": 674,
     "size_human": "0.7 KB",
     "file_count": 1
-  },
-  "llm-rpg": {
-    "filename": "llm-rpg.zip",
-    "size_bytes": 20945,
-    "size_human": "20.5 KB",
-    "file_count": 5
-  },
-  "skillsmp-search": {
-    "filename": "skillsmp-search.zip",
-    "size_bytes": 6789,
-    "size_human": "6.6 KB",
-    "file_count": 3
-  },
-  "strategy-sim": {
-    "filename": "strategy-sim.zip",
-    "size_bytes": 12070,
-    "size_human": "11.8 KB",
-    "file_count": 4
   },
   "google-workspace": {
     "filename": "google-workspace.zip",
