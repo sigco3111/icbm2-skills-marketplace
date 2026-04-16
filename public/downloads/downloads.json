@@ -187,8 +187,8 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 6151,
-    "size_human": "6.0 KB",
+    "size_bytes": 6197,
+    "size_human": "6.1 KB",
     "file_count": 1
   },
   "weekly-automation-report": {
@@ -245,6 +245,12 @@
     "size_human": "2.4 KB",
     "file_count": 1
   },
+  "architecture-diagram": {
+    "filename": "architecture-diagram.zip",
+    "size_bytes": 5695,
+    "size_human": "5.6 KB",
+    "file_count": 2
+  },
   "ascii-art": {
     "filename": "ascii-art.zip",
     "size_bytes": 4578,
@@ -283,8 +289,8 @@
   },
   "manim-video-with-narration": {
     "filename": "manim-video-with-narration.zip",
-    "size_bytes": 6369,
-    "size_human": "6.2 KB",
+    "size_bytes": 6547,
+    "size_human": "6.4 KB",
     "file_count": 2
   },
   "p5js": {
@@ -311,6 +317,12 @@
     "size_human": "5.2 KB",
     "file_count": 1
   },
+  "youtube-shorts-factory": {
+    "filename": "youtube-shorts-factory.zip",
+    "size_bytes": 2317,
+    "size_human": "2.3 KB",
+    "file_count": 1
+  },
   "youtube-uploader": {
     "filename": "youtube-uploader.zip",
     "size_bytes": 6789,
@@ -327,6 +339,12 @@
     "filename": "smart-data-analyzer.zip",
     "size_bytes": 4446,
     "size_human": "4.3 KB",
+    "file_count": 1
+  },
+  "local-dashboard": {
+    "filename": "local-dashboard.zip",
+    "size_bytes": 1333,
+    "size_human": "1.3 KB",
     "file_count": 1
   },
   "skill-security-audit": {
@@ -427,7 +445,7 @@
   },
   "find-nearby": {
     "filename": "find-nearby.zip",
-    "size_bytes": 4259,
+    "size_bytes": 4260,
     "size_human": "4.2 KB",
     "file_count": 2
   },
@@ -709,8 +727,8 @@
   },
   "research-paper-writing": {
     "filename": "research-paper-writing.zip",
-    "size_bytes": 798700,
-    "size_human": "780.0 KB",
+    "size_bytes": 799644,
+    "size_human": "780.9 KB",
     "file_count": 55
   },
   "openhue": {
