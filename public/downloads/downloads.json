@@ -31,8 +31,8 @@
   },
   "agentnews-monitor": {
     "filename": "agentnews-monitor.zip",
-    "size_bytes": 1681,
-    "size_human": "1.6 KB",
+    "size_bytes": 1817,
+    "size_human": "1.8 KB",
     "file_count": 1
   },
   "ai-model-tracker": {
@@ -153,6 +153,12 @@
     "filename": "morning-briefing.zip",
     "size_bytes": 4664,
     "size_human": "4.6 KB",
+    "file_count": 1
+  },
+  "notebooklm": {
+    "filename": "notebooklm.zip",
+    "size_bytes": 3144,
+    "size_human": "3.1 KB",
     "file_count": 1
   },
   "notion-dashboard": {
@@ -355,8 +361,8 @@
   },
   "youtube-uploader": {
     "filename": "youtube-uploader.zip",
-    "size_bytes": 6789,
-    "size_human": "6.6 KB",
+    "size_bytes": 7047,
+    "size_human": "6.9 KB",
     "file_count": 4
   },
   "data-analysis": {

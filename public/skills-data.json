@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-17T21:03:16.210895+00:00",
-  "total_skills": 155,
+  "generated_at": "2026-04-18T03:01:05.379988+00:00",
+  "total_skills": 156,
   "total_categories": 41,
   "categories": [
     {
       "name": "automation",
       "slug": "automation",
-      "count": 35
+      "count": 36
     },
     {
       "name": "mlops",
@@ -341,10 +341,10 @@
       "tags": [],
       "related_skills": [],
       "prerequisites": {},
-      "content": "# ICBM2 AgentNews 실시간 모니터\n\n## 개요\n\nAgentNews (https://agent.news) 피드를 매시간 확인하여, 주인님의 관심사와 높게 매칭되는 뉴스만 실시간 알림으로 전송합니다. morning-briefing에 이미 AgentNews가 통합되어 있지만, 이 스킬은 **실시간 알림**에 초점을 맞춥니다.\n\n## 작동 방식\n\n1. **매시간 피드 확인** — `https://agent.news/api/v1/feed` 에서 최신 아이템 조회\n2. **키워드 매칭** — 주인님 관심사 키워드 + 가중치 기반 점수 계산\n3. **Threshold 필터** — 점수 12점 이상만 알림 대상\n4. **일일 제한** — 하루 최대 3건까지만 알림 발송\n5. **중복 제거** — 이미 본 아이템은 건너뜀\n\n## 점수 시스템\n\n### 카테고리 가중치\n- `insight`: +3 (가치 높음)\n- `tool`: +2 (실용적)\n- `infrastructure`: +2 (중요)\n- `show`: +0 (낮음)\n\n### 관심사 키워드 (점수)\n| 카테고리 | 키워드 | 점수 |\n|---------|--------|------|\n| AI/ML 핵심 | AI model, LLM, GPT, Claude, OpenAI, Anthropic | 9-10 |\n| AI 에이전트 | AI agent, MCP, agentic | 10 |\n| iOS/Apple | iOS, Swift, WWDC, Apple | 8-10 |\n| 투자 | NVIDIA, semiconductor, IPO | 7-8 |\n| 개발 | automation, developer tool | 6-7 |\n\n최종 점수 = 카테고리 가중치 + 매칭 키워드 점수 합\n\n## 실행\n\n### 일반 실행 (크론용)\n```bash\npython3 scripts/agentnews_monitor.py\n```\n\n출력이 있으면 알림 대상, `NO_ALERTS:` 로 시작하면 알림 없음.\n\n### 상태 확인\n```bash\npython3 scripts/agentnews_monitor.py --stats\n```\n\n### 일일 카운터 리셋\n```bash\npython3 scripts/agentnews_monitor.py --reset\n```\n\n## 상태 파일\n\n`memory/agentnews_state.json`:\n```json\n{\n  \"seen_ids\": [\"id1\", \"id2\"],\n  \"daily_alerts\": [{\"id\": \"...\", \"title\": \"...\", \"score\": 15}],\n  \"last_alert_date\": \"2026-04-09\"\n}\n```\n\n- `seen_ids`: 최대 500개 유지 (자동 정리)\n- `daily_alerts`: 매일 자정(KST) 자동 리셋\n\n## 크론 설정\n\n```bash\n# 매 정시 5분에 실행 (AgentNews 업데이트 :55분 이후)\n# 05 * * * * → 하루 24번 확인, 알림은 최대 3건\n```\n\n## 주의사항\n\n- 알림 없음(`NO_ALERTS:`)일 때는 메시지 전송하지 않음 (스팸 방지)\n- threshold 조정 필요하면 스크립트의 `MIN_SCORE_THRESHOLD` 변경\n- 키워드 추가/수정 필요하면 `INTEREST_KEYWORDS` 딕셔너리 편집\n- 일일 제한 변경은 `DAILY_ALERT_LIMIT` 조정",
-      "reading_time_minutes": 1.5,
-      "line_count": 89,
-      "created_at": 1775982745
+      "content": "# ICBM2 AgentNews 실시간 모니터\n\n## 개요\n\nAgentNews (https://agent.news) 피드를 매시간 확인하여, 주인님의 관심사와 높게 매칭되는 뉴스만 실시간 알림으로 전송합니다. morning-briefing에 이미 AgentNews가 통합되어 있지만, 이 스킬은 **실시간 알림**에 초점을 맞춥니다.\n\n## 작동 방식\n\n1. **매시간 피드 확인** — `https://agent.news/api/v1/feed` 에서 최신 아이템 조회\n2. **키워드 매칭** — 주인님 관심사 키워드 + 가중치 기반 점수 계산\n3. **Threshold 필터** — 점수 12점 이상만 알림 대상\n4. **일일 제한** — 하루 최대 3건까지만 알림 발송\n5. **중복 제거** — 이미 본 아이템은 건너뜀\n\n## 점수 시스템\n\n### 카테고리 가중치\n- `insight`: +3 (가치 높음)\n- `tool`: +2 (실용적)\n- `infrastructure`: +2 (중요)\n- `show`: +0 (낮음)\n\n### 관심사 키워드 (점수)\n| 카테고리 | 키워드 | 점수 |\n|---------|--------|------|\n| AI/ML 핵심 | AI model, LLM, GPT, Claude, OpenAI, Anthropic | 9-10 |\n| AI 에이전트 | AI agent, MCP, agentic | 10 |\n| iOS/Apple | iOS, Swift, WWDC, Apple | 8-10 |\n| 투자 | NVIDIA, semiconductor, IPO | 7-8 |\n| 개발 | automation, developer tool | 6-7 |\n\n최종 점수 = 카테고리 가중치 + 매칭 키워드 점수 합\n\n## 실행\n\n### 일반 실행 (크론용)\n```bash\npython3 scripts/agentnews_monitor.py\n```\n\n**⚠️ 주의:** 이 스크립트는 아직 생성되지 않았음 (2026-04-18 확인). 메인 세션에서 스크립트를 먼저 생성해야 크론 작동함. chrome-automation 스킬로 API를 직접 호출하는 fallback도 고려할 것.\n\n출력이 있으면 알림 대상, `NO_ALERTS:` 로 시작하면 알림 없음.\n\n### 상태 확인\n```bash\npython3 scripts/agentnews_monitor.py --stats\n```\n\n### 일일 카운터 리셋\n```bash\npython3 scripts/agentnews_monitor.py --reset\n```\n\n## 상태 파일\n\n`memory/agentnews_state.json`:\n```json\n{\n  \"seen_ids\": [\"id1\", \"id2\"],\n  \"daily_alerts\": [{\"id\": \"...\", \"title\": \"...\", \"score\": 15}],\n  \"last_alert_date\": \"2026-04-09\"\n}\n```\n\n- `seen_ids`: 최대 500개 유지 (자동 정리)\n- `daily_alerts`: 매일 자정(KST) 자동 리셋\n\n## 크론 설정\n\n```bash\n# 매 정시 5분에 실행 (AgentNews 업데이트 :55분 이후)\n# 05 * * * * → 하루 24번 확인, 알림은 최대 3건\n```\n\n## 주의사항\n\n- 알림 없음(`NO_ALERTS:`)일 때는 메시지 전송하지 않음 (스팸 방지)\n- threshold 조정 필요하면 스크립트의 `MIN_SCORE_THRESHOLD` 변경\n- 키워드 추가/수정 필요하면 `INTEREST_KEYWORDS` 딕셔너리 편집\n- 일일 제한 변경은 `DAILY_ALERT_LIMIT` 조정",
+      "reading_time_minutes": 1.7,
+      "line_count": 91,
+      "created_at": 1776474713
     },
     {
       "name": "ai-model-tracker",
@@ -765,6 +765,26 @@
       "reading_time_minutes": 5.4,
       "line_count": 284,
       "created_at": 1775998129
+    },
+    {
+      "name": "notebooklm",
+      "slug": "notebooklm",
+      "category": "automation",
+      "category_slug": "automation",
+      "dir_name": "notebooklm",
+      "description": "Google NotebookLM 자동화 — 비디오/오디오/슬라이드 생성, 소스 관리, 다운로드 (일반 계정)",
+      "description_ko": "",
+      "description_en": "Google NotebookLM 자동화 — 비디오/오디오/슬라이드 생성, 소스 관리, 다운로드 (일반 계정)",
+      "version": "",
+      "author": "",
+      "license": "",
+      "tags": [],
+      "related_skills": [],
+      "prerequisites": {},
+      "content": "# Google NotebookLM 자동화 (일반 계정)\n\nnotebooklm-py를 사용해 Google NotebookLM의 모든 기능을 프로그래밍 방식으로 제어합니다.\n\n## 전제 조건\n\n| 항목 | 설명 |\n|------|------|\n| notebooklm-py v0.3.4+ | `~/.hermes/venv-notebooklm/`에 설치됨 |\n| Python 3.13 | venv 전용 (시스템 패키지와 격리) |\n| 구글 로그인 | `~/.hermes/venv-notebooklm/bin/activate && notebooklm login` |\n| 인증 파일 | `~/.notebooklm/storage_state.json` |\n\n## 인증\n\n```bash\nsource ~/.hermes/venv-notebooklm/bin/activate\nnotebooklm login              # 브라우저 로그인\nnotebooklm auth check --test  # 인증 상태 확인\n```\n\n## 기본 사용법\n\n모든 notebooklm 명령어는 반드시 venv 활성화 후 실행:\n\n```bash\nsource ~/.hermes/venv-notebooklm/bin/activate\n```\n\n## 노트북 관리\n\n```bash\nnotebooklm create \"제목\"           # 노트북 생성 (ID 반환)\nnotebooklm list                   # 노트북 목록\nnotebooklm use <notebook_id>      # 현재 노트북 설정\nnotebooklm delete <notebook_id>   # 노트북 삭제\n```\n\n## 소스 추가\n\n```bash\n# URL\nnotebooklm source add \"https://example.com\"\n\n# YouTube 영상\nnotebooklm source add \"https://youtube.com/watch?v=xxx\"\n\n# 로컬 파일 (PDF, 텍스트, 마크다운)\nnotebooklm source add \"./paper.pdf\"\n\n# 인라인 텍스트\nnotebooklm source add \"요약할 텍스트 내용\" --title \"제목\"\n\n# 웹 리서치 자동 수집 (시간 걸림, 2~5분)\nnotebooklm source add-research \"검색어\" --mode deep\n\n# 소스 목록 확인\nnotebooklm source list\n```\n\n## 콘텐츠 생성\n\n### 비디오 (YouTube 업로드용)\n\n```bash\n# Video Overview (빠름, ~5-10분)\nnotebooklm generate video \"설명\" --style whiteboard --language ko --wait\nnotebooklm download video ./output.mp4\n\n# Cinematic Video (Veo 3, ~30-40분, AI Ultra 필요)\nnotebooklm generate cinematic-video \"설명\" --language ko --wait\nnotebooklm download cinematic-video ./output.mp4\n```\n\n**비디오 스타일:** `auto`, `classic`, `whiteboard`, `kawaii`, `anime`, `watercolor`, `retro-print`, `heritage`, `paper-craft`\n\n**비디오 포맷:** `explainer` (기본), `brief`, `cinematic`\n\n### 오디오 (팟캐스트)\n\n```bash\nnotebooklm generate audio \"설명\" --format deep-dive --language ko --wait\nnotebooklm download audio ./podcast.mp3\n```\n\n**오디오 포맷:** `deep-dive` (기본), `brief`, `critique`, `debate`\n**오디오 길이:** `short`, `default`, `long`\n\n### 슬라이드 덱\n\n```bash\nnotebooklm generate slide-deck \"설명\" --format detailed --language ko --wait\nnotebooklm download slide-deck ./slides.pdf     # PDF\nnotebooklm download slide-deck ./slides.pptx    # PPTX\n```\n\n### 기타 콘텐츠\n\n```bash\n# 인포그래픽 (PNG)\nnotebooklm generate infographic --orientation portrait --wait\nnotebooklm download infographic ./info.png\n\n# 마인드맵 (JSON)\nnotebooklm generate mind-map --wait\nnotebooklm download mind-map ./mindmap.json\n\n# 퀴즈\nnotebooklm generate quiz --difficulty hard --wait\nnotebooklm download quiz --format markdown ./quiz.md\n\n# 플래시카드\nnotebooklm generate flashcards --quantity more --wait\nnotebooklm download flashcards --format json ./cards.json\n\n# 리포트\nnotebooklm generate report --format blog-post --wait\nnotebooklm download report ./report.md\n\n# 데이터 테이블 (CSV)\nnotebooklm generate data-table \"비교 항목\" --wait\nnotebooklm download data-table ./data.csv\n```\n\n## 채팅\n\n```bash\nnotebooklm ask \"질문\"\n```\n\n## YouTube 업로드 파이프라인 (자동 노트북 정리 포함)\n\n무료 계정은 최대 5개 노트북 제한이 있으므로, 업로드 완료 후 노트북을 자동 삭제합니다.\n\n```bash\n# 1. 노트북 생성 + 소스 추가\nNOTEBOOK_ID=$(notebooklm create \"주제\")\nnotebooklm use $NOTEBOOK_ID\nnotebooklm source add \"https://url1.com\"\nnotebooklm source add \"https://url2.com\"\n\n# 2. 비디오 생성 (한국어)\nnotebooklm generate video \"한국어로 흥미롭게 설명해주세요\" --style whiteboard --language ko --wait\n\n# 3. 다운로드\nnotebooklm download video /tmp/video.mp4\n\n# 4. YouTube 업로드 (youtube-uploader 스킬 사용)\ncd /path/to/youtube-uploader/scripts\npython3 upload.py /tmp/video.mp4 --title \"제목\" --description \"설명\" --category 28 --privacy public\n\n# 5. 노트북 삭제 (무료 계정 5개 제한 관리)\nnotebooklm delete $NOTEBOOK_ID\n```\n\n⚠️ **필수:** 비디오 다운로드를 완료한 후에만 삭제하세요. 생성 콘텐츠는 다운로드 전에 노트북 삭제하면 유실됩니다.\n\n## 주요 함정\n\n| 문제 | 해결 |\n|------|------|\n| 일일 쿼터 제한 (cinematic-video) | `--retry 5` 추가, 1~24시간 대기 |\n| 비디오 생성 타임아웃 | `--wait` 없이 생성 후 `download video`로 폴링 |\n| 소스 처리 안 됨 | URL 추가 후 `source list`로 ready 상태 확인 |\n| 인증 만료 | `notebooklm login` 재실행 |\n| venv 미활성화 | 모든 명령어 앞에 `source ~/.hermes/venv-notebooklm/bin/activate` 필수 |\n| httpx 충돌 | 시스템 Python이 아닌 반드시 venv 사용 |\n\n## YouTube 자동화 파이프라인\n\n`~/.hermes/scripts/notebooklm_youtube_pipeline.py` — NotebookLM → YouTube 일일 자동 업로드 시스템\n\n### 일반 영상 (Video Overview)\n```bash\npython3 ~/.hermes/scripts/notebooklm_youtube_pipeline.py --mode video --type daily_tech\npython3 ~/.hermes/scripts/notebooklm_youtube_pipeline.py --mode video --type ai_deep_review\n```\n파이프라인: 콘텐츠 수집 → 노트북 생성 → 소스 추가 → Video Overview 생성(whiteboard/ko) → MP4 다운로드 → YouTube 업로드 → 노트북 삭제\n\n### 숏츠 (Audio Podcast → 60초 영상)\n```bash\npython3 ~/.hermes/scripts/notebooklm_youtube_pipeline.py --mode shorts --type ai_news\npython3 ~/.hermes/scripts/notebooklm_youtube_pipeline.py --mode shorts --type github_trending\npython3 ~/.hermes/scripts/notebooklm_youtube_pipeline.py --mode shorts --type dev_tip\npython3 ~/.hermes/scripts/notebooklm_youtube_pipeline.py --mode shorts --type opensource\n```\n파이프라인: 콘텐츠 수집 → 노트북 생성 → 소스 추가 → Audio Podcast(brief/short/ko) → MP3 다운로드 → 60초 트리밍 → 배경 이미지 합성 → Shorts MP4 → YouTube 업로드 → 노트북 삭제\n\n### 콘텐츠 타입\n\n| 타입 | 모드 | 스케줄 | 설명 |\n|------|------|--------|------|\n| `daily_tech` | video | 23:15 | 데일리 테크 브리핑 (HN + Reddit) |\n| `ai_deep_review` | video | 01:15 | AI/테크 심층 리뷰 |\n| `ai_news` | shorts | 04:15 | AI 뉴스 속보 |\n| `github_trending` | shorts | 00:15 | GitHub 트렌딩 프로젝트 |\n| `dev_tip` | shorts | 22:15 | 개발 팁/인사이트 |\n| `opensource` | shorts | 02:15 | 오픈소스 도구 소개 |\n\n### 공통 옵션\n```\n--no-upload    # 업로드 생략 (테스트용)\n--no-cleanup   # 노트북 삭제 생략\n```\n\n### 의존성\n- notebooklm-py venv: `~/.hermes/venv-notebooklm/`\n- Pillow (배경 이미지): hermes-agent venv에서 sys.path injection\n- ffmpeg / ffprobe: 시스템\n- YouTube 업로드: `~/.hermes/skills/creative/youtube-uploader/scripts/upload.py`\n\n## 한계\n\n- 비공식 API — 구글이 언제든 변경 가능\n- cinematic-video는 Google AI Ultra 구독 필요 (일일 쿼터 있음)\n- 무료 계정은 최대 5개 노트북 — 파이프라인은 생성 후 자동 삭제\n- 생성 시간: video ~5-10분, cinematic ~30-40분, audio ~3-5분",
+      "reading_time_minutes": 4.3,
+      "line_count": 223,
+      "created_at": 1776479651
     },
     {
       "name": "notion-dashboard",
