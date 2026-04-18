@@ -283,8 +283,8 @@
   },
   "architecture-diagram": {
     "filename": "architecture-diagram.zip",
-    "size_bytes": 5695,
-    "size_human": "5.6 KB",
+    "size_bytes": 6315,
+    "size_human": "6.2 KB",
     "file_count": 2
   },
   "ascii-art": {
@@ -298,6 +298,12 @@
     "size_bytes": 117467,
     "size_human": "114.7 KB",
     "file_count": 10
+  },
+  "baoyu-infographic": {
+    "filename": "baoyu-infographic.zip",
+    "size_bytes": 43617,
+    "size_human": "42.6 KB",
+    "file_count": 47
   },
   "ideation": {
     "filename": "ideation.zip",
@@ -685,9 +691,9 @@
   },
   "llama-cpp": {
     "filename": "llama-cpp.zip",
-    "size_bytes": 6986,
-    "size_human": "6.8 KB",
-    "file_count": 4
+    "size_bytes": 17305,
+    "size_human": "16.9 KB",
+    "file_count": 6
   },
   "obliteratus": {
     "filename": "obliteratus.zip",
@@ -769,9 +775,9 @@
   },
   "fine-tuning-with-trl": {
     "filename": "fine-tuning-with-trl.zip",
-    "size_bytes": 9841,
-    "size_human": "9.6 KB",
-    "file_count": 5
+    "size_bytes": 18752,
+    "size_human": "18.3 KB",
+    "file_count": 7
   },
   "unsloth": {
     "filename": "unsloth.zip",
