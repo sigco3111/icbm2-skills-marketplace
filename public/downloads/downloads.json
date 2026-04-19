@@ -940,5 +940,11 @@
     "size_bytes": 1350,
     "size_human": "1.3 KB",
     "file_count": 1
+  },
+  "video-editing": {
+    "filename": "video-editing.zip",
+    "size_bytes": 3229,
+    "size_human": "3.2 KB",
+    "file_count": 1
   }
 }
