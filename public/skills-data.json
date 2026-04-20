@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-20T03:00:30.572998+00:00",
-  "total_skills": 161,
+  "generated_at": "2026-04-20T09:00:16.569527+00:00",
+  "total_skills": 162,
   "total_categories": 42,
   "categories": [
     {
@@ -24,6 +24,11 @@
       "count": 9
     },
     {
+      "name": "autonomous-ai-agents",
+      "slug": "autonomous-ai-agents",
+      "count": 7
+    },
+    {
       "name": "devops",
       "slug": "devops",
       "count": 7
@@ -37,11 +42,6 @@
       "name": "software-development",
       "slug": "software-development",
       "count": 7
-    },
-    {
-      "name": "autonomous-ai-agents",
-      "slug": "autonomous-ai-agents",
-      "count": 6
     },
     {
       "name": "research",
@@ -1208,6 +1208,26 @@
       "reading_time_minutes": 5.3,
       "line_count": 237,
       "created_at": 1775847745
+    },
+    {
+      "name": "perpetual-engine-zai",
+      "slug": "perpetual-engine-zai",
+      "category": "autonomous-ai-agents",
+      "category_slug": "autonomous-ai-agents",
+      "dir_name": "perpetual-engine-zai",
+      "description": "Multi-agent AI startup framework fork with ZAI (GLM) support. Provider adapter pattern, concurrency limiter, agent team design for ICBM2.",
+      "description_ko": "",
+      "description_en": "Multi-agent AI startup framework fork with ZAI (GLM) support. Provider adapter pattern, concurrency limiter, agent team design for ICBM2.",
+      "version": "",
+      "author": "",
+      "license": "",
+      "tags": [],
+      "related_skills": [],
+      "prerequisites": {},
+      "content": "# Perpetual Engine ZAI\n\nMulti-agent AI startup framework fork with ZAI (GLM) support.\n\n## Overview\n- **Original:** https://github.com/greatsk55/perpetual-engine\n- **Fork:** https://github.com/sigco3111/perpetual-engine-zai\n- Claude Code CLI 기반 멀티 에이전트 프레임워크를 ZAI(GLM) 지원하도록 개조\n- Hermes 없이 독립 동작 (Node.js + tmux + Express 대시보드)\n\n## Key Modifications from Original\n- **Provider Adapter Pattern:** `provider-adapter.ts` 인터페이스로 런타임 추상화\n  - `providers/claude-code-adapter.ts` — Claude Code CLI (원본 호환)\n  - `providers/opencode-adapter.ts` — OpenCode 지원\n  - `providers/http-api-adapter.ts` — ZAI/OpenAI HTTP API 지원\n- **Concurrency Limiter:** `concurrency-limiter.ts` — 모델별 동시성 큐 관리\n- **Config Extension:** `agent_providers`, `providers`, `concurrency` 설정 추가\n- **Agent Skills:** Claude Code 슬래시 커맨드 → 프롬프트 기반 스킬 변환\n- **Installation Guide:** `docs/installation-guide.md` — LLM 에이전트 자동 설치 지원\n\n## Agent Team Design (ICBM2용)\n| Role | Runtime | Concurrency | Notes |\n|------|---------|-------------|-------|\n| PM | Hermes/HTTP API (GLM-4-Plus, 동시20) | 자유 | 오케스트레이션 |\n| Coder | OpenCode CLI (ZAI 코딩플랜) | **큐 기반 순차** | GLM-5-Turbo 동시1 제한 준수 |\n| Writer | HTTP API (GLM-4.5, 동시10) | 병렬 OK | 콘텐츠 생성 |\n| Researcher | HTTP API (GLM-4.5, 동시10) | 병렬 OK | 정보 수집/분석 |\n| Trader | HTTP API (GLM-4.5, 동시10) | 병렬 OK | 투자 분석 |\n| Ops | HTTP API (GLM-4.5, 동시10) | 병렬 OK | 시스템 운영/미디어 |\n\n## Concurrency Strategy\n- Coder가 GLM-5-Turbo(동시1) 사용 중일 때, Hermes 본체는 GLM-4.5/4-Plus로 폴백하여 충돌 방지\n- 상세 제한: `~/.hermes/docs/zai-rate-limits.md` 참조\n\n## Remaining Work\n1. `session-manager.ts`가 ProviderAdapter 사용하도록 리팩토링\n2. `orchestrator.ts`가 ConcurrencyLimiter 연결\n3. 통합 테스트 + ZAI API 엔드투엔드 테스트\n\n## History\n- 2026-04-20: 포크 생성, 핵심 모듈 7개 추가, 4개 파일 수정, PR #1 머지 (빌드 에러 수정)",
+      "reading_time_minutes": 1.4,
+      "line_count": 46,
+      "created_at": 1776658962
     },
     {
       "name": "project-delegation",
