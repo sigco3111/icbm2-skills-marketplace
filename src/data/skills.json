@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-19T21:03:22.986465+00:00",
-  "total_skills": 158,
+  "generated_at": "2026-04-20T03:00:30.572998+00:00",
+  "total_skills": 161,
   "total_categories": 42,
   "categories": [
     {
       "name": "automation",
       "slug": "automation",
-      "count": 36
+      "count": 38
     },
     {
       "name": "mlops",
@@ -16,7 +16,7 @@
     {
       "name": "creative",
       "slug": "creative",
-      "count": 16
+      "count": 17
     },
     {
       "name": "productivity",
@@ -514,10 +514,10 @@
       "tags": [],
       "related_skills": [],
       "prerequisites": {},
-      "content": "# ICBM2 매일 자기 개선 리뷰\n\n## 개요\n\n매일 밤 당일 활동을 분석하여 자기 개선 포인트를 도출하고, 새로운 패턴을 스킬로 저장하며, 메모리를 최적화합니다.\n\n## 실행 방법\n\n크론 잡에서 실행 시 자동으로 아래 프로세스를 따릅니다.\n\n## 수행 절차\n\n### 1. 당일 세션 검색 (session_search)\n\n- 오늘 날짜의 모든 세션을 검색\n- 주요 활동 요약 (어떤 작업을 했는지)\n- 도구 사용 빈도 파악\n- 에러/실패 사례 수집\n- **주인님 피드백 파싱**: 세션에서 주인님이 부정적 반응(수정 요청, 불만, \"다시 해\", \"아니야\" 등)을 보인 부분 식별\n\n### 2. 새로운 패턴 감지\n\n다음 조건을 만족하면 새 스킬 생성을 검토:\n- 5번 이상의 툴 콜이 포함된 복잡한 작업\n- 이전 세션에서 유사한 작업이 반복된 패턴\n- 새로운 해결법을 발견한 경우 (디버깅, 워크어라운드)\n- **반복되는 주인님 요청 패턴** → 프롬프트/메모리에 반영 권장\n\n### 3. 스킬 건강도 점검\n\n- 오늘 사용된 스킬 목록 확인\n- 사용 중 문제가 있었던 스킬이 있으면 **즉시 patch 실행** (검토만 하지 말 것)\n- 스킬 내용이 구식이 된 것이 있는지 검토\n- **스킬 경로 유효성**: 스킬이 참조하는 파일/스크립트 경로가 실제로 존재하는지 확인\n\n### 4. 메모리 정리\n\n- 당일 새로 추가된 메모리 항목 검토\n- 중복되거나 더 이상 유효하지 않은 메모리 **즉시 제거**\n- 중요한 새 사실이 메모리에 누락되었는지 확인 → 누락 시 **즉시 추가**\n- 메모리 용량이 90% 이상이면 우선순위로 정리\n\n### 5. .learnings/ Self-Improvement 분석 ⭐\n\n`.learnings/`에 기록된 학습/에러/피처 리퀘스트를 분석하여 자가 학습한다.\n\n#### 5-1. Learnings 분석\n```bash\npython3 scripts/learnings_analyzer.py analyze\n```\n\n#### 5-2. 승격 후보 자동 승격\n```bash\npython3 scripts/learnings_analyzer.py promote\n```\n\n#### 5-3. 승격된 항목을 Hermes memory에 등록\npromotion_log.jsonl의 항목을 읽어서:\n- target=\"memory\" → memory(action=\"add\", target=\"memory\", ...)\n- target=\"user\" → memory(action=\"add\", target=\"user\", ...)\n- target=\"skill\" → skill_manage(action=\"create\", ...)\n중복 확인 후 등록한다.\n\n#### 5-4. 30일 이상 된 완료 항목 정리\n```bash\npython3 scripts/learnings_analyzer.py cleanup\n```\n\n### 6. 크론 잡 상태 확인\n\n- 오늘 실행된 크론 잡들의 성공/실패 확인\n- 실패한 잡이 있으면 **자가 치유 스크립트 실행**:\n  ```\n  python3 scripts/cron_self_healer.py\n  ```\n- `memory/cron_quality.md` 확인하여 전체 크론 품질 점수 확인\n- 실패 원인이 프롬프트 내 경로 오류인지, API 문제인지 분류\n\n### 7. 피드백 루프 분석\n\n- `python3 scripts/feedback_collector.py stats` 실행\n- 당일 수집된 피드백 분석 (correction/positive/preference)\n- **당일 세션에서 주인님 교정/피드백을 발견한 경우 feedback_collector.py에 기록:**\n  ```bash\n  python3 scripts/feedback_collector.py add --category correction --content \"내용\" --resolved true --resolution \"해결방법\"\n  ```\n- **반복 패턴 감지**: `python3 scripts/feedback_collector.py insights` 실행\n  - 동일 카테고리의 피드백이 3회 이상이면 MEMORY에 영구 규칙으로 저장\n- 긍정적 피드백 → 해당 행동 강화 (스킬/설정에 반영)\n- 부정적 피드백 → 시스템 수정 필요시 즉시 `skill_manage(action='patch')` 실행\n- 30일 이상 된 피드백: `python3 scripts/feedback_collector.py archive` 실행\n\n### 8. 개선 액션 아이템 생성\n\n분석 결과를 바탕으로 **즉시 실행 가능한** 액션 아이템 생성:\n- 🔴 즉시 수정 (해당 항목을 **바로 실행**하여 다음 리뷰까지 해결)\n- 🟡 개선 권장 (구체적인 수정 방안 포함)\n- 🟢 새로운 시도 (실행 계획과 예상 효과 포함)\n\n**중요: 액션 아이템은 목록만 만들지 말고, 🔴 항목은 즉시 실행하여 해결 상태로 만들 것.**\n\n## 출력 형식\n\n```\n==================================================\n🔄 ICBM2 일일 자기 개선 리뷰 — YYYY-MM-DD\n==================================================\n\n━━━ 📊 오늘의 활동 요약 ━━━\n- 세션 수: N\n- 주요 작업: ...\n- 도구 사용: terminal(12), search(5), ...\n\n━━━ 🔍 새로운 패턴 ━━━\n- [발견/없음] 설명\n\n━━━ 🛠️ 스킬 점검 ━━━\n- 사용된 스킬: ...\n- 개선 필요: ...\n\n━━━ 🧠 메모리 정리 ━━━\n- 추가: N건\n- 정리: N건\n- 누락 의심: ...\n\n━━━ ⚙️ 크론 잡 상태 ━━━\n- 정상: ...\n- 실패: ...\n\n━━━ ✅ 개선 액션 ━━━\n- 🔴 ...\n- 🟡 ...\n- 🟢 ...\n\n━━━ 💡 내일의 목표 ━━━\n- ...\n```\n\n## 저장 위치\n\n- 리포트: `memory/reports/daily_YYYY-MM-DD.md`\n\n## 관련\n\n- `weekly-self-report` — 주간 종합 리포트 (이 일일 리뷰 데이터를 활용)",
-      "reading_time_minutes": 3.0,
-      "line_count": 157,
-      "created_at": 1775982873
+      "content": "# ICBM2 매일 자기 개선 리뷰\n\n## 개요\n\n매일 밤 당일 활동을 분석하여 자기 개선 포인트를 도출하고, 새로운 패턴을 스킬로 저장하며, 메모리를 최적화합니다.\n\n## 실행 방법\n\n크론 잡에서 실행 시 자동으로 아래 프로세스를 따릅니다.\n\n## 수행 절차\n\n### 1. 당일 세션 검색 (session_search)\n\n- 오늘 날짜의 모든 세션을 검색\n- 주요 활동 요약 (어떤 작업을 했는지)\n- 도구 사용 빈도 파악\n- 에러/실패 사례 수집\n- **주인님 피드백 파싱**: 세션에서 주인님이 부정적 반응(수정 요청, 불만, \"다시 해\", \"아니야\" 등)을 보인 부분 식별\n\n### 2. 새로운 패턴 감지\n\n다음 조건을 만족하면 새 스킬 생성을 검토:\n- 5번 이상의 툴 콜이 포함된 복잡한 작업\n- 이전 세션에서 유사한 작업이 반복된 패턴\n- 새로운 해결법을 발견한 경우 (디버깅, 워크어라운드)\n- **반복되는 주인님 요청 패턴** → 프롬프트/메모리에 반영 권장\n\n### 3. 스킬 건강도 점검\n\n- 오늘 사용된 스킬 목록 확인\n- 사용 중 문제가 있었던 스킬이 있으면 **즉시 patch 실행** (검토만 하지 말 것)\n- 스킬 내용이 구식이 된 것이 있는지 검토\n- **스킬 경로 유효성**: 스킬이 참조하는 파일/스크립트 경로가 실제로 존재하는지 확인\n\n### 4. 메모리 정리\n\n- 당일 새로 추가된 메모리 항목 검토\n- 중복되거나 더 이상 유효하지 않은 메모리 **즉시 제거**\n- 중요한 새 사실이 메모리에 누락되었는지 확인 → 누락 시 **즉시 추가**\n- 메모리 용량이 90% 이상이면 우선순위로 정리\n\n### 5. .learnings/ Self-Improvement 분석 ⭐\n\n`.learnings/`에 기록된 학습/에러/피처 리퀘스트를 분석하여 자가 학습한다.\n\n#### 5-1. Learnings 분석\n```bash\npython3 scripts/learnings_analyzer.py analyze\n```\n\n#### 5-2. 승격 후보 자동 승격\n```bash\npython3 scripts/learnings_analyzer.py promote\n```\n\n#### 5-3. 승격된 항목을 Hermes memory에 등록\npromotion_log.jsonl의 항목을 읽어서:\n- target=\"memory\" → memory(action=\"add\", target=\"memory\", ...)\n- target=\"user\" → memory(action=\"add\", target=\"user\", ...)\n- target=\"skill\" → skill_manage(action=\"create\", ...)\n중복 확인 후 등록한다.\n\n#### 5-4. 30일 이상 된 완료 항목 정리\n```bash\npython3 scripts/learnings_analyzer.py cleanup\n```\n\n### 6. 크론 잡 상태 확인\n\n- 오늘 실행된 크론 잡들의 성공/실패 확인\n- 실패한 잡이 있으면 **자가 치유 스크립트 실행**:\n  ```\n  python3 scripts/cron_self_healer.py\n  ```\n- `memory/cron_quality.md` 확인하여 전체 크론 품질 점수 확인\n- 실패 원인이 프롬프트 내 경로 오류인지, API 문제인지 분류\n\n### 7. 학습 갭 체크 (Learning Gap Tracker) ⭐\n\nICBM2가 대화 중 알지 못했던 것들을 추적하는 시스템.\n\n```bash\n# 미해결 학습 갭 목록 확인\npython3 ~/.hermes/scripts/learning_gap_tracker.py list --status open\n\n# 통계 확인\npython3 ~/.hermes/scripts/learning_gap_tracker.py stats\n\n# 일일 리뷰용 내보내기\npython3 ~/.hermes/scripts/learning_gap_tracker.py export --format markdown\n```\n\n- encounter_count ≥ 2인 갭을 **우선 학습 대상**으로 표시\n- 해결된 갭이 있으면 통계에 반영\n- 30일 이상 된 해결 갭 정리: `python3 ~/.hermes/scripts/learning_gap_tracker.py cleanup --days 30`\n- **세션 중 \"모르겠습니다\"/\"확실하지 않습니다\" 표현이 있었다면 해당 갭을 추가:**\n  ```bash\n  python3 ~/.hermes/scripts/learning_gap_tracker.py add --topic \"주제\" --context \"맥락\" --severity medium\n  ```\n\n### 8. 피드백 루프 분석\n\n- `python3 scripts/feedback_collector.py stats` 실행\n- 당일 수집된 피드백 분석 (correction/positive/preference)\n- **당일 세션에서 주인님 교정/피드백을 발견한 경우 feedback_collector.py에 기록:**\n  ```bash\n  python3 scripts/feedback_collector.py add --category correction --content \"내용\" --resolved true --resolution \"해결방법\"\n  ```\n- **반복 패턴 감지**: `python3 scripts/feedback_collector.py insights` 실행\n  - 동일 카테고리의 피드백이 3회 이상이면 MEMORY에 영구 규칙으로 저장\n- 긍정적 피드백 → 해당 행동 강화 (스킬/설정에 반영)\n- 부정적 피드백 → 시스템 수정 필요시 즉시 `skill_manage(action='patch')` 실행\n- 30일 이상 된 피드백: `python3 scripts/feedback_collector.py archive` 실행\n\n### 9. 개선 액션 아이템 생성\n\n분석 결과를 바탕으로 **즉시 실행 가능한** 액션 아이템 생성:\n- 🔴 즉시 수정 (해당 항목을 **바로 실행**하여 다음 리뷰까지 해결)\n- 🟡 개선 권장 (구체적인 수정 방안 포함)\n- 🟢 새로운 시도 (실행 계획과 예상 효과 포함)\n\n**중요: 액션 아이템은 목록만 만들지 말고, 🔴 항목은 즉시 실행하여 해결 상태로 만들 것.**\n\n## 출력 형식\n\n```\n==================================================\n🔄 ICBM2 일일 자기 개선 리뷰 — YYYY-MM-DD\n==================================================\n\n━━━ 📊 오늘의 활동 요약 ━━━\n- 세션 수: N\n- 주요 작업: ...\n- 도구 사용: terminal(12), search(5), ...\n\n━━━ 🔍 새로운 패턴 ━━━\n- [발견/없음] 설명\n\n━━━ 🛠️ 스킬 점검 ━━━\n- 사용된 스킬: ...\n- 개선 필요: ...\n\n━━━ 🧠 메모리 정리 ━━━\n- 추가: N건\n- 정리: N건\n- 누락 의심: ...\n\n━━━ 🎓 학습 갭 ━━━\n- 미해결: N건 (우선순위 높은 것 N건)\n- 오늘 해결: N건\n- 반복 토픽: ...\n\n━━━ ⚙️ 크론 잡 상태 ━━━\n- 정상: ...\n- 실패: ...\n\n━━━ ✅ 개선 액션 ━━━\n- 🔴 ...\n- 🟡 ...\n- 🟢 ...\n\n━━━ 💡 내일의 목표 ━━━\n- ...\n```\n\n## 저장 위치\n\n- 리포트: `memory/reports/daily_YYYY-MM-DD.md`\n\n## 관련\n\n- `weekly-self-report` — 주간 종합 리포트 (이 일일 리뷰 데이터를 활용)",
+      "reading_time_minutes": 3.5,
+      "line_count": 185,
+      "created_at": 1776640936
     },
     {
       "name": "dev-news-to-wiki",
@@ -578,6 +578,26 @@
       "reading_time_minutes": 1.6,
       "line_count": 93,
       "created_at": 1775982740
+    },
+    {
+      "name": "gazette-trend-analyzer",
+      "slug": "gazette-trend-analyzer",
+      "category": "automation",
+      "category_slug": "automation",
+      "dir_name": "gazette-trend-analyzer",
+      "description": "대한민국 관보 트렌드 분석기 — ai-readable-gazette-kr 데이터 기반 정책 흐름 분석 대시보드",
+      "description_ko": "",
+      "description_en": "대한민국 관보 트렌드 분석기 — ai-readable-gazette-kr 데이터 기반 정책 흐름 분석 대시보드",
+      "version": "",
+      "author": "",
+      "license": "",
+      "tags": [],
+      "related_skills": [],
+      "prerequisites": {},
+      "content": "# 관보 트렌드 분석기\n\n## 프로젝트 정보\n\n- **GitHub:** https://github.com/sigco3111/gazette-trend-analyzer\n- **배포:** https://gazette-trend-analyzer.vercel.app\n- **데이터소스:** https://hosungseo.github.io/ai-readable-gazette-kr/\n\n## 데이터 소스 구조\n\n### meta.json\n- `heatmap`: `[{ym, count}]` 배열 (월별 공시 수)\n- `institutions`: `[{name, count, cat}]` 배열 (기관별 공시 수)\n- `dates`: 날짜 문자열 배열\n\n### 날짜별 JSON (dates/{YYYY-MM-DD}.json)\n- `{date, docs: [{n, inst, title, file, raw, blob}]}`\n\n## 기술 스택\n\n- Next.js (App Router)\n- Tailwind CSS v4\n- Vercel 배포\n\n## 주의사항\n\n- Tailwind v4에서 `mx-auto`가 컴파일에서 누락될 수 있음 → CSS에서 직접 `margin: auto`로 해결\n- AI 느낌 배제, 에디토리얼/저널 스타일 디자인 유지",
+      "reading_time_minutes": 1,
+      "line_count": 33,
+      "created_at": 1776644916
     },
     {
       "name": "gemma4-vision",
@@ -726,6 +746,26 @@
       "reading_time_minutes": 1.8,
       "line_count": 94,
       "created_at": 1775982880
+    },
+    {
+      "name": "learning-gap-tracker",
+      "slug": "learning-gap-tracker",
+      "category": "automation",
+      "category_slug": "automation",
+      "dir_name": "learning-gap-tracker",
+      "description": "ICBM2가 대화 중 '모르는 것'을 자동 감지하고 학습 큐에 등록 — 반복 질문 패턴 분석, 자동 조사 큐 관리",
+      "description_ko": "",
+      "description_en": "ICBM2가 대화 중 '모르는 것'을 자동 감지하고 학습 큐에 등록 — 반복 질문 패턴 분석, 자동 조사 큐 관리",
+      "version": "",
+      "author": "",
+      "license": "",
+      "tags": [],
+      "related_skills": [],
+      "prerequisites": {},
+      "content": "# Learning Gap Tracker\n\nICBM2가 대화 중 알지 못하는 것을 감지하고 학습 큐에 등록하는 시스템입니다.\n\n## 💡 언제 사용하는가\n\n- 주인님이 질문했는데 **정확한 답변을 주지 못한 경우**\n- 주인님이 \"이것 좀 조사해봐\"라고 한 뒤 **결과물의 질이 낮았던 경우**\n- 같은 주제가 **2회 이상 반복** 등장한 경우\n- 크론 잡이나 스크립트에서 **에러 해결에 실패**한 경우\n\n## 📋 동작 원리\n\n### 1. 감지 (Detect)\n대화 중 다음 패턴이 감지되면 자동으로 학습 갭으로 기록:\n- \"모르겠습니다\", \"확실하지 않습니다\", \"조사가 필요합니다\" 등 불확실성 표현\n- 주인님이 교정/추가 정보를 제공한 경우\n- 같은 질문이 반복된 경우 (encounter_count 증가)\n\n### 2. 기록 (Record)\n```bash\npython3 ~/.hermes/scripts/learning_gap_tracker.py add \\\n  --topic \"주제\" \\\n  --context \"맥락\" \\\n  --severity medium \\\n  --tags \"태그1,태그2\"\n```\n\n심각도 (severity):\n- `low` — 사소한 정보 누락\n- `medium` — 부분적 지식, 개선 필요\n- `high` — 중요한 영역에서 지식 부족\n- `critical` — 핵심 기능에 영향\n\n### 3. 분석 (Analyze)\n```bash\n# 미해결 갭 목록\npython3 ~/.hermes/scripts/learning_gap_tracker.py list --status open\n\n# 통계\npython3 ~/.hermes/scripts/learning_gap_tracker.py stats\n\n# 일일 리뷰용 내보내기\npython3 ~/.hermes/scripts/learning_gap_tracker.py export --format markdown\n```\n\n### 4. 해결 (Resolve)\n학습 후 해결 처리:\n```bash\npython3 ~/.hermes/scripts/learning_gap_tracker.py resolve \\\n  --topic \"주제\" \\\n  --notes \"학습 내용 요약\"\n```\n\n### 5. 정리 (Cleanup)\n```bash\n# 30일 이상 된 해결 갭 자동 삭제\npython3 ~/.hermes/scripts/learning_gap_tracker.py cleanup --days 30\n```\n\n## 🔄 일일 자기 개선 리뷰 통합\n\n`daily-self-review` 리뷰에서 다음을 추가:\n1. `learning_gap_tracker.py export --format markdown` 실행\n2. 미해결 갭 중 encounter_count ≥ 2인 것을 우선 학습 대상으로 표시\n3. 해결된 갭이 있으면 통계에 반영\n\n## 📊 데이터 파일\n\n- **저장소:** `~/.hermes/memory/learning_gaps.json`\n- **구조:**\n  ```json\n  {\n    \"gaps\": [\n      {\n        \"topic\": \"주제\",\n        \"context\": \"맥락\",\n        \"severity\": \"medium\",\n        \"tags\": [\"ios\", \"swift\"],\n        \"status\": \"open\",\n        \"created\": \"ISO timestamp\",\n        \"last_encountered\": \"ISO timestamp\",\n        \"encounter_count\": 3,\n        \"contexts\": [\"맥락1\", \"맥락2\"],\n        \"auto_researched\": false\n      }\n    ],\n    \"stats\": {\"total_detected\": 10, \"total_resolved\": 5}\n  }\n  ```\n\n## ⚠️ 주의사항\n\n- **중복 방지:** 동일 토픽이 이미 open 상태면 encounter_count만 증가\n- **자동화 금지:** 학습 갭은 반드시 주인님과의 대화 맥락에서만 기록\n- **과도한 기록 자제:** trivial한 정보는 기록하지 않음 (예: 특정 명령어 옵션)\n- **우선순위:** encounter_count가 높은 갭을 학습 우선순위로 삼을 것",
+      "reading_time_minutes": 1.7,
+      "line_count": 103,
+      "created_at": 1776640919
     },
     {
       "name": "learning-log",
@@ -1328,6 +1368,26 @@
       "reading_time_minutes": 4.8,
       "line_count": 194,
       "created_at": 1775442712
+    },
+    {
+      "name": "google-veo-api",
+      "slug": "google-veo-api",
+      "category": "creative",
+      "category_slug": "creative",
+      "dir_name": "google-veo-api",
+      "description": "Google Veo 3.1 API를 통한 AI 영상 생성 — 텍스트/이미지 기반 영상 클립 생성, 오디오 포함, 연장, 다운로드",
+      "description_ko": "",
+      "description_en": "Google Veo 3.1 API를 통한 AI 영상 생성 — 텍스트/이미지 기반 영상 클립 생성, 오디오 포함, 연장, 다운로드",
+      "version": "",
+      "author": "",
+      "license": "",
+      "tags": [],
+      "related_skills": [],
+      "prerequisites": {},
+      "content": "# Google Veo 3.1 API 가이드\n\n## 개요\nGoogle Gemini API를 통해 Veo 3.1 모델로 AI 영상을 프로그래밍 방식으로 생성.\n\n## 전제조건\n- Google AI Studio 또는 Google Cloud Console에서 API 키 발급\n- Gemini API 접근 권한 (Google Workspace Enterprise 계정)\n\n## 모델\n- `veo-3.1-generate-preview`\n\n## 지원 기능\n- 텍스트 → 영상 (8초, 720p/1080p/4K)\n- 네이티브 오디오 포함 (효과음, 대화, 배경음악)\n- 이미지 기반 영상 생성 (참조 이미지 최대 3장)\n- 첫/마지막 프레임 지정 생성\n- 비디오 연장\n- 가로(16:9) / 세로(9:16) 비율\n\n## Python 예시\n```python\nfrom google import genai\nimport time\n\nclient = genai.Client()\noperation = client.models.generate_videos(\n    model=\"veo-3.1-generate-preview\",\n    prompt=\"일몰이 지는 해변가를 걷는 사람, 파도 소리\",\n)\n\nwhile not operation.done:\n    time.sleep(10)\n    operation = client.operations.get(operation)\n\noperation.response.generated_videos[0].video.save(\"output.mp4\")\n```\n\n## REST 예시\n```bash\ncurl -s \"https://generativelanguage.googleapis.com/v1beta/models/veo-3.1-generate-preview:predictLongRunning\" \\\n  -H \"x-goog-api-key: $GEMINI_API_KEY\" \\\n  -H \"Content-Type: application/json\" \\\n  -X POST \\\n  -d '{\"instances\": [{\"prompt\": \"프롬프트 텍스트\"}]}'\n```\n\n## API 없이 앱 전용인 것들\n- **Lyria (음악 생성)** — Google Vids 앱 내에서만\n- **NotebookLM Audio Overview** — NotebookLM 웹앱에서만\n- **Google Flow** — Flow 웹앱에서만\n\n## 참고\n- API 키 발급: https://aistudio.google.com\n- 공식 문서: Google AI for Developers > Veo",
+      "reading_time_minutes": 1,
+      "line_count": 60,
+      "created_at": 1776639992
     },
     {
       "name": "image-batch-processor",

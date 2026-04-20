@@ -79,8 +79,8 @@
   },
   "daily-self-review": {
     "filename": "daily-self-review.zip",
-    "size_bytes": 2608,
-    "size_human": "2.5 KB",
+    "size_bytes": 2995,
+    "size_human": "2.9 KB",
     "file_count": 1
   },
   "dev-news-to-wiki": {
@@ -99,6 +99,12 @@
     "filename": "feedback-loop.zip",
     "size_bytes": 1731,
     "size_human": "1.7 KB",
+    "file_count": 1
+  },
+  "gazette-trend-analyzer": {
+    "filename": "gazette-trend-analyzer.zip",
+    "size_bytes": 808,
+    "size_human": "0.8 KB",
     "file_count": 1
   },
   "gemma4-vision": {
@@ -140,6 +146,12 @@
   "knowledge-graph": {
     "filename": "knowledge-graph.zip",
     "size_bytes": 1784,
+    "size_human": "1.7 KB",
+    "file_count": 1
+  },
+  "learning-gap-tracker": {
+    "filename": "learning-gap-tracker.zip",
+    "size_bytes": 1786,
     "size_human": "1.7 KB",
     "file_count": 1
   },
@@ -316,6 +328,12 @@
     "size_bytes": 10079,
     "size_human": "9.8 KB",
     "file_count": 5
+  },
+  "google-veo-api": {
+    "filename": "google-veo-api.zip",
+    "size_bytes": 1239,
+    "size_human": "1.2 KB",
+    "file_count": 1
   },
   "image-batch-processor": {
     "filename": "image-batch-processor.zip",
