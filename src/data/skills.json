@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-21T03:01:50.338560+00:00",
-  "total_skills": 162,
+  "generated_at": "2026-04-21T09:00:19.100797+00:00",
+  "total_skills": 163,
   "total_categories": 42,
   "categories": [
     {
       "name": "automation",
       "slug": "automation",
-      "count": 38
+      "count": 39
     },
     {
       "name": "mlops",
@@ -600,6 +600,26 @@
       "created_at": 1776644916
     },
     {
+      "name": "gemini-cli-vision",
+      "slug": "gemini-cli-vision",
+      "category": "automation",
+      "category_slug": "automation",
+      "dir_name": "gemini-cli-vision",
+      "description": "Gemini CLI로 이미지 분석 — OpenRouter 불가 시 백업 또는 주인님 명시 요청 시 사용",
+      "description_ko": "",
+      "description_en": "Gemini CLI로 이미지 분석 — OpenRouter 불가 시 백업 또는 주인님 명시 요청 시 사용",
+      "version": "",
+      "author": "",
+      "license": "",
+      "tags": [],
+      "related_skills": [],
+      "prerequisites": {},
+      "content": "# Gemini CLI 이미지 분석\n\n> Google Gemini CLI를 이용한 이미지 분석 스킬. 기본은 `vision_analyze`(OpenRouter gemini-3-flash-preview)를 사용하고, 본 스킬은 백업/명시 요청 시에만 사용.\n\n## 사용 조건\n\n- OpenRouter 비전 모델 사용 불가 시 (자동 폴백)\n- 주인님이 명시적으로 \"gemini cli로 분석해줘\"라고 요청한 경우\n\n## 사전 준비\n\n- Gemini CLI 설치: `npm install -g @google/gemini-cli`\n- 인증 완료: `gemini auth login` (브라우저 로그인 필요)\n- 인증 상태는 `~/.gemini/` 디렉토리로 관리됨\n\n## 실행 방법\n\n### 1. 이미지를 워크스페이스로 복사 (중요!)\n\nGemini CLI는 샌드박스 제한으로 `~/.hermes/hermes-agent/` 외부 파일을 읽지 못함. 반드시 먼저 복사해야 함.\n\n```bash\ncp /path/to/source/image.jpg /Users/hjshin/.hermes/hermes-agent/tmp_vision.jpg\n```\n\n### 2. Gemini CLI 실행\n\n```bash\ncd /Users/hjshin/.hermes/hermes-agent && gemini -p \"이 이미지를 한국어로 자세히 분석해줘. 파일: tmp_vision.jpg\"\n```\n\n### 3. 임시 파일 정리\n\n```bash\nrm /Users/hjshin/.hermes/hermes-agent/tmp_vision.jpg\n```\n\n## 파이프라인 (한 줄 실행)\n\n```bash\ncp IMAGE_PATH ~/.hermes/hermes-agent/tmp_vision.jpg && cd ~/.hermes/hermes-agent && gemini -p \"PROMPT. 파일: tmp_vision.jpg\" && rm ~/.hermes/hermes-agent/tmp_vision.jpg\n```\n\n## 주의사항\n\n- **샌드박스 제한:** 반드시 `~/.hermes/hermes-agent/` 내부에 파일을 복사 후 분석할 것\n- **할루시네이션 주의:** OpenRouter(gemini-3-flash-preview)보다 할루시네이션 빈도가 높을 수 있음\n- **토큰 제한:** API 무료 티어 기준 1,000건/일, 초과 시 4초 대기 후 재시도\n- **실행 디렉토리:** `cd ~/.hermes/hermes-agent` 필수 (워크스페이스 루트여야 함)\n- **시간 초과:** 분석에 30-60초 소요될 수 있음. `timeout=90` 권장\n\n## 비교: Gemini CLI vs vision_analyze (OpenRouter)\n\n| 항목 | Gemini CLI | vision_analyze |\n|---|---|---|\n| 모델 | Gemini 3 (기본) | gemini-3-flash-preview |\n| 비용 | 무료 (1,000건/일) | OpenRouter 크레딧 소모 |\n| 정확도 | 보통 (할루시네이션 가능) | 높음 |\n| 속도 | 느림 (30-60초) | 빠름 |\n| 파일 접근 | 워크스페이스 내부만 | 제한 없음 |",
+      "reading_time_minutes": 1.3,
+      "line_count": 66,
+      "created_at": 1776749838
+    },
+    {
       "name": "gemma4-vision",
       "slug": "gemma4-vision",
       "category": "automation",
@@ -617,7 +637,7 @@
       "content": "# 이미지 분석 (OpenRouter 비전)\n\n> ⚠️ **2026-04-16 변경:** 카글 Gemma 4 서버 종속성 제거. 이제 OpenRouter (google/gemini-3-flash-preview)를 통해 이미지를 분석합니다.\n\n## 현재 방식\n\nICBM2의 `vision_analyze` 툴이 자동으로 OpenRouter 비전 모델을 사용합니다.\n\n- **프로바이더:** OpenRouter\n- **모델:** google/gemini-3-flash-preview\n- **설정:** `~/.hermes/config.yaml` → `auxiliary.vision.provider: openrouter`\n\n## 사용 방법\n\n### 1. 텔레그램 이미지 분석\n- 텔레그램으로 이미지를 직접 보내면 자동으로 분석\n- 또는 이미지와 함께 \"이거 분석해줘\" 전송\n\n### 2. vision_analyze 툴 직접 사용\n```\nvision_analyze(image_url=\"/path/to/image.jpg\", question=\"이미지 설명해줘\")\n```\n\n## 레거시: 카글 Gemma 4 서버 (사용 중단)\n\n기존에는 카글 T4 x2 GPU에서 Gemma 4 26B A4B-it을 구동했으나, 아래 이유로 사용 중단:\n- 카글 세션 40분 유휴 타임아웃 → 서버 자동 종료\n- 주간 GPU 30시간 제한 → 상시 서버 유지 불가\n- ICBM2가 서버를 원격 재시작할 수 없음\n\n### 레거시 스크립트 (참고용)\n- `~/.hermes/scripts/kaggle_account2_gemma4_final.py` — 카글 노트북 레시피\n- `~/.hermes/scripts/kaggle_account2_gemma4_multimodal.py` — 대체 레시피\n- `~/.hermes/scripts/gemma-4-26b-a4b-it-gguf.ipynb` — Jupyter 노트북",
       "reading_time_minutes": 1,
       "line_count": 40,
-      "created_at": 1776285448
+      "created_at": 1776748750
     },
     {
       "name": "github-portfolio-planner",

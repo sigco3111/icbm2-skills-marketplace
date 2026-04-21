@@ -107,6 +107,12 @@
     "size_human": "0.8 KB",
     "file_count": 1
   },
+  "gemini-cli-vision": {
+    "filename": "gemini-cli-vision.zip",
+    "size_bytes": 1370,
+    "size_human": "1.3 KB",
+    "file_count": 1
+  },
   "gemma4-vision": {
     "filename": "gemma4-vision.zip",
     "size_bytes": 2715,
