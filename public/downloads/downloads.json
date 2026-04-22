@@ -175,8 +175,8 @@
   },
   "notebooklm": {
     "filename": "notebooklm.zip",
-    "size_bytes": 5505,
-    "size_human": "5.4 KB",
+    "size_bytes": 5677,
+    "size_human": "5.5 KB",
     "file_count": 1
   },
   "notion-dashboard": {
@@ -457,7 +457,7 @@
   },
   "vercel": {
     "filename": "vercel.zip",
-    "size_bytes": 1499,
+    "size_bytes": 1506,
     "size_human": "1.5 KB",
     "file_count": 1
   },
