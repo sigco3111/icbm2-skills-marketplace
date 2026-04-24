@@ -125,6 +125,12 @@
     "size_human": "2.2 KB",
     "file_count": 1
   },
+  "github-trending-duplicate-prevention": {
+    "filename": "github-trending-duplicate-prevention.zip",
+    "size_bytes": 2415,
+    "size_human": "2.4 KB",
+    "file_count": 1
+  },
   "invest-memo": {
     "filename": "invest-memo.zip",
     "size_bytes": 1601,
@@ -175,8 +181,8 @@
   },
   "notebooklm": {
     "filename": "notebooklm.zip",
-    "size_bytes": 5677,
-    "size_human": "5.5 KB",
+    "size_bytes": 5691,
+    "size_human": "5.6 KB",
     "file_count": 1
   },
   "notion-dashboard": {
@@ -225,6 +231,12 @@
     "filename": "tech-doc-translator.zip",
     "size_bytes": 3625,
     "size_human": "3.5 KB",
+    "file_count": 1
+  },
+  "tistory-failover": {
+    "filename": "tistory-failover.zip",
+    "size_bytes": 871,
+    "size_human": "0.9 KB",
     "file_count": 1
   },
   "tistory-publisher": {
@@ -442,6 +454,18 @@
     "size_bytes": 1458,
     "size_human": "1.4 KB",
     "file_count": 1
+  },
+  "opencode-nvidia-setup": {
+    "filename": "opencode-nvidia-setup.zip",
+    "size_bytes": 1512,
+    "size_human": "1.5 KB",
+    "file_count": 1
+  },
+  "readme-changelog-automation": {
+    "filename": "readme-changelog-automation.zip",
+    "size_bytes": 2193,
+    "size_human": "2.1 KB",
+    "file_count": 2
   },
   "skill-security-audit": {
     "filename": "skill-security-audit.zip",
