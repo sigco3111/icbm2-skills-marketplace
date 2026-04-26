@@ -185,6 +185,12 @@
     "size_human": "5.6 KB",
     "file_count": 1
   },
+  "notebooklm-youtube-automation": {
+    "filename": "notebooklm-youtube-automation.zip",
+    "size_bytes": 2288,
+    "size_human": "2.2 KB",
+    "file_count": 1
+  },
   "notion-dashboard": {
     "filename": "notion-dashboard.zip",
     "size_bytes": 2463,
@@ -699,6 +705,12 @@
     "filename": "heartmula.zip",
     "size_bytes": 3213,
     "size_human": "3.1 KB",
+    "file_count": 1
+  },
+  "notebooklm-video-upload": {
+    "filename": "notebooklm-video-upload.zip",
+    "size_bytes": 1696,
+    "size_human": "1.7 KB",
     "file_count": 1
   },
   "songsee": {

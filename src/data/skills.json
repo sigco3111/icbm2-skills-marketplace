@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-24T18:00:31.815560+00:00",
-  "total_skills": 170,
+  "generated_at": "2026-04-26T18:00:47.748117+00:00",
+  "total_skills": 172,
   "total_categories": 42,
   "categories": [
     {
       "name": "automation",
       "slug": "automation",
-      "count": 41
+      "count": 42
     },
     {
       "name": "mlops",
@@ -44,6 +44,11 @@
       "count": 7
     },
     {
+      "name": "media",
+      "slug": "media",
+      "count": 5
+    },
+    {
       "name": "research",
       "slug": "research",
       "count": 5
@@ -51,11 +56,6 @@
     {
       "name": "apple",
       "slug": "apple",
-      "count": 4
-    },
-    {
-      "name": "media",
-      "slug": "media",
       "count": 4
     },
     {
@@ -870,6 +870,26 @@
       "reading_time_minutes": 7.9,
       "line_count": 322,
       "created_at": 1776973384
+    },
+    {
+      "name": "notebooklm-youtube-automation",
+      "slug": "notebooklm-youtube-automation",
+      "category": "automation",
+      "category_slug": "automation",
+      "dir_name": "notebooklm-youtube-automation",
+      "description": "NotebookLM 에서 생성한 비디오 오버뷰를 자동으로 YouTube 에 업로드하는 워크플로우",
+      "description_ko": "",
+      "description_en": "NotebookLM 에서 생성한 비디오 오버뷰를 자동으로 YouTube 에 업로드하는 워크플로우",
+      "version": "",
+      "author": "",
+      "license": "",
+      "tags": [],
+      "related_skills": [],
+      "prerequisites": {},
+      "content": "# NotebookLM YouTube 자동화 워크플로우\n\n## 목적\nNotebookLM 에서 생성한 비디오 오버뷰를 자동으로 YouTube 에 업로드하는 워크플로우.\n\n## 워크플로우 개요\n1. **준비 (16:00):** ICBM2 가 NotebookLM 에 4 개 노트북 생성 + 소스 추가\n2. **생성 (주인님):** 주인님이 NotebookLM 에서 비디오 오버뷰 생성\n3. **업로드 (00:15):** ICBM2 가 다운로드 → YouTube 업로드 → 노트북 삭제\n\n## 단계별 상세\n\n### 1. 노트북 준비 (16:00 크론 잡)\n**스크립트:** `~/.hermes/scripts/notebooklm_prepare.py`\n**작업:**\n- 4 개 노트북 생성:\n  - 데일리 테크 브리핑\n  - AI 심층 리뷰\n  - AI 뉴스\n  - GitHub 트렌딩\n- 각 노트북에 소스 4 개 추가 (웹 스크래핑 또는 RSS 기반)\n- 노트북 ID 를 `~/.hermes/data/notebooklm_ids.json` 에 저장\n\n**명령어:**\n```bash\npython3 ~/.hermes/scripts/notebooklm_prepare.py\n```\n\n### 2. 주인님 생성 (수동)\n**작업:**\n- NotebookLM 접속 (`https://notebooklm.google.com`)\n- 각 노트북에서 **비디오 오버뷰** 생성 클릭\n- 생성 완료 대기 (보통 5-15 분)\n\n**체크리스트:**\n- [ ] 데일리 테크 브리핑 - 비디오 오버뷰 생성 완료\n- [ ] AI 심층 리뷰 - 비디오 오버뷰 생성 완료\n- [ ] AI 뉴스 - 비디오 오버뷰 생성 완료\n- [ ] GitHub 트렌딩 - 비디오 오버뷰 생성 완료\n\n### 3. YouTube 업로드 (00:15 크론 잡)\n**스크립트:** `~/.hermes/scripts/notebooklm_upload.py`\n**작업:**\n- 저장된 노트북 ID 로 비디오 오버뷰 다운로드\n- AI 뉴스 또는 GitHub 트렌딩 중 하나를 선택하여 숏츠로 편집 (60 초 이하)\n- YouTube 에 업로드:\n  - 일반 영상 4 개 (데일리 테크, AI 심층 리뷰, AI 뉴스, GitHub 트렌딩)\n  - 숏츠 1 개 (AI 뉴스 또는 GitHub 트렌딩 하이라이트)\n- 업로드 완료 후 노트북 자동 삭제\n\n**명령어:**\n```bash\npython3 ~/.hermes/scripts/notebooklm_upload.py\n```\n\n## 파일 구조\n```\n~/.hermes/\n├── scripts/\n│   ├── notebooklm_prepare.py   # 노트북 생성 + 소스 추가\n│   └── notebooklm_upload.py    # 다운로드 + 업로드 + 삭제\n├── data/\n│   └── notebooklm_ids.json     # 노트북 ID 저장\n└── secrets/\n    └── youtube_token.pickle    # YouTube OAuth 토큰\n```\n\n## 오류 처리 및 개선 사항 (2026-04-26)\n\n### ✅ 동적 ID 조회 (주요 개선)\n- **문제**: `notebook_ids.json` 의 정적 ID 가 만료/변경되어 다운로드 실패\n- **해결**: 업로드 전 `notebooklm list --json`으로 최신 ID 실시간 검색 (제목 키워드 매칭)\n- **효과**: ID 변경 문제 자동 해결\n\n### ✅ 상태 검증\n- **문제**: 비디오 생성 안됨에도 다운로드 시도 → 실패\n- **해결**: `notebooklm download video --dry-run`으로 생성 완료 확인 후 다운로드\n- **효과**: 불필요한 시도 방지, 명확한 오류 메시지\n\n### ✅ 자동 복구 로직\n- **문제**: 다운로드 실패 시 즉시 중단\n- **해결**: 2 단계 재시도 전략\n  1. `--notebook` 옵션으로 직접 다운로드 시도\n  2. `notebooklm use` 후 다운로드 시도\n- **효과**: 일시적 오류 자동 복구\n\n### ✅ 안전 삭제\n- **문제**: 실패한 노트북도 삭제되어 복구 불가\n- **해결**: 업로드 성공한 노트북만 삭제, 실패 건은 유지\n- **효과**: 수동 복구 가능\n\n### ⚠️ video overview 미생성 시 우회 파이프라인\n- **상황**: NotebookLM에서 비디오 오버뷰가 생성되지 않은 경우 (00:15 크론에서 4/4 실패 기록)\n- **감지**: `notebooklm download video --dry-run`으로 생성 완료 여부 확인\n- **우회流程**:\n  1. 팟캐스트 오디오 다운로드 시도\n  2. 팟캐스트 실패 시 → Manim 영상 생성 파이프라인으로 전환\n  3. Manim 파이프라인: `~/.hermes/scripts/manim_video_pipeline.py` 실행\n- **스크립트 수정 필요**: `notebooklm_upload.py`에 우회 로직 자동 전환 코드 추가\n\n### 📢 알림 시스템\n- **비디오 오버뷰 미생성**: 스크립트가 다운로드 실패 시 주인님께 텔레그램 알림 전송 (노트북 URL + 생성 프롬프트 포함)\n- **YouTube 인증 만료**: `python3 /tmp/youtube_auth_manual.py` 실행하여 수동 인증\n- **노트북 없음**: `notebooklm_prepare.py` 재실행 요청\n\n## 주의사항\n- **생성은 주인님만**: ICBM2 는 생성 기능 없음 (NotebookLM API 제한)\n- **비디오 오버뷰만**: 팟캐스트는 사용하지 않음 (타임아웃 위험)\n- **자동 삭제**: 업로드 완료 후 노트북은 자동 삭제되어 공간 확보\n- **숏츠 선택**: AI 뉴스와 GitHub 트렌딩 중 하나를 자동 선택 (매일 교차 또는 랜덤)\n- **ID 관리**: 더 이상 정적 ID 파일 불필요, 실시간 검색 사용 (2026-04-26 개선)\n- **오류 복구**: 다운로드 실패 시 자동 2 단계 재시도, 실패 시 텔레그램 알림\n\n## 크론 잡 설정\n```bash\n# 노트북 준비 (매일 16:00)\n0 16 * * * cd ~/.hermes && python3 scripts/notebooklm_prepare.py >> logs/notebooklm_prepare.log 2>&1\n\n# YouTube 업로드 (매일 00:15)\n15 0 * * * cd ~/.hermes && python3 scripts/notebooklm_upload.py >> logs/notebooklm_upload.log 2>&1\n```",
+      "reading_time_minutes": 3.2,
+      "line_count": 127,
+      "created_at": 1777209477
     },
     {
       "name": "notion-dashboard",
@@ -2628,6 +2648,26 @@
       "reading_time_minutes": 4.1,
       "line_count": 170,
       "created_at": 1775442712
+    },
+    {
+      "name": "notebooklm-video-upload",
+      "slug": "notebooklm-video-upload",
+      "category": "media",
+      "category_slug": "media",
+      "dir_name": "notebooklm-video-upload",
+      "description": "NotebookLM에서 생성한 비디오 오버뷰를 YouTube에 업로드하는 자동화 워크플로우",
+      "description_ko": "",
+      "description_en": "NotebookLM에서 생성한 비디오 오버뷰를 YouTube에 업로드하는 자동화 워크플로우",
+      "version": "1.0",
+      "author": "",
+      "license": "",
+      "tags": [],
+      "related_skills": [],
+      "prerequisites": {},
+      "content": "# NotebookLM Video Upload Workflow\n\nNotebookLM에서 생성한 비디오 오버뷰를 YouTube에 업로드하는 자동화 워크플로우.\n\n## Trigger Conditions\n- 주인님이 NotebookLM 비디오 오버뷰 URL을 제공\n- \"노트북엘엠 영상 올려줘\", \"비디오 오버뷰 업로드\" 등의 요청\n\n## Workflow Steps\n\n### 1. NotebookLM 비디오 다운로드\n```bash\n# 노트북 ID 추출 (URL에서)\n# 예: https://notebooklm.google.com/notebook/db759654-8218-4082-b936-7189bc2412c3\n# ID: db759654-8218-4082-b936-7189bc2412c3\n\n# 스크립트 실행\npython3 ~/.hermes/scripts/notebooklm_download.py --notebook-id <ID>\n```\n\n### 2. YouTube 업로드 (일반 영상)\n```bash\npython3 ~/.hermes/skills/creative/youtube-uploader/scripts/upload.py \\\n  --file <downloaded_video.mp4> \\\n  --title \"한국어 제목: 서브타이틀 🚀\" \\\n  --description \"상세 설명 포함\" \\\n  --tags \"태그1,태그2,태그3\" \\\n  --category \"Science & Technology\" \\\n  --privacy \"public\"\n```\n\n### 3. 숏츠 생성 및 업로드\n```bash\n# 숏츠 생성 (60초, 세로 9:16)\nffmpeg -i <original_video.mp4> -vf \"scale=720:1280:force_original_aspect_ratio=decrease,pad=720:1280:(ow-iw)/2:(oh-ih)/2,crop=720:1280\" -t 60 <shorts.mp4>\n\n# 숏츠 업로드\npython3 ~/.hermes/skills/creative/youtube-uploader/scripts/upload.py \\\n  --file <shorts.mp4> \\\n  --title \"주제 60 초 한 방! 🚀 #shorts\" \\\n  --description \"일반 영상 링크 포함\" \\\n  --tags \"shorts,주제\" \\\n  --category \"Science & Technology\" \\\n  --privacy \"public\"\n```\n\n### 4. 임시 파일 정리\n- 업로드 완료 후 `/tmp/icbm_notebooklm/` 폴더의 임시 파일은 수동으로 삭제하거나, 별도 정리 스크립트 사용\n- **주의:** `rm -rf` 명령어는 위험하므로 자동화 스크립트에서는 사용하지 않음\n\n## Title Guidelines\n- **일반 영상:** \"주제: 서브타이틀 🚀\" (5 분 이상)\n- **숏츠:** \"주제 60 초 한 방! 🚀 #shorts\" (60 초 이하)\n- **카테고리:** Science & Technology (기본)\n- **태그:** 주제 관련 한국어/영어 키워드 (5-10 개)\n\n## Pitfalls\n- **URL 추출:** iOS 앱에서는 공유 버튼이 없어 URL 직접 복사 불가 → 주인님이 브라우저에서 URL 복사 필요\n- **비디오 생성:** NotebookLM에서 비디오 오버뷰가 생성되지 않으면 다운로드 불가 → 주인님이 직접 생성 필요\n- **임시 파일:** `/tmp` 폴더는 재부팅 시 삭제되므로, 영구 보관 필요 시 다른 위치로 이동\n- **인증:** YouTube OAuth 토큰 만료 시 수동 인증 스크립트 사용 (`~/.hermes/secrets/youtube_token.pickle`)\n\n## Verification\n- YouTube URL 확인 (업로드 완료 후)\n- 영상 길이 확인 (일반: 5 분 이상, 숏츠: 60 초 이하)\n- 프라이버시 설정 확인 (Public)\n- 태그 및 카테고리 확인\n\n## Example\n```\n입력: \"https://notebooklm.google.com/notebook/db759654-8218-4082-b936-7189bc2412c3\"\n출력: \n  - 일반 영상: https://www.youtube.com/watch?v=xb9NiM6CR2Y\n  - 숏츠: https://www.youtube.com/watch?v=H79eDdpPN34\n```",
+      "reading_time_minutes": 1.6,
+      "line_count": 82,
+      "created_at": 1777161024
     },
     {
       "name": "songsee",
