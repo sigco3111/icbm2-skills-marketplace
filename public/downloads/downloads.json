@@ -61,8 +61,8 @@
   },
   "automation-healthcheck": {
     "filename": "automation-healthcheck.zip",
-    "size_bytes": 2220,
-    "size_human": "2.2 KB",
+    "size_bytes": 2930,
+    "size_human": "2.9 KB",
     "file_count": 1
   },
   "chrome-automation": {
@@ -85,8 +85,8 @@
   },
   "dev-news-to-wiki": {
     "filename": "dev-news-to-wiki.zip",
-    "size_bytes": 1461,
-    "size_human": "1.4 KB",
+    "size_bytes": 2088,
+    "size_human": "2.0 KB",
     "file_count": 1
   },
   "docker-manager": {
@@ -187,14 +187,14 @@
   },
   "notebooklm": {
     "filename": "notebooklm.zip",
-    "size_bytes": 3551,
-    "size_human": "3.5 KB",
+    "size_bytes": 3746,
+    "size_human": "3.7 KB",
     "file_count": 1
   },
   "notebooklm-youtube-automation": {
     "filename": "notebooklm-youtube-automation.zip",
-    "size_bytes": 2386,
-    "size_human": "2.3 KB",
+    "size_bytes": 2937,
+    "size_human": "2.9 KB",
     "file_count": 1
   },
   "notion-dashboard": {
@@ -241,8 +241,8 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 7580,
-    "size_human": "7.4 KB",
+    "size_bytes": 9156,
+    "size_human": "8.9 KB",
     "file_count": 1
   },
   "trading-strategy": {
@@ -433,8 +433,8 @@
   },
   "youtube-shorts-factory": {
     "filename": "youtube-shorts-factory.zip",
-    "size_bytes": 2207,
-    "size_human": "2.2 KB",
+    "size_bytes": 2594,
+    "size_human": "2.5 KB",
     "file_count": 1
   },
   "youtube-uploader": {
@@ -907,8 +907,8 @@
   },
   "notion": {
     "filename": "notion.zip",
-    "size_bytes": 3534,
-    "size_human": "3.5 KB",
+    "size_bytes": 5091,
+    "size_human": "5.0 KB",
     "file_count": 2
   },
   "ocr-and-documents": {
@@ -1045,8 +1045,8 @@
   },
   "video-editing": {
     "filename": "video-editing.zip",
-    "size_bytes": 3778,
-    "size_human": "3.7 KB",
+    "size_bytes": 3970,
+    "size_human": "3.9 KB",
     "file_count": 1
   }
 }
