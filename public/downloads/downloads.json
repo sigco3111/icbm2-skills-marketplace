@@ -31,7 +31,7 @@
   },
   "agent-benchmark-tracker": {
     "filename": "agent-benchmark-tracker.zip",
-    "size_bytes": 3214,
+    "size_bytes": 3210,
     "size_human": "3.1 KB",
     "file_count": 1
   },
@@ -43,7 +43,7 @@
   },
   "auto-researcher": {
     "filename": "auto-researcher.zip",
-    "size_bytes": 2575,
+    "size_bytes": 2571,
     "size_human": "2.5 KB",
     "file_count": 1
   },
@@ -55,13 +55,13 @@
   },
   "automation-decommission": {
     "filename": "automation-decommission.zip",
-    "size_bytes": 4367,
-    "size_human": "4.3 KB",
+    "size_bytes": 4836,
+    "size_human": "4.7 KB",
     "file_count": 1
   },
   "automation-healthcheck": {
     "filename": "automation-healthcheck.zip",
-    "size_bytes": 2930,
+    "size_bytes": 2926,
     "size_human": "2.9 KB",
     "file_count": 1
   },
@@ -79,14 +79,14 @@
   },
   "daily-self-review": {
     "filename": "daily-self-review.zip",
-    "size_bytes": 2995,
-    "size_human": "2.9 KB",
+    "size_bytes": 3210,
+    "size_human": "3.1 KB",
     "file_count": 1
   },
   "dev-news-to-wiki": {
     "filename": "dev-news-to-wiki.zip",
-    "size_bytes": 2088,
-    "size_human": "2.0 KB",
+    "size_bytes": 2429,
+    "size_human": "2.4 KB",
     "file_count": 1
   },
   "docker-manager": {
@@ -133,13 +133,13 @@
   },
   "invest-memo": {
     "filename": "invest-memo.zip",
-    "size_bytes": 1601,
+    "size_bytes": 1597,
     "size_human": "1.6 KB",
     "file_count": 1
   },
   "ios-trend-digest": {
     "filename": "ios-trend-digest.zip",
-    "size_bytes": 1772,
+    "size_bytes": 1769,
     "size_human": "1.7 KB",
     "file_count": 1
   },
@@ -169,14 +169,14 @@
   },
   "learning-log": {
     "filename": "learning-log.zip",
-    "size_bytes": 1663,
+    "size_bytes": 1660,
     "size_human": "1.6 KB",
     "file_count": 1
   },
   "memory-error-tracker": {
     "filename": "memory-error-tracker.zip",
-    "size_bytes": 1692,
-    "size_human": "1.7 KB",
+    "size_bytes": 2238,
+    "size_human": "2.2 KB",
     "file_count": 1
   },
   "morning-briefing": {
@@ -187,14 +187,14 @@
   },
   "notebooklm": {
     "filename": "notebooklm.zip",
-    "size_bytes": 3746,
-    "size_human": "3.7 KB",
+    "size_bytes": 5427,
+    "size_human": "5.3 KB",
     "file_count": 1
   },
   "notebooklm-youtube-automation": {
     "filename": "notebooklm-youtube-automation.zip",
-    "size_bytes": 2937,
-    "size_human": "2.9 KB",
+    "size_bytes": 6385,
+    "size_human": "6.2 KB",
     "file_count": 1
   },
   "notion-dashboard": {
@@ -205,13 +205,13 @@
   },
   "portfolio-rebalancer": {
     "filename": "portfolio-rebalancer.zip",
-    "size_bytes": 2829,
+    "size_bytes": 2824,
     "size_human": "2.8 KB",
     "file_count": 1
   },
   "smart-summary": {
     "filename": "smart-summary.zip",
-    "size_bytes": 1902,
+    "size_bytes": 1900,
     "size_human": "1.9 KB",
     "file_count": 1
   },
@@ -229,7 +229,7 @@
   },
   "tech-doc-translator": {
     "filename": "tech-doc-translator.zip",
-    "size_bytes": 3625,
+    "size_bytes": 3621,
     "size_human": "3.5 KB",
     "file_count": 1
   },
@@ -241,8 +241,8 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 9156,
-    "size_human": "8.9 KB",
+    "size_bytes": 13410,
+    "size_human": "13.1 KB",
     "file_count": 1
   },
   "trading-strategy": {
@@ -433,8 +433,8 @@
   },
   "youtube-shorts-factory": {
     "filename": "youtube-shorts-factory.zip",
-    "size_bytes": 2594,
-    "size_human": "2.5 KB",
+    "size_bytes": 3360,
+    "size_human": "3.3 KB",
     "file_count": 1
   },
   "youtube-uploader": {
@@ -493,8 +493,8 @@
   },
   "skill-security-audit": {
     "filename": "skill-security-audit.zip",
-    "size_bytes": 1187,
-    "size_human": "1.2 KB",
+    "size_bytes": 1371,
+    "size_human": "1.3 KB",
     "file_count": 1
   },
   "skills-showcase": {
@@ -505,7 +505,7 @@
   },
   "vercel": {
     "filename": "vercel.zip",
-    "size_bytes": 1860,
+    "size_bytes": 1820,
     "size_human": "1.8 KB",
     "file_count": 1
   },
@@ -1045,8 +1045,8 @@
   },
   "video-editing": {
     "filename": "video-editing.zip",
-    "size_bytes": 3970,
-    "size_human": "3.9 KB",
+    "size_bytes": 4413,
+    "size_human": "4.3 KB",
     "file_count": 1
   }
 }
