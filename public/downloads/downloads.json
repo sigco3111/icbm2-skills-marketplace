@@ -79,8 +79,8 @@
   },
   "daily-self-review": {
     "filename": "daily-self-review.zip",
-    "size_bytes": 3210,
-    "size_human": "3.1 KB",
+    "size_bytes": 1455,
+    "size_human": "1.4 KB",
     "file_count": 1
   },
   "dev-news-to-wiki": {
@@ -193,8 +193,8 @@
   },
   "notebooklm-youtube-automation": {
     "filename": "notebooklm-youtube-automation.zip",
-    "size_bytes": 6385,
-    "size_human": "6.2 KB",
+    "size_bytes": 6953,
+    "size_human": "6.8 KB",
     "file_count": 1
   },
   "notion-dashboard": {
@@ -241,8 +241,8 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 13410,
-    "size_human": "13.1 KB",
+    "size_bytes": 14009,
+    "size_human": "13.7 KB",
     "file_count": 1
   },
   "trading-strategy": {
