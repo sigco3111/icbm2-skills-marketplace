@@ -187,20 +187,20 @@
   },
   "nightly-maintenance-workflow": {
     "filename": "nightly-maintenance-workflow.zip",
-    "size_bytes": 2658,
-    "size_human": "2.6 KB",
+    "size_bytes": 3104,
+    "size_human": "3.0 KB",
     "file_count": 1
   },
   "notebooklm": {
     "filename": "notebooklm.zip",
-    "size_bytes": 6924,
-    "size_human": "6.8 KB",
+    "size_bytes": 8288,
+    "size_human": "8.1 KB",
     "file_count": 1
   },
   "notebooklm-youtube-automation": {
     "filename": "notebooklm-youtube-automation.zip",
-    "size_bytes": 6953,
-    "size_human": "6.8 KB",
+    "size_bytes": 7252,
+    "size_human": "7.1 KB",
     "file_count": 1
   },
   "notion-dashboard": {
@@ -247,8 +247,8 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 15269,
-    "size_human": "14.9 KB",
+    "size_bytes": 16796,
+    "size_human": "16.4 KB",
     "file_count": 1
   },
   "trading-strategy": {
@@ -271,8 +271,8 @@
   },
   "weekly-tech-digest": {
     "filename": "weekly-tech-digest.zip",
-    "size_bytes": 1877,
-    "size_human": "1.8 KB",
+    "size_bytes": 3930,
+    "size_human": "3.8 KB",
     "file_count": 1
   },
   "agent-prompts": {
@@ -1051,8 +1051,8 @@
   },
   "video-editing": {
     "filename": "video-editing.zip",
-    "size_bytes": 4413,
-    "size_human": "4.3 KB",
+    "size_bytes": 4927,
+    "size_human": "4.8 KB",
     "file_count": 1
   }
 }
