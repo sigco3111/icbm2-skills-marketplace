@@ -7,19 +7,19 @@
   },
   "apple-notes": {
     "filename": "apple-notes.zip",
-    "size_bytes": 1113,
+    "size_bytes": 1109,
     "size_human": "1.1 KB",
     "file_count": 1
   },
   "apple-reminders": {
     "filename": "apple-reminders.zip",
-    "size_bytes": 1299,
+    "size_bytes": 1293,
     "size_human": "1.3 KB",
     "file_count": 1
   },
   "findmy": {
     "filename": "findmy.zip",
-    "size_bytes": 1740,
+    "size_bytes": 1731,
     "size_human": "1.7 KB",
     "file_count": 1
   },
@@ -55,14 +55,14 @@
   },
   "automation-decommission": {
     "filename": "automation-decommission.zip",
-    "size_bytes": 4836,
-    "size_human": "4.7 KB",
+    "size_bytes": 5679,
+    "size_human": "5.5 KB",
     "file_count": 1
   },
   "automation-healthcheck": {
     "filename": "automation-healthcheck.zip",
-    "size_bytes": 2926,
-    "size_human": "2.9 KB",
+    "size_bytes": 3407,
+    "size_human": "3.3 KB",
     "file_count": 1
   },
   "chrome-automation": {
@@ -85,8 +85,8 @@
   },
   "dev-news-to-wiki": {
     "filename": "dev-news-to-wiki.zip",
-    "size_bytes": 2429,
-    "size_human": "2.4 KB",
+    "size_bytes": 2958,
+    "size_human": "2.9 KB",
     "file_count": 1
   },
   "docker-manager": {
@@ -191,16 +191,10 @@
     "size_human": "3.0 KB",
     "file_count": 1
   },
-  "notebooklm": {
-    "filename": "notebooklm.zip",
-    "size_bytes": 8288,
-    "size_human": "8.1 KB",
-    "file_count": 1
-  },
   "notebooklm-youtube-automation": {
     "filename": "notebooklm-youtube-automation.zip",
-    "size_bytes": 7252,
-    "size_human": "7.1 KB",
+    "size_bytes": 8285,
+    "size_human": "8.1 KB",
     "file_count": 1
   },
   "notion-dashboard": {
@@ -247,8 +241,8 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 16796,
-    "size_human": "16.4 KB",
+    "size_bytes": 18165,
+    "size_human": "17.7 KB",
     "file_count": 1
   },
   "trading-strategy": {
@@ -259,8 +253,8 @@
   },
   "weekly-automation-report": {
     "filename": "weekly-automation-report.zip",
-    "size_bytes": 1473,
-    "size_human": "1.4 KB",
+    "size_bytes": 1537,
+    "size_human": "1.5 KB",
     "file_count": 1
   },
   "weekly-self-report": {
@@ -283,13 +277,13 @@
   },
   "claude-code": {
     "filename": "claude-code.zip",
-    "size_bytes": 12817,
+    "size_bytes": 12785,
     "size_human": "12.5 KB",
     "file_count": 1
   },
   "codex": {
     "filename": "codex.zip",
-    "size_bytes": 1769,
+    "size_bytes": 1782,
     "size_human": "1.7 KB",
     "file_count": 1
   },
@@ -323,58 +317,64 @@
     "size_human": "1.5 KB",
     "file_count": 1
   },
-  "ace-step-music": {
-    "filename": "ace-step-music.zip",
-    "size_bytes": 2413,
-    "size_human": "2.4 KB",
-    "file_count": 1
-  },
   "architecture-diagram": {
     "filename": "architecture-diagram.zip",
-    "size_bytes": 6315,
-    "size_human": "6.2 KB",
+    "size_bytes": 6122,
+    "size_human": "6.0 KB",
     "file_count": 2
   },
   "ascii-art": {
     "filename": "ascii-art.zip",
-    "size_bytes": 4578,
-    "size_human": "4.5 KB",
+    "size_bytes": 4535,
+    "size_human": "4.4 KB",
     "file_count": 1
   },
   "ascii-video": {
     "filename": "ascii-video.zip",
-    "size_bytes": 117467,
+    "size_bytes": 117487,
     "size_human": "114.7 KB",
     "file_count": 10
   },
   "baoyu-comic": {
     "filename": "baoyu-comic.zip",
-    "size_bytes": 59769,
-    "size_human": "58.4 KB",
+    "size_bytes": 59713,
+    "size_human": "58.3 KB",
     "file_count": 35
   },
   "baoyu-infographic": {
     "filename": "baoyu-infographic.zip",
-    "size_bytes": 43617,
-    "size_human": "42.6 KB",
+    "size_bytes": 43564,
+    "size_human": "42.5 KB",
     "file_count": 47
+  },
+  "claude-design": {
+    "filename": "claude-design.zip",
+    "size_bytes": 8228,
+    "size_human": "8.0 KB",
+    "file_count": 1
+  },
+  "comfyui": {
+    "filename": "comfyui.zip",
+    "size_bytes": 92548,
+    "size_human": "90.4 KB",
+    "file_count": 32
   },
   "ideation": {
     "filename": "ideation.zip",
-    "size_bytes": 5210,
+    "size_bytes": 5217,
     "size_human": "5.1 KB",
     "file_count": 2
   },
   "design-md": {
     "filename": "design-md.zip",
-    "size_bytes": 4681,
-    "size_human": "4.6 KB",
+    "size_bytes": 4651,
+    "size_human": "4.5 KB",
     "file_count": 2
   },
   "excalidraw": {
     "filename": "excalidraw.zip",
-    "size_bytes": 10079,
-    "size_human": "9.8 KB",
+    "size_bytes": 10088,
+    "size_human": "9.9 KB",
     "file_count": 5
   },
   "google-veo-api": {
@@ -382,6 +382,12 @@
     "size_bytes": 1239,
     "size_human": "1.2 KB",
     "file_count": 1
+  },
+  "humanizer": {
+    "filename": "humanizer.zip",
+    "size_bytes": 12677,
+    "size_human": "12.4 KB",
+    "file_count": 2
   },
   "image-batch-processor": {
     "filename": "image-batch-processor.zip",
@@ -403,21 +409,27 @@
   },
   "p5js": {
     "filename": "p5js.zip",
-    "size_bytes": 64687,
+    "size_bytes": 64712,
     "size_human": "63.2 KB",
     "file_count": 17
   },
   "pixel-art": {
     "filename": "pixel-art.zip",
-    "size_bytes": 14271,
+    "size_bytes": 14203,
     "size_human": "13.9 KB",
     "file_count": 7
   },
   "popular-web-designs": {
     "filename": "popular-web-designs.zip",
-    "size_bytes": 345845,
-    "size_human": "337.7 KB",
+    "size_bytes": 345984,
+    "size_human": "337.9 KB",
     "file_count": 55
+  },
+  "pretext": {
+    "filename": "pretext.zip",
+    "size_bytes": 28739,
+    "size_human": "28.1 KB",
+    "file_count": 4
   },
   "qwen3-tts": {
     "filename": "qwen3-tts.zip",
@@ -431,23 +443,23 @@
     "size_human": "6.3 KB",
     "file_count": 1
   },
+  "sketch": {
+    "filename": "sketch.zip",
+    "size_bytes": 4398,
+    "size_human": "4.3 KB",
+    "file_count": 1
+  },
   "songwriting-and-ai-music": {
     "filename": "songwriting-and-ai-music.zip",
-    "size_bytes": 5321,
-    "size_human": "5.2 KB",
+    "size_bytes": 5239,
+    "size_human": "5.1 KB",
     "file_count": 1
   },
-  "youtube-shorts-factory": {
-    "filename": "youtube-shorts-factory.zip",
-    "size_bytes": 3360,
-    "size_human": "3.3 KB",
-    "file_count": 1
-  },
-  "youtube-uploader": {
-    "filename": "youtube-uploader.zip",
-    "size_bytes": 8662,
-    "size_human": "8.5 KB",
-    "file_count": 5
+  "touchdesigner-mcp": {
+    "filename": "touchdesigner-mcp.zip",
+    "size_bytes": 101232,
+    "size_human": "98.9 KB",
+    "file_count": 23
   },
   "data-analysis": {
     "filename": "data-analysis.zip",
@@ -457,14 +469,26 @@
   },
   "jupyter-live-kernel": {
     "filename": "jupyter-live-kernel.zip",
-    "size_bytes": 2665,
-    "size_human": "2.6 KB",
+    "size_bytes": 2539,
+    "size_human": "2.5 KB",
     "file_count": 1
   },
   "smart-data-analyzer": {
     "filename": "smart-data-analyzer.zip",
     "size_bytes": 4446,
     "size_human": "4.3 KB",
+    "file_count": 1
+  },
+  "kanban-orchestrator": {
+    "filename": "kanban-orchestrator.zip",
+    "size_bytes": 3666,
+    "size_human": "3.6 KB",
+    "file_count": 1
+  },
+  "kanban-worker": {
+    "filename": "kanban-worker.zip",
+    "size_bytes": 3429,
+    "size_human": "3.3 KB",
     "file_count": 1
   },
   "local-dashboard": {
@@ -523,32 +547,32 @@
   },
   "dogfood": {
     "filename": "dogfood.zip",
-    "size_bytes": 5595,
+    "size_bytes": 5593,
     "size_human": "5.5 KB",
     "file_count": 3
   },
   "himalaya": {
     "filename": "himalaya.zip",
-    "size_bytes": 5446,
-    "size_human": "5.3 KB",
+    "size_bytes": 5371,
+    "size_human": "5.2 KB",
     "file_count": 3
   },
   "minecraft-modpack-server": {
     "filename": "minecraft-modpack-server.zip",
-    "size_bytes": 3250,
-    "size_human": "3.2 KB",
+    "size_bytes": 3219,
+    "size_human": "3.1 KB",
     "file_count": 1
   },
   "pokemon-player": {
     "filename": "pokemon-player.zip",
-    "size_bytes": 4320,
+    "size_bytes": 4257,
     "size_human": "4.2 KB",
     "file_count": 1
   },
   "codebase-inspection": {
     "filename": "codebase-inspection.zip",
-    "size_bytes": 1809,
-    "size_human": "1.8 KB",
+    "size_bytes": 1767,
+    "size_human": "1.7 KB",
     "file_count": 1
   },
   "github-actions": {
@@ -598,12 +622,6 @@
     "size_bytes": 31870,
     "size_human": "31.1 KB",
     "file_count": 10
-  },
-  "adapt": {
-    "filename": "adapt.zip",
-    "size_bytes": 3263,
-    "size_human": "3.2 KB",
-    "file_count": 1
   },
   "animate": {
     "filename": "animate.zip",
@@ -727,27 +745,33 @@
   },
   "heartmula": {
     "filename": "heartmula.zip",
-    "size_bytes": 3213,
+    "size_bytes": 3204,
     "size_human": "3.1 KB",
     "file_count": 1
   },
   "songsee": {
     "filename": "songsee.zip",
-    "size_bytes": 1291,
-    "size_human": "1.3 KB",
+    "size_bytes": 1252,
+    "size_human": "1.2 KB",
     "file_count": 1
   },
   "spotify": {
     "filename": "spotify.zip",
-    "size_bytes": 2809,
+    "size_bytes": 2733,
     "size_human": "2.7 KB",
     "file_count": 1
   },
   "youtube-content": {
     "filename": "youtube-content.zip",
-    "size_bytes": 4292,
+    "size_bytes": 4295,
     "size_human": "4.2 KB",
     "file_count": 3
+  },
+  "minimax-vision": {
+    "filename": "minimax-vision.zip",
+    "size_bytes": 1530,
+    "size_human": "1.5 KB",
+    "file_count": 1
   },
   "modal-serverless-gpu": {
     "filename": "modal-serverless-gpu.zip",
@@ -757,20 +781,20 @@
   },
   "evaluating-llms-harness": {
     "filename": "evaluating-llms-harness.zip",
-    "size_bytes": 20061,
+    "size_bytes": 20090,
     "size_human": "19.6 KB",
     "file_count": 5
   },
   "weights-and-biases": {
     "filename": "weights-and-biases.zip",
-    "size_bytes": 17742,
+    "size_bytes": 17718,
     "size_human": "17.3 KB",
     "file_count": 4
   },
   "huggingface-hub": {
     "filename": "huggingface-hub.zip",
-    "size_bytes": 1926,
-    "size_human": "1.9 KB",
+    "size_bytes": 1891,
+    "size_human": "1.8 KB",
     "file_count": 1
   },
   "gguf-quantization": {
@@ -793,14 +817,14 @@
   },
   "obliteratus": {
     "filename": "obliteratus.zip",
-    "size_bytes": 14804,
-    "size_human": "14.5 KB",
+    "size_bytes": 14774,
+    "size_human": "14.4 KB",
     "file_count": 6
   },
   "outlines": {
     "filename": "outlines.zip",
-    "size_bytes": 21470,
-    "size_human": "21.0 KB",
+    "size_bytes": 21434,
+    "size_human": "20.9 KB",
     "file_count": 4
   },
   "serving-llms-vllm": {
@@ -811,8 +835,8 @@
   },
   "audiocraft-audio-generation": {
     "filename": "audiocraft-audio-generation.zip",
-    "size_bytes": 14607,
-    "size_human": "14.3 KB",
+    "size_bytes": 14559,
+    "size_human": "14.2 KB",
     "file_count": 3
   },
   "clip": {
@@ -823,8 +847,8 @@
   },
   "segment-anything-model": {
     "filename": "segment-anything-model.zip",
-    "size_bytes": 14412,
-    "size_human": "14.1 KB",
+    "size_bytes": 14379,
+    "size_human": "14.0 KB",
     "file_count": 3
   },
   "stable-diffusion-image-generation": {
@@ -841,13 +865,13 @@
   },
   "dspy": {
     "filename": "dspy.zip",
-    "size_bytes": 19449,
+    "size_bytes": 19420,
     "size_human": "19.0 KB",
     "file_count": 4
   },
   "axolotl": {
     "filename": "axolotl.zip",
-    "size_bytes": 80981,
+    "size_bytes": 81010,
     "size_human": "79.1 KB",
     "file_count": 5
   },
@@ -871,13 +895,13 @@
   },
   "fine-tuning-with-trl": {
     "filename": "fine-tuning-with-trl.zip",
-    "size_bytes": 18752,
-    "size_human": "18.3 KB",
+    "size_bytes": 18687,
+    "size_human": "18.2 KB",
     "file_count": 7
   },
   "unsloth": {
     "filename": "unsloth.zip",
-    "size_bytes": 500405,
+    "size_bytes": 500381,
     "size_human": "488.7 KB",
     "file_count": 5
   },
@@ -885,6 +909,12 @@
     "filename": "obsidian.zip",
     "size_bytes": 674,
     "size_human": "0.7 KB",
+    "file_count": 1
+  },
+  "airtable": {
+    "filename": "airtable.zip",
+    "size_bytes": 4576,
+    "size_human": "4.5 KB",
     "file_count": 1
   },
   "google-workspace": {
@@ -895,19 +925,19 @@
   },
   "linear": {
     "filename": "linear.zip",
-    "size_bytes": 2959,
+    "size_bytes": 2921,
     "size_human": "2.9 KB",
     "file_count": 1
   },
   "maps": {
     "filename": "maps.zip",
-    "size_bytes": 14503,
-    "size_human": "14.2 KB",
+    "size_bytes": 14470,
+    "size_human": "14.1 KB",
     "file_count": 2
   },
   "nano-pdf": {
     "filename": "nano-pdf.zip",
-    "size_bytes": 954,
+    "size_bytes": 921,
     "size_human": "0.9 KB",
     "file_count": 1
   },
@@ -919,8 +949,8 @@
   },
   "ocr-and-documents": {
     "filename": "ocr-and-documents.zip",
-    "size_bytes": 5175,
-    "size_human": "5.1 KB",
+    "size_bytes": 5140,
+    "size_human": "5.0 KB",
     "file_count": 4
   },
   "pdf-report": {
@@ -931,7 +961,7 @@
   },
   "powerpoint": {
     "filename": "powerpoint.zip",
-    "size_bytes": 140677,
+    "size_bytes": 140697,
     "size_human": "137.4 KB",
     "file_count": 50
   },
@@ -955,13 +985,13 @@
   },
   "arxiv": {
     "filename": "arxiv.zip",
-    "size_bytes": 5408,
+    "size_bytes": 5379,
     "size_human": "5.3 KB",
     "file_count": 2
   },
   "blogwatcher": {
     "filename": "blogwatcher.zip",
-    "size_bytes": 1961,
+    "size_bytes": 1931,
     "size_human": "1.9 KB",
     "file_count": 1
   },
@@ -973,19 +1003,19 @@
   },
   "polymarket": {
     "filename": "polymarket.zip",
-    "size_bytes": 6820,
-    "size_human": "6.7 KB",
+    "size_bytes": 6791,
+    "size_human": "6.6 KB",
     "file_count": 3
   },
   "research-paper-writing": {
     "filename": "research-paper-writing.zip",
-    "size_bytes": 799675,
+    "size_bytes": 799638,
     "size_human": "780.9 KB",
     "file_count": 55
   },
   "openhue": {
     "filename": "openhue.zip",
-    "size_bytes": 1254,
+    "size_bytes": 1229,
     "size_human": "1.2 KB",
     "file_count": 1
   },
@@ -997,8 +1027,8 @@
   },
   "xurl": {
     "filename": "xurl.zip",
-    "size_bytes": 5710,
-    "size_human": "5.6 KB",
+    "size_bytes": 5663,
+    "size_human": "5.5 KB",
     "file_count": 1
   },
   "d3-layout-debugging": {
@@ -1007,39 +1037,69 @@
     "size_human": "1.0 KB",
     "file_count": 1
   },
+  "debugging-hermes-tui-commands": {
+    "filename": "debugging-hermes-tui-commands.zip",
+    "size_bytes": 3346,
+    "size_human": "3.3 KB",
+    "file_count": 1
+  },
+  "hermes-agent-skill-authoring": {
+    "filename": "hermes-agent-skill-authoring.zip",
+    "size_bytes": 3467,
+    "size_human": "3.4 KB",
+    "file_count": 1
+  },
+  "node-inspect-debugger": {
+    "filename": "node-inspect-debugger.zip",
+    "size_bytes": 4859,
+    "size_human": "4.7 KB",
+    "file_count": 1
+  },
   "plan": {
     "filename": "plan.zip",
-    "size_bytes": 1178,
-    "size_human": "1.2 KB",
+    "size_bytes": 1144,
+    "size_human": "1.1 KB",
+    "file_count": 1
+  },
+  "python-debugpy": {
+    "filename": "python-debugpy.zip",
+    "size_bytes": 5627,
+    "size_human": "5.5 KB",
     "file_count": 1
   },
   "requesting-code-review": {
     "filename": "requesting-code-review.zip",
-    "size_bytes": 4018,
+    "size_bytes": 3983,
     "size_human": "3.9 KB",
+    "file_count": 1
+  },
+  "spike": {
+    "filename": "spike.zip",
+    "size_bytes": 4069,
+    "size_human": "4.0 KB",
     "file_count": 1
   },
   "subagent-driven-development": {
     "filename": "subagent-driven-development.zip",
-    "size_bytes": 3944,
-    "size_human": "3.9 KB",
-    "file_count": 1
+    "size_bytes": 9023,
+    "size_human": "8.8 KB",
+    "file_count": 3
   },
   "systematic-debugging": {
     "filename": "systematic-debugging.zip",
-    "size_bytes": 4726,
+    "size_bytes": 4697,
     "size_human": "4.6 KB",
     "file_count": 1
   },
   "test-driven-development": {
     "filename": "test-driven-development.zip",
-    "size_bytes": 4244,
+    "size_bytes": 4208,
     "size_human": "4.1 KB",
     "file_count": 1
   },
   "writing-plans": {
     "filename": "writing-plans.zip",
-    "size_bytes": 3182,
+    "size_bytes": 3144,
     "size_human": "3.1 KB",
     "file_count": 1
   },
@@ -1053,6 +1113,12 @@
     "filename": "video-editing.zip",
     "size_bytes": 4927,
     "size_human": "4.8 KB",
+    "file_count": 1
+  },
+  "yuanbao": {
+    "filename": "yuanbao.zip",
+    "size_bytes": 1930,
+    "size_human": "1.9 KB",
     "file_count": 1
   }
 }
