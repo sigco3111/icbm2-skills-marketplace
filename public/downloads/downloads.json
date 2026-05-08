@@ -77,6 +77,12 @@
     "size_human": "1.8 KB",
     "file_count": 1
   },
+  "cron-stale-triage": {
+    "filename": "cron-stale-triage.zip",
+    "size_bytes": 2957,
+    "size_human": "2.9 KB",
+    "file_count": 1
+  },
   "daily-self-review": {
     "filename": "daily-self-review.zip",
     "size_bytes": 1455,
@@ -241,8 +247,8 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 19398,
-    "size_human": "18.9 KB",
+    "size_bytes": 20012,
+    "size_human": "19.5 KB",
     "file_count": 1
   },
   "trading-strategy": {
