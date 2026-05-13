@@ -85,8 +85,8 @@
   },
   "cron-stale-triage": {
     "filename": "cron-stale-triage.zip",
-    "size_bytes": 2957,
-    "size_human": "2.9 KB",
+    "size_bytes": 4111,
+    "size_human": "4.0 KB",
     "file_count": 1
   },
   "daily-self-review": {
@@ -205,9 +205,9 @@
   },
   "notebooklm-youtube-automation": {
     "filename": "notebooklm-youtube-automation.zip",
-    "size_bytes": 8362,
-    "size_human": "8.2 KB",
-    "file_count": 4
+    "size_bytes": 13958,
+    "size_human": "13.6 KB",
+    "file_count": 8
   },
   "notion-dashboard": {
     "filename": "notion-dashboard.zip",
@@ -253,8 +253,8 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 21440,
-    "size_human": "20.9 KB",
+    "size_bytes": 22940,
+    "size_human": "22.4 KB",
     "file_count": 1
   },
   "trading-strategy": {
