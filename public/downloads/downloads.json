@@ -47,6 +47,12 @@
     "size_human": "1.8 KB",
     "file_count": 1
   },
+  "api-key-manager": {
+    "filename": "api-key-manager.zip",
+    "size_bytes": 3214,
+    "size_human": "3.1 KB",
+    "file_count": 2
+  },
   "auto-researcher": {
     "filename": "auto-researcher.zip",
     "size_bytes": 2571,
@@ -67,8 +73,8 @@
   },
   "automation-healthcheck": {
     "filename": "automation-healthcheck.zip",
-    "size_bytes": 3407,
-    "size_human": "3.3 KB",
+    "size_bytes": 3574,
+    "size_human": "3.5 KB",
     "file_count": 1
   },
   "chrome-automation": {
@@ -97,8 +103,8 @@
   },
   "dev-news-to-wiki": {
     "filename": "dev-news-to-wiki.zip",
-    "size_bytes": 3965,
-    "size_human": "3.9 KB",
+    "size_bytes": 4366,
+    "size_human": "4.3 KB",
     "file_count": 1
   },
   "docker-manager": {
@@ -205,9 +211,9 @@
   },
   "notebooklm-youtube-automation": {
     "filename": "notebooklm-youtube-automation.zip",
-    "size_bytes": 13958,
-    "size_human": "13.6 KB",
-    "file_count": 8
+    "size_bytes": 16962,
+    "size_human": "16.6 KB",
+    "file_count": 9
   },
   "notion-dashboard": {
     "filename": "notion-dashboard.zip",
@@ -253,9 +259,9 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 22940,
-    "size_human": "22.4 KB",
-    "file_count": 1
+    "size_bytes": 30746,
+    "size_human": "30.0 KB",
+    "file_count": 3
   },
   "trading-strategy": {
     "filename": "trading-strategy.zip",
