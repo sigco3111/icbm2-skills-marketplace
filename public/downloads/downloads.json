@@ -1,8 +1,14 @@
 {
+  "daily-self-review": {
+    "filename": "daily-self-review.zip",
+    "size_bytes": 3466,
+    "size_human": "3.4 KB",
+    "file_count": 1
+  },
   "ai-model-tracker": {
     "filename": "ai-model-tracker.zip",
-    "size_bytes": 4219,
-    "size_human": "4.1 KB",
+    "size_bytes": 4477,
+    "size_human": "4.4 KB",
     "file_count": 2
   },
   "apple-notes": {
@@ -73,8 +79,8 @@
   },
   "automation-healthcheck": {
     "filename": "automation-healthcheck.zip",
-    "size_bytes": 3574,
-    "size_human": "3.5 KB",
+    "size_bytes": 4369,
+    "size_human": "4.3 KB",
     "file_count": 1
   },
   "chrome-automation": {
@@ -95,16 +101,10 @@
     "size_human": "4.0 KB",
     "file_count": 1
   },
-  "daily-self-review": {
-    "filename": "daily-self-review.zip",
-    "size_bytes": 1455,
-    "size_human": "1.4 KB",
-    "file_count": 1
-  },
   "dev-news-to-wiki": {
     "filename": "dev-news-to-wiki.zip",
-    "size_bytes": 5379,
-    "size_human": "5.3 KB",
+    "size_bytes": 4692,
+    "size_human": "4.6 KB",
     "file_count": 1
   },
   "docker-manager": {
@@ -125,18 +125,6 @@
     "size_human": "0.8 KB",
     "file_count": 1
   },
-  "gemini-cli-vision": {
-    "filename": "gemini-cli-vision.zip",
-    "size_bytes": 1370,
-    "size_human": "1.3 KB",
-    "file_count": 1
-  },
-  "gemma4-vision": {
-    "filename": "gemma4-vision.zip",
-    "size_bytes": 2715,
-    "size_human": "2.7 KB",
-    "file_count": 2
-  },
   "github-portfolio-planner": {
     "filename": "github-portfolio-planner.zip",
     "size_bytes": 2207,
@@ -147,6 +135,12 @@
     "filename": "github-trending-duplicate-prevention.zip",
     "size_bytes": 2415,
     "size_human": "2.4 KB",
+    "file_count": 1
+  },
+  "image-analysis": {
+    "filename": "image-analysis.zip",
+    "size_bytes": 1111,
+    "size_human": "1.1 KB",
     "file_count": 1
   },
   "invest-memo": {
@@ -205,15 +199,15 @@
   },
   "nightly-maintenance-workflow": {
     "filename": "nightly-maintenance-workflow.zip",
-    "size_bytes": 3985,
+    "size_bytes": 4001,
     "size_human": "3.9 KB",
     "file_count": 1
   },
   "notebooklm-youtube-automation": {
     "filename": "notebooklm-youtube-automation.zip",
-    "size_bytes": 16962,
-    "size_human": "16.6 KB",
-    "file_count": 9
+    "size_bytes": 20925,
+    "size_human": "20.4 KB",
+    "file_count": 10
   },
   "notion-dashboard": {
     "filename": "notion-dashboard.zip",
@@ -251,17 +245,11 @@
     "size_human": "3.5 KB",
     "file_count": 1
   },
-  "tistory-failover": {
-    "filename": "tistory-failover.zip",
-    "size_bytes": 871,
-    "size_human": "0.9 KB",
-    "file_count": 1
-  },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 40530,
-    "size_human": "39.6 KB",
-    "file_count": 3
+    "size_bytes": 48815,
+    "size_human": "47.7 KB",
+    "file_count": 5
   },
   "trading-strategy": {
     "filename": "trading-strategy.zip",
@@ -373,9 +361,9 @@
   },
   "comfyui": {
     "filename": "comfyui.zip",
-    "size_bytes": 92548,
-    "size_human": "90.4 KB",
-    "file_count": 32
+    "size_bytes": 97030,
+    "size_human": "94.8 KB",
+    "file_count": 33
   },
   "ideation": {
     "filename": "ideation.zip",
@@ -499,14 +487,14 @@
   },
   "kanban-orchestrator": {
     "filename": "kanban-orchestrator.zip",
-    "size_bytes": 5698,
-    "size_human": "5.6 KB",
+    "size_bytes": 5929,
+    "size_human": "5.8 KB",
     "file_count": 1
   },
   "kanban-worker": {
     "filename": "kanban-worker.zip",
-    "size_bytes": 4077,
-    "size_human": "4.0 KB",
+    "size_bytes": 4565,
+    "size_human": "4.5 KB",
     "file_count": 1
   },
   "local-dashboard": {
@@ -538,12 +526,6 @@
     "size_bytes": 2193,
     "size_human": "2.1 KB",
     "file_count": 2
-  },
-  "skill-security-audit": {
-    "filename": "skill-security-audit.zip",
-    "size_bytes": 1371,
-    "size_human": "1.3 KB",
-    "file_count": 1
   },
   "skills-showcase": {
     "filename": "skills-showcase.zip",
@@ -641,102 +623,6 @@
     "size_human": "31.1 KB",
     "file_count": 10
   },
-  "animate": {
-    "filename": "animate.zip",
-    "size_bytes": 3607,
-    "size_human": "3.5 KB",
-    "file_count": 1
-  },
-  "audit": {
-    "filename": "audit.zip",
-    "size_bytes": 3520,
-    "size_human": "3.4 KB",
-    "file_count": 1
-  },
-  "bolder": {
-    "filename": "bolder.zip",
-    "size_bytes": 3300,
-    "size_human": "3.2 KB",
-    "file_count": 1
-  },
-  "clarify": {
-    "filename": "clarify.zip",
-    "size_bytes": 3230,
-    "size_human": "3.2 KB",
-    "file_count": 1
-  },
-  "colorize": {
-    "filename": "colorize.zip",
-    "size_bytes": 3245,
-    "size_human": "3.2 KB",
-    "file_count": 1
-  },
-  "critique": {
-    "filename": "critique.zip",
-    "size_bytes": 15615,
-    "size_human": "15.2 KB",
-    "file_count": 4
-  },
-  "delight": {
-    "filename": "delight.zip",
-    "size_bytes": 4575,
-    "size_human": "4.5 KB",
-    "file_count": 1
-  },
-  "distill": {
-    "filename": "distill.zip",
-    "size_bytes": 2986,
-    "size_human": "2.9 KB",
-    "file_count": 1
-  },
-  "harden": {
-    "filename": "harden.zip",
-    "size_bytes": 4907,
-    "size_human": "4.8 KB",
-    "file_count": 1
-  },
-  "layout": {
-    "filename": "layout.zip",
-    "size_bytes": 3445,
-    "size_human": "3.4 KB",
-    "file_count": 1
-  },
-  "optimize": {
-    "filename": "optimize.zip",
-    "size_bytes": 3694,
-    "size_human": "3.6 KB",
-    "file_count": 1
-  },
-  "overdrive": {
-    "filename": "overdrive.zip",
-    "size_bytes": 4534,
-    "size_human": "4.4 KB",
-    "file_count": 1
-  },
-  "polish": {
-    "filename": "polish.zip",
-    "size_bytes": 4294,
-    "size_human": "4.2 KB",
-    "file_count": 1
-  },
-  "quieter": {
-    "filename": "quieter.zip",
-    "size_bytes": 2548,
-    "size_human": "2.5 KB",
-    "file_count": 1
-  },
-  "shape": {
-    "filename": "shape.zip",
-    "size_bytes": 2517,
-    "size_human": "2.5 KB",
-    "file_count": 1
-  },
-  "typeset": {
-    "filename": "typeset.zip",
-    "size_bytes": 2860,
-    "size_human": "2.8 KB",
-    "file_count": 1
-  },
   "find-nearby": {
     "filename": "find-nearby.zip",
     "size_bytes": 4260,
@@ -784,12 +670,6 @@
     "size_bytes": 4320,
     "size_human": "4.2 KB",
     "file_count": 3
-  },
-  "minimax-vision": {
-    "filename": "minimax-vision.zip",
-    "size_bytes": 1530,
-    "size_human": "1.5 KB",
-    "file_count": 1
   },
   "modal-serverless-gpu": {
     "filename": "modal-serverless-gpu.zip",
@@ -949,8 +829,8 @@
   },
   "maps": {
     "filename": "maps.zip",
-    "size_bytes": 14489,
-    "size_human": "14.1 KB",
+    "size_bytes": 14493,
+    "size_human": "14.2 KB",
     "file_count": 2
   },
   "nano-pdf": {
@@ -961,13 +841,13 @@
   },
   "notion": {
     "filename": "notion.zip",
-    "size_bytes": 5091,
-    "size_human": "5.0 KB",
-    "file_count": 2
+    "size_bytes": 7251,
+    "size_human": "7.1 KB",
+    "file_count": 3
   },
   "ocr-and-documents": {
     "filename": "ocr-and-documents.zip",
-    "size_bytes": 5162,
+    "size_bytes": 5163,
     "size_human": "5.0 KB",
     "file_count": 4
   },
@@ -1009,7 +889,7 @@
   },
   "arxiv": {
     "filename": "arxiv.zip",
-    "size_bytes": 5405,
+    "size_bytes": 5406,
     "size_human": "5.3 KB",
     "file_count": 2
   },
@@ -1027,7 +907,7 @@
   },
   "polymarket": {
     "filename": "polymarket.zip",
-    "size_bytes": 6813,
+    "size_bytes": 6814,
     "size_human": "6.7 KB",
     "file_count": 3
   },
@@ -1059,12 +939,6 @@
     "filename": "d3-layout-debugging.zip",
     "size_bytes": 1072,
     "size_human": "1.0 KB",
-    "file_count": 1
-  },
-  "debugging-hermes-tui-commands": {
-    "filename": "debugging-hermes-tui-commands.zip",
-    "size_bytes": 3368,
-    "size_human": "3.3 KB",
     "file_count": 1
   },
   "hermes-agent-skill-authoring": {
@@ -1108,12 +982,6 @@
     "size_bytes": 9044,
     "size_human": "8.8 KB",
     "file_count": 3
-  },
-  "systematic-debugging": {
-    "filename": "systematic-debugging.zip",
-    "size_bytes": 4717,
-    "size_human": "4.6 KB",
-    "file_count": 1
   },
   "test-driven-development": {
     "filename": "test-driven-development.zip",
