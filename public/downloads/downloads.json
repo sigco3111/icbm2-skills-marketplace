@@ -1,15 +1,15 @@
 {
   "daily-self-review": {
     "filename": "daily-self-review.zip",
-    "size_bytes": 3466,
+    "size_bytes": 3467,
     "size_human": "3.4 KB",
     "file_count": 1
   },
   "ai-model-tracker": {
     "filename": "ai-model-tracker.zip",
-    "size_bytes": 4477,
-    "size_human": "4.4 KB",
-    "file_count": 2
+    "size_bytes": 6400,
+    "size_human": "6.2 KB",
+    "file_count": 3
   },
   "apple-notes": {
     "filename": "apple-notes.zip",
@@ -97,14 +97,14 @@
   },
   "cron-stale-triage": {
     "filename": "cron-stale-triage.zip",
-    "size_bytes": 4111,
-    "size_human": "4.0 KB",
+    "size_bytes": 4716,
+    "size_human": "4.6 KB",
     "file_count": 1
   },
   "dev-news-to-wiki": {
     "filename": "dev-news-to-wiki.zip",
-    "size_bytes": 4692,
-    "size_human": "4.6 KB",
+    "size_bytes": 5236,
+    "size_human": "5.1 KB",
     "file_count": 1
   },
   "docker-manager": {
@@ -205,9 +205,9 @@
   },
   "notebooklm-youtube-automation": {
     "filename": "notebooklm-youtube-automation.zip",
-    "size_bytes": 20925,
-    "size_human": "20.4 KB",
-    "file_count": 10
+    "size_bytes": 24919,
+    "size_human": "24.3 KB",
+    "file_count": 12
   },
   "notion-dashboard": {
     "filename": "notion-dashboard.zip",
@@ -247,9 +247,9 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 48815,
-    "size_human": "47.7 KB",
-    "file_count": 5
+    "size_bytes": 51930,
+    "size_human": "50.7 KB",
+    "file_count": 6
   },
   "trading-strategy": {
     "filename": "trading-strategy.zip",
@@ -670,6 +670,12 @@
     "size_bytes": 4320,
     "size_human": "4.2 KB",
     "file_count": 3
+  },
+  "minimax-image-gen": {
+    "filename": "minimax-image-gen.zip",
+    "size_bytes": 2424,
+    "size_human": "2.4 KB",
+    "file_count": 2
   },
   "modal-serverless-gpu": {
     "filename": "modal-serverless-gpu.zip",
