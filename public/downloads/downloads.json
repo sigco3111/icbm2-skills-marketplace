@@ -1,8 +1,8 @@
 {
   "daily-self-review": {
     "filename": "daily-self-review.zip",
-    "size_bytes": 3467,
-    "size_human": "3.4 KB",
+    "size_bytes": 3827,
+    "size_human": "3.7 KB",
     "file_count": 1
   },
   "ai-model-tracker": {
@@ -247,9 +247,9 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 61855,
-    "size_human": "60.4 KB",
-    "file_count": 11
+    "size_bytes": 69297,
+    "size_human": "67.7 KB",
+    "file_count": 15
   },
   "trading-strategy": {
     "filename": "trading-strategy.zip",
