@@ -197,10 +197,22 @@
     "size_human": "4.6 KB",
     "file_count": 1
   },
+  "music-video-generator": {
+    "filename": "music-video-generator.zip",
+    "size_bytes": 38828,
+    "size_human": "37.9 KB",
+    "file_count": 13
+  },
+  "music-video-pipeline": {
+    "filename": "music-video-pipeline.zip",
+    "size_bytes": 13601,
+    "size_human": "13.3 KB",
+    "file_count": 5
+  },
   "nightly-maintenance-workflow": {
     "filename": "nightly-maintenance-workflow.zip",
-    "size_bytes": 4420,
-    "size_human": "4.3 KB",
+    "size_bytes": 4961,
+    "size_human": "4.8 KB",
     "file_count": 1
   },
   "notebooklm-youtube-automation": {
@@ -247,9 +259,9 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 69297,
-    "size_human": "67.7 KB",
-    "file_count": 15
+    "size_bytes": 77415,
+    "size_human": "75.6 KB",
+    "file_count": 17
   },
   "trading-strategy": {
     "filename": "trading-strategy.zip",
@@ -319,8 +331,8 @@
   },
   "canvas-static-site-pipeline": {
     "filename": "canvas-static-site-pipeline.zip",
-    "size_bytes": 1579,
-    "size_human": "1.5 KB",
+    "size_bytes": 2188,
+    "size_human": "2.1 KB",
     "file_count": 1
   },
   "architecture-diagram": {
@@ -847,9 +859,9 @@
   },
   "notion": {
     "filename": "notion.zip",
-    "size_bytes": 7251,
-    "size_human": "7.1 KB",
-    "file_count": 3
+    "size_bytes": 10010,
+    "size_human": "9.8 KB",
+    "file_count": 4
   },
   "ocr-and-documents": {
     "filename": "ocr-and-documents.zip",
@@ -1009,9 +1021,9 @@
   },
   "video-editing": {
     "filename": "video-editing.zip",
-    "size_bytes": 5478,
-    "size_human": "5.3 KB",
-    "file_count": 1
+    "size_bytes": 8152,
+    "size_human": "8.0 KB",
+    "file_count": 2
   },
   "yuanbao": {
     "filename": "yuanbao.zip",
