@@ -121,9 +121,9 @@
   },
   "gallery-sync": {
     "filename": "gallery-sync.zip",
-    "size_bytes": 2631,
-    "size_human": "2.6 KB",
-    "file_count": 2
+    "size_bytes": 5406,
+    "size_human": "5.3 KB",
+    "file_count": 3
   },
   "gazette-trend-analyzer": {
     "filename": "gazette-trend-analyzer.zip",
@@ -205,15 +205,9 @@
   },
   "music-video-generator": {
     "filename": "music-video-generator.zip",
-    "size_bytes": 79913,
-    "size_human": "78.0 KB",
-    "file_count": 35
-  },
-  "music-video-pipeline": {
-    "filename": "music-video-pipeline.zip",
-    "size_bytes": 17478,
-    "size_human": "17.1 KB",
-    "file_count": 6
+    "size_bytes": 97035,
+    "size_human": "94.8 KB",
+    "file_count": 42
   },
   "nightly-maintenance-workflow": {
     "filename": "nightly-maintenance-workflow.zip",
@@ -265,9 +259,9 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 80718,
-    "size_human": "78.8 KB",
-    "file_count": 19
+    "size_bytes": 85165,
+    "size_human": "83.2 KB",
+    "file_count": 22
   },
   "trading-strategy": {
     "filename": "trading-strategy.zip",
