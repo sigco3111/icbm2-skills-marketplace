@@ -259,9 +259,9 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 100341,
-    "size_human": "98.0 KB",
-    "file_count": 28
+    "size_bytes": 105067,
+    "size_human": "102.6 KB",
+    "file_count": 31
   },
   "trading-strategy": {
     "filename": "trading-strategy.zip",
@@ -311,6 +311,12 @@
     "size_human": "10.1 KB",
     "file_count": 2
   },
+  "kanban-codex-lane": {
+    "filename": "kanban-codex-lane.zip",
+    "size_bytes": 6576,
+    "size_human": "6.4 KB",
+    "file_count": 2
+  },
   "opencode": {
     "filename": "opencode.zip",
     "size_bytes": 3837,
@@ -352,6 +358,12 @@
     "size_bytes": 117512,
     "size_human": "114.8 KB",
     "file_count": 10
+  },
+  "baoyu-article-illustrator": {
+    "filename": "baoyu-article-illustrator.zip",
+    "size_bytes": 54435,
+    "size_human": "53.2 KB",
+    "file_count": 35
   },
   "baoyu-comic": {
     "filename": "baoyu-comic.zip",
@@ -505,8 +517,8 @@
   },
   "kanban-worker": {
     "filename": "kanban-worker.zip",
-    "size_bytes": 4565,
-    "size_human": "4.5 KB",
+    "size_bytes": 4754,
+    "size_human": "4.6 KB",
     "file_count": 1
   },
   "local-dashboard": {
@@ -565,8 +577,8 @@
   },
   "himalaya": {
     "filename": "himalaya.zip",
-    "size_bytes": 6542,
-    "size_human": "6.4 KB",
+    "size_bytes": 6648,
+    "size_human": "6.5 KB",
     "file_count": 3
   },
   "minecraft-modpack-server": {
@@ -949,8 +961,8 @@
   },
   "xurl": {
     "filename": "xurl.zip",
-    "size_bytes": 5663,
-    "size_human": "5.5 KB",
+    "size_bytes": 5936,
+    "size_human": "5.8 KB",
     "file_count": 1
   },
   "d3-layout-debugging": {
@@ -963,6 +975,12 @@
     "filename": "hermes-agent-skill-authoring.zip",
     "size_bytes": 3493,
     "size_human": "3.4 KB",
+    "file_count": 1
+  },
+  "hermes-s6-container-supervision": {
+    "filename": "hermes-s6-container-supervision.zip",
+    "size_bytes": 4781,
+    "size_human": "4.7 KB",
     "file_count": 1
   },
   "node-inspect-debugger": {
