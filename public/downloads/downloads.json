@@ -1,9 +1,9 @@
 {
   "daily-self-review": {
     "filename": "daily-self-review.zip",
-    "size_bytes": 25256,
-    "size_human": "24.7 KB",
-    "file_count": 9
+    "size_bytes": 32366,
+    "size_human": "31.6 KB",
+    "file_count": 11
   },
   "ai-model-tracker": {
     "filename": "ai-model-tracker.zip",
@@ -11,34 +11,10 @@
     "size_human": "8.5 KB",
     "file_count": 3
   },
-  "apple-notes": {
-    "filename": "apple-notes.zip",
-    "size_bytes": 1109,
-    "size_human": "1.1 KB",
-    "file_count": 1
-  },
-  "apple-reminders": {
-    "filename": "apple-reminders.zip",
-    "size_bytes": 1744,
-    "size_human": "1.7 KB",
-    "file_count": 1
-  },
-  "findmy": {
-    "filename": "findmy.zip",
-    "size_bytes": 1731,
-    "size_human": "1.7 KB",
-    "file_count": 1
-  },
-  "imessage": {
-    "filename": "imessage.zip",
-    "size_bytes": 1289,
-    "size_human": "1.3 KB",
-    "file_count": 1
-  },
-  "macos-computer-use": {
-    "filename": "macos-computer-use.zip",
-    "size_bytes": 3552,
-    "size_human": "3.5 KB",
+  "apple-platform": {
+    "filename": "apple-platform.zip",
+    "size_bytes": 6075,
+    "size_human": "5.9 KB",
     "file_count": 1
   },
   "agent-benchmark-tracker": {
@@ -259,9 +235,9 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 118856,
-    "size_human": "116.1 KB",
-    "file_count": 58
+    "size_bytes": 153566,
+    "size_human": "150.0 KB",
+    "file_count": 70
   },
   "trading-strategy": {
     "filename": "trading-strategy.zip",
@@ -293,22 +269,16 @@
     "size_human": "1.9 KB",
     "file_count": 1
   },
-  "claude-code": {
-    "filename": "claude-code.zip",
-    "size_bytes": 12809,
-    "size_human": "12.5 KB",
-    "file_count": 1
-  },
-  "codex": {
-    "filename": "codex.zip",
-    "size_bytes": 1998,
-    "size_human": "2.0 KB",
-    "file_count": 1
+  "autonomous-coding-agents": {
+    "filename": "autonomous-coding-agents.zip",
+    "size_bytes": 25298,
+    "size_human": "24.7 KB",
+    "file_count": 4
   },
   "hermes-agent": {
     "filename": "hermes-agent.zip",
-    "size_bytes": 10350,
-    "size_human": "10.1 KB",
+    "size_bytes": 11432,
+    "size_human": "11.2 KB",
     "file_count": 2
   },
   "kanban-codex-lane": {
@@ -316,12 +286,6 @@
     "size_bytes": 6576,
     "size_human": "6.4 KB",
     "file_count": 2
-  },
-  "opencode": {
-    "filename": "opencode.zip",
-    "size_bytes": 3837,
-    "size_human": "3.7 KB",
-    "file_count": 1
   },
   "perpetual-engine-zai": {
     "filename": "perpetual-engine-zai.zip",
@@ -377,12 +341,6 @@
     "size_human": "42.6 KB",
     "file_count": 47
   },
-  "claude-design": {
-    "filename": "claude-design.zip",
-    "size_bytes": 8245,
-    "size_human": "8.1 KB",
-    "file_count": 1
-  },
   "comfyui": {
     "filename": "comfyui.zip",
     "size_bytes": 96954,
@@ -395,10 +353,10 @@
     "size_human": "5.1 KB",
     "file_count": 2
   },
-  "design-md": {
-    "filename": "design-md.zip",
-    "size_bytes": 4673,
-    "size_human": "4.6 KB",
+  "design-artifacts": {
+    "filename": "design-artifacts.zip",
+    "size_bytes": 9721,
+    "size_human": "9.5 KB",
     "file_count": 2
   },
   "excalidraw": {
@@ -448,12 +406,6 @@
     "size_bytes": 14224,
     "size_human": "13.9 KB",
     "file_count": 7
-  },
-  "popular-web-designs": {
-    "filename": "popular-web-designs.zip",
-    "size_bytes": 346004,
-    "size_human": "337.9 KB",
-    "file_count": 55
   },
   "pretext": {
     "filename": "pretext.zip",
@@ -511,13 +463,13 @@
   },
   "kanban-orchestrator": {
     "filename": "kanban-orchestrator.zip",
-    "size_bytes": 6619,
+    "size_bytes": 6627,
     "size_human": "6.5 KB",
     "file_count": 1
   },
   "kanban-worker": {
     "filename": "kanban-worker.zip",
-    "size_bytes": 4932,
+    "size_bytes": 4941,
     "size_human": "4.8 KB",
     "file_count": 1
   },
@@ -593,47 +545,17 @@
     "size_human": "4.2 KB",
     "file_count": 1
   },
-  "codebase-inspection": {
-    "filename": "codebase-inspection.zip",
-    "size_bytes": 1787,
-    "size_human": "1.7 KB",
+  "github-cli": {
+    "filename": "github-cli.zip",
+    "size_bytes": 22540,
+    "size_human": "22.0 KB",
+    "file_count": 10
+  },
+  "oss-python-bootstrap": {
+    "filename": "oss-python-bootstrap.zip",
+    "size_bytes": 8265,
+    "size_human": "8.1 KB",
     "file_count": 1
-  },
-  "github-actions": {
-    "filename": "github-actions.zip",
-    "size_bytes": 4667,
-    "size_human": "4.6 KB",
-    "file_count": 1
-  },
-  "github-auth": {
-    "filename": "github-auth.zip",
-    "size_bytes": 4354,
-    "size_human": "4.3 KB",
-    "file_count": 2
-  },
-  "github-code-review": {
-    "filename": "github-code-review.zip",
-    "size_bytes": 6633,
-    "size_human": "6.5 KB",
-    "file_count": 2
-  },
-  "github-issues": {
-    "filename": "github-issues.zip",
-    "size_bytes": 4056,
-    "size_human": "4.0 KB",
-    "file_count": 3
-  },
-  "github-pr-workflow": {
-    "filename": "github-pr-workflow.zip",
-    "size_bytes": 9019,
-    "size_human": "8.8 KB",
-    "file_count": 5
-  },
-  "github-repo-management": {
-    "filename": "github-repo-management.zip",
-    "size_bytes": 6241,
-    "size_human": "6.1 KB",
-    "file_count": 2
   },
   "github-trending-monitor": {
     "filename": "github-trending-monitor.zip",
@@ -671,35 +593,17 @@
     "size_human": "4.7 KB",
     "file_count": 1
   },
-  "ai-music-generation": {
-    "filename": "ai-music-generation.zip",
-    "size_bytes": 6891,
-    "size_human": "6.7 KB",
-    "file_count": 2
+  "ai-music": {
+    "filename": "ai-music.zip",
+    "size_bytes": 31516,
+    "size_human": "30.8 KB",
+    "file_count": 10
   },
   "gif-search": {
     "filename": "gif-search.zip",
     "size_bytes": 1356,
     "size_human": "1.3 KB",
     "file_count": 1
-  },
-  "heartmula": {
-    "filename": "heartmula.zip",
-    "size_bytes": 3227,
-    "size_human": "3.2 KB",
-    "file_count": 1
-  },
-  "korean-ballad-from-reference": {
-    "filename": "korean-ballad-from-reference.zip",
-    "size_bytes": 2917,
-    "size_human": "2.8 KB",
-    "file_count": 1
-  },
-  "minimax-mmx-music": {
-    "filename": "minimax-mmx-music.zip",
-    "size_bytes": 11812,
-    "size_human": "11.5 KB",
-    "file_count": 5
   },
   "remote-file-delivery": {
     "filename": "remote-file-delivery.zip",
@@ -989,16 +893,10 @@
     "size_human": "1.2 KB",
     "file_count": 1
   },
-  "xitter": {
-    "filename": "xitter.zip",
-    "size_bytes": 2702,
-    "size_human": "2.6 KB",
-    "file_count": 1
-  },
   "xurl": {
     "filename": "xurl.zip",
-    "size_bytes": 5936,
-    "size_human": "5.8 KB",
+    "size_bytes": 6200,
+    "size_human": "6.1 KB",
     "file_count": 1
   },
   "d3-layout-debugging": {
@@ -1009,7 +907,7 @@
   },
   "hermes-agent-skill-authoring": {
     "filename": "hermes-agent-skill-authoring.zip",
-    "size_bytes": 3493,
+    "size_bytes": 3488,
     "size_human": "3.4 KB",
     "file_count": 1
   },
@@ -1027,8 +925,8 @@
   },
   "plan": {
     "filename": "plan.zip",
-    "size_bytes": 1164,
-    "size_human": "1.1 KB",
+    "size_bytes": 3863,
+    "size_human": "3.8 KB",
     "file_count": 1
   },
   "python-debugpy": {
@@ -1039,13 +937,13 @@
   },
   "requesting-code-review": {
     "filename": "requesting-code-review.zip",
-    "size_bytes": 4003,
+    "size_bytes": 3998,
     "size_human": "3.9 KB",
     "file_count": 1
   },
   "spike": {
     "filename": "spike.zip",
-    "size_bytes": 4093,
+    "size_bytes": 4083,
     "size_human": "4.0 KB",
     "file_count": 1
   },
@@ -1057,7 +955,7 @@
   },
   "test-driven-development": {
     "filename": "test-driven-development.zip",
-    "size_bytes": 4232,
+    "size_bytes": 4230,
     "size_human": "4.1 KB",
     "file_count": 1
   },
@@ -1065,12 +963,6 @@
     "filename": "writing-plans.zip",
     "size_bytes": 3167,
     "size_human": "3.1 KB",
-    "file_count": 1
-  },
-  "telegram-commands": {
-    "filename": "telegram-commands.zip",
-    "size_bytes": 1350,
-    "size_human": "1.3 KB",
     "file_count": 1
   },
   "video-editing": {
