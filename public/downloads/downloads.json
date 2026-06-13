@@ -1,9 +1,9 @@
 {
   "daily-self-review": {
     "filename": "daily-self-review.zip",
-    "size_bytes": 56531,
-    "size_human": "55.2 KB",
-    "file_count": 15
+    "size_bytes": 62001,
+    "size_human": "60.5 KB",
+    "file_count": 16
   },
   "ai-model-tracker": {
     "filename": "ai-model-tracker.zip",
@@ -193,9 +193,9 @@
   },
   "nightly-maintenance-workflow": {
     "filename": "nightly-maintenance-workflow.zip",
-    "size_bytes": 36951,
-    "size_human": "36.1 KB",
-    "file_count": 9
+    "size_bytes": 41752,
+    "size_human": "40.8 KB",
+    "file_count": 10
   },
   "notebooklm-youtube-automation": {
     "filename": "notebooklm-youtube-automation.zip",
@@ -247,9 +247,9 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 276462,
-    "size_human": "270.0 KB",
-    "file_count": 113
+    "size_bytes": 304523,
+    "size_human": "297.4 KB",
+    "file_count": 120
   },
   "trading-strategy": {
     "filename": "trading-strategy.zip",
