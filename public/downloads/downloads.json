@@ -7,9 +7,9 @@
   },
   "ai-model-tracker": {
     "filename": "ai-model-tracker.zip",
-    "size_bytes": 9907,
-    "size_human": "9.7 KB",
-    "file_count": 3
+    "size_bytes": 11443,
+    "size_human": "11.2 KB",
+    "file_count": 4
   },
   "apple-platform": {
     "filename": "apple-platform.zip",
@@ -193,15 +193,15 @@
   },
   "nightly-maintenance-workflow": {
     "filename": "nightly-maintenance-workflow.zip",
-    "size_bytes": 52017,
-    "size_human": "50.8 KB",
+    "size_bytes": 54536,
+    "size_human": "53.3 KB",
     "file_count": 12
   },
   "notebooklm-youtube-automation": {
     "filename": "notebooklm-youtube-automation.zip",
-    "size_bytes": 76495,
-    "size_human": "74.7 KB",
-    "file_count": 29
+    "size_bytes": 78569,
+    "size_human": "76.7 KB",
+    "file_count": 30
   },
   "notion-dashboard": {
     "filename": "notion-dashboard.zip",
@@ -217,9 +217,9 @@
   },
   "python-oss-bootstrap": {
     "filename": "python-oss-bootstrap.zip",
-    "size_bytes": 42263,
-    "size_human": "41.3 KB",
-    "file_count": 7
+    "size_bytes": 53297,
+    "size_human": "52.0 KB",
+    "file_count": 8
   },
   "smart-summary": {
     "filename": "smart-summary.zip",
@@ -247,9 +247,9 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 378579,
-    "size_human": "369.7 KB",
-    "file_count": 143
+    "size_bytes": 374533,
+    "size_human": "365.8 KB",
+    "file_count": 152
   },
   "trading-strategy": {
     "filename": "trading-strategy.zip",
@@ -577,9 +577,9 @@
   },
   "ios-trend-digest": {
     "filename": "ios-trend-digest.zip",
-    "size_bytes": 5951,
-    "size_human": "5.8 KB",
-    "file_count": 2
+    "size_bytes": 8622,
+    "size_human": "8.4 KB",
+    "file_count": 3
   },
   "find-nearby": {
     "filename": "find-nearby.zip",
@@ -877,8 +877,8 @@
   },
   "llm-wiki": {
     "filename": "llm-wiki.zip",
-    "size_bytes": 24632,
-    "size_human": "24.1 KB",
+    "size_bytes": 27307,
+    "size_human": "26.7 KB",
     "file_count": 2
   },
   "polymarket": {
