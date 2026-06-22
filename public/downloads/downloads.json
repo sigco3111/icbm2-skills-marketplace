@@ -55,8 +55,8 @@
   },
   "automation-healthcheck": {
     "filename": "automation-healthcheck.zip",
-    "size_bytes": 17359,
-    "size_human": "17.0 KB",
+    "size_bytes": 19355,
+    "size_human": "18.9 KB",
     "file_count": 3
   },
   "chrome-automation": {
@@ -193,15 +193,15 @@
   },
   "nightly-maintenance-workflow": {
     "filename": "nightly-maintenance-workflow.zip",
-    "size_bytes": 59111,
-    "size_human": "57.7 KB",
-    "file_count": 12
+    "size_bytes": 63215,
+    "size_human": "61.7 KB",
+    "file_count": 14
   },
   "notebooklm-youtube-automation": {
     "filename": "notebooklm-youtube-automation.zip",
-    "size_bytes": 87622,
-    "size_human": "85.6 KB",
-    "file_count": 32
+    "size_bytes": 90844,
+    "size_human": "88.7 KB",
+    "file_count": 33
   },
   "notion-dashboard": {
     "filename": "notion-dashboard.zip",
@@ -247,9 +247,9 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 456236,
-    "size_human": "445.5 KB",
-    "file_count": 170
+    "size_bytes": 459705,
+    "size_human": "448.9 KB",
+    "file_count": 171
   },
   "tokscale": {
     "filename": "tokscale.zip",
@@ -481,8 +481,8 @@
   },
   "kanban-worker": {
     "filename": "kanban-worker.zip",
-    "size_bytes": 4941,
-    "size_human": "4.8 KB",
+    "size_bytes": 5716,
+    "size_human": "5.6 KB",
     "file_count": 1
   },
   "local-dashboard": {
@@ -547,7 +547,7 @@
   },
   "himalaya": {
     "filename": "himalaya.zip",
-    "size_bytes": 6648,
+    "size_bytes": 6672,
     "size_human": "6.5 KB",
     "file_count": 3
   },
@@ -565,8 +565,8 @@
   },
   "github-cli": {
     "filename": "github-cli.zip",
-    "size_bytes": 22540,
-    "size_human": "22.0 KB",
+    "size_bytes": 22879,
+    "size_human": "22.3 KB",
     "file_count": 10
   },
   "github-profile-readme": {
@@ -587,6 +587,12 @@
     "size_human": "4.0 KB",
     "file_count": 2
   },
+  "hermes-gateway-doctor": {
+    "filename": "hermes-gateway-doctor.zip",
+    "size_bytes": 4532,
+    "size_human": "4.4 KB",
+    "file_count": 1
+  },
   "impeccable": {
     "filename": "impeccable.zip",
     "size_bytes": 31870,
@@ -595,9 +601,9 @@
   },
   "ios-trend-digest": {
     "filename": "ios-trend-digest.zip",
-    "size_bytes": 16744,
-    "size_human": "16.4 KB",
-    "file_count": 6
+    "size_bytes": 20721,
+    "size_human": "20.2 KB",
+    "file_count": 7
   },
   "find-nearby": {
     "filename": "find-nearby.zip",
@@ -925,8 +931,8 @@
   },
   "hermes-agent-skill-authoring": {
     "filename": "hermes-agent-skill-authoring.zip",
-    "size_bytes": 3488,
-    "size_human": "3.4 KB",
+    "size_bytes": 4784,
+    "size_human": "4.7 KB",
     "file_count": 1
   },
   "hermes-s6-container-supervision": {
@@ -961,8 +967,8 @@
   },
   "simplify-code": {
     "filename": "simplify-code.zip",
-    "size_bytes": 4099,
-    "size_human": "4.0 KB",
+    "size_bytes": 5153,
+    "size_human": "5.0 KB",
     "file_count": 1
   },
   "spike": {
@@ -979,8 +985,8 @@
   },
   "test-driven-development": {
     "filename": "test-driven-development.zip",
-    "size_bytes": 4230,
-    "size_human": "4.1 KB",
+    "size_bytes": 4548,
+    "size_human": "4.4 KB",
     "file_count": 1
   },
   "textual-tui-development": {
