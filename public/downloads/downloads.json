@@ -1,15 +1,15 @@
 {
   "daily-self-review": {
     "filename": "daily-self-review.zip",
-    "size_bytes": 108693,
-    "size_human": "106.1 KB",
-    "file_count": 26
+    "size_bytes": 114703,
+    "size_human": "112.0 KB",
+    "file_count": 27
   },
   "ai-model-tracker": {
     "filename": "ai-model-tracker.zip",
-    "size_bytes": 22157,
-    "size_human": "21.6 KB",
-    "file_count": 8
+    "size_bytes": 24948,
+    "size_human": "24.4 KB",
+    "file_count": 9
   },
   "apple-platform": {
     "filename": "apple-platform.zip",
@@ -199,9 +199,9 @@
   },
   "notebooklm-youtube-automation": {
     "filename": "notebooklm-youtube-automation.zip",
-    "size_bytes": 91775,
-    "size_human": "89.6 KB",
-    "file_count": 33
+    "size_bytes": 95468,
+    "size_human": "93.2 KB",
+    "file_count": 34
   },
   "notion-dashboard": {
     "filename": "notion-dashboard.zip",
@@ -479,6 +479,12 @@
     "size_human": "4.3 KB",
     "file_count": 1
   },
+  "device-environment-migration": {
+    "filename": "device-environment-migration.zip",
+    "size_bytes": 23224,
+    "size_human": "22.7 KB",
+    "file_count": 5
+  },
   "direct-device-execution": {
     "filename": "direct-device-execution.zip",
     "size_bytes": 6260,
@@ -619,9 +625,9 @@
   },
   "ios-trend-digest": {
     "filename": "ios-trend-digest.zip",
-    "size_bytes": 28512,
-    "size_human": "27.8 KB",
-    "file_count": 9
+    "size_bytes": 32477,
+    "size_human": "31.7 KB",
+    "file_count": 10
   },
   "find-nearby": {
     "filename": "find-nearby.zip",
@@ -853,8 +859,8 @@
   },
   "idea-bank-sync": {
     "filename": "idea-bank-sync.zip",
-    "size_bytes": 3825,
-    "size_human": "3.7 KB",
+    "size_bytes": 4817,
+    "size_human": "4.7 KB",
     "file_count": 1
   },
   "linear": {
@@ -937,8 +943,8 @@
   },
   "llm-wiki": {
     "filename": "llm-wiki.zip",
-    "size_bytes": 34215,
-    "size_human": "33.4 KB",
+    "size_bytes": 36498,
+    "size_human": "35.6 KB",
     "file_count": 3
   },
   "polymarket": {
