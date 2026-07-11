@@ -1,15 +1,129 @@
 {
+  "apple-notes": {
+    "filename": "apple-notes.zip",
+    "size_bytes": 1109,
+    "size_human": "1.1 KB",
+    "file_count": 1
+  },
+  "apple-reminders": {
+    "filename": "apple-reminders.zip",
+    "size_bytes": 1744,
+    "size_human": "1.7 KB",
+    "file_count": 1
+  },
+  "claude-code": {
+    "filename": "claude-code.zip",
+    "size_bytes": 12809,
+    "size_human": "12.5 KB",
+    "file_count": 1
+  },
+  "claude-design": {
+    "filename": "claude-design.zip",
+    "size_bytes": 10437,
+    "size_human": "10.2 KB",
+    "file_count": 1
+  },
+  "codebase-inspection": {
+    "filename": "codebase-inspection.zip",
+    "size_bytes": 1787,
+    "size_human": "1.7 KB",
+    "file_count": 1
+  },
+  "codex": {
+    "filename": "codex.zip",
+    "size_bytes": 2842,
+    "size_human": "2.8 KB",
+    "file_count": 1
+  },
   "daily-self-review": {
     "filename": "daily-self-review.zip",
-    "size_bytes": 114703,
-    "size_human": "112.0 KB",
-    "file_count": 27
+    "size_bytes": 130261,
+    "size_human": "127.2 KB",
+    "file_count": 40
+  },
+  "design-md": {
+    "filename": "design-md.zip",
+    "size_bytes": 4673,
+    "size_human": "4.6 KB",
+    "file_count": 2
+  },
+  "findmy": {
+    "filename": "findmy.zip",
+    "size_bytes": 1731,
+    "size_human": "1.7 KB",
+    "file_count": 1
+  },
+  "github-auth": {
+    "filename": "github-auth.zip",
+    "size_bytes": 4386,
+    "size_human": "4.3 KB",
+    "file_count": 2
+  },
+  "github-code-review": {
+    "filename": "github-code-review.zip",
+    "size_bytes": 6643,
+    "size_human": "6.5 KB",
+    "file_count": 2
+  },
+  "github-issues": {
+    "filename": "github-issues.zip",
+    "size_bytes": 4066,
+    "size_human": "4.0 KB",
+    "file_count": 3
+  },
+  "github-pr-workflow": {
+    "filename": "github-pr-workflow.zip",
+    "size_bytes": 9011,
+    "size_human": "8.8 KB",
+    "file_count": 5
+  },
+  "github-repo-management": {
+    "filename": "github-repo-management.zip",
+    "size_bytes": 6294,
+    "size_human": "6.1 KB",
+    "file_count": 2
+  },
+  "heartmula": {
+    "filename": "heartmula.zip",
+    "size_bytes": 3227,
+    "size_human": "3.2 KB",
+    "file_count": 1
+  },
+  "imessage": {
+    "filename": "imessage.zip",
+    "size_bytes": 1289,
+    "size_human": "1.3 KB",
+    "file_count": 1
+  },
+  "manim-video": {
+    "filename": "manim-video.zip",
+    "size_bytes": 45953,
+    "size_human": "44.9 KB",
+    "file_count": 17
+  },
+  "opencode": {
+    "filename": "opencode.zip",
+    "size_bytes": 3082,
+    "size_human": "3.0 KB",
+    "file_count": 1
+  },
+  "popular-web-designs": {
+    "filename": "popular-web-designs.zip",
+    "size_bytes": 346004,
+    "size_human": "337.9 KB",
+    "file_count": 55
+  },
+  "systematic-debugging": {
+    "filename": "systematic-debugging.zip",
+    "size_bytes": 6352,
+    "size_human": "6.2 KB",
+    "file_count": 1
   },
   "ai-model-tracker": {
     "filename": "ai-model-tracker.zip",
-    "size_bytes": 24948,
-    "size_human": "24.4 KB",
-    "file_count": 9
+    "size_bytes": 48618,
+    "size_human": "47.5 KB",
+    "file_count": 19
   },
   "apple-platform": {
     "filename": "apple-platform.zip",
@@ -19,8 +133,8 @@
   },
   "agent-benchmark-tracker": {
     "filename": "agent-benchmark-tracker.zip",
-    "size_bytes": 20053,
-    "size_human": "19.6 KB",
+    "size_bytes": 21879,
+    "size_human": "21.4 KB",
     "file_count": 6
   },
   "agentnews-monitor": {
@@ -31,8 +145,8 @@
   },
   "api-key-manager": {
     "filename": "api-key-manager.zip",
-    "size_bytes": 5174,
-    "size_human": "5.1 KB",
+    "size_bytes": 7163,
+    "size_human": "7.0 KB",
     "file_count": 3
   },
   "auto-researcher": {
@@ -61,9 +175,9 @@
   },
   "chrome-automation": {
     "filename": "chrome-automation.zip",
-    "size_bytes": 4198,
-    "size_human": "4.1 KB",
-    "file_count": 2
+    "size_bytes": 9109,
+    "size_human": "8.9 KB",
+    "file_count": 3
   },
   "cloud-image-gen": {
     "filename": "cloud-image-gen.zip",
@@ -79,9 +193,9 @@
   },
   "dev-news-to-wiki": {
     "filename": "dev-news-to-wiki.zip",
-    "size_bytes": 23328,
-    "size_human": "22.8 KB",
-    "file_count": 5
+    "size_bytes": 32757,
+    "size_human": "32.0 KB",
+    "file_count": 7
   },
   "docker-manager": {
     "filename": "docker-manager.zip",
@@ -91,8 +205,8 @@
   },
   "feedback-loop": {
     "filename": "feedback-loop.zip",
-    "size_bytes": 2687,
-    "size_human": "2.6 KB",
+    "size_bytes": 3325,
+    "size_human": "3.2 KB",
     "file_count": 1
   },
   "gallery-sync": {
@@ -121,9 +235,9 @@
   },
   "icbm2-daily-workspace-cleanup": {
     "filename": "icbm2-daily-workspace-cleanup.zip",
-    "size_bytes": 6819,
-    "size_human": "6.7 KB",
-    "file_count": 3
+    "size_bytes": 12597,
+    "size_human": "12.3 KB",
+    "file_count": 5
   },
   "image-analysis": {
     "filename": "image-analysis.zip",
@@ -163,21 +277,21 @@
   },
   "learning-log": {
     "filename": "learning-log.zip",
-    "size_bytes": 12430,
-    "size_human": "12.1 KB",
-    "file_count": 3
+    "size_bytes": 16576,
+    "size_human": "16.2 KB",
+    "file_count": 4
   },
   "memory-error-tracker": {
     "filename": "memory-error-tracker.zip",
-    "size_bytes": 2827,
-    "size_human": "2.8 KB",
+    "size_bytes": 3150,
+    "size_human": "3.1 KB",
     "file_count": 1
   },
   "memory-hygiene": {
     "filename": "memory-hygiene.zip",
-    "size_bytes": 10241,
-    "size_human": "10.0 KB",
-    "file_count": 4
+    "size_bytes": 20375,
+    "size_human": "19.9 KB",
+    "file_count": 8
   },
   "morning-briefing": {
     "filename": "morning-briefing.zip",
@@ -187,21 +301,21 @@
   },
   "music-video-generator": {
     "filename": "music-video-generator.zip",
-    "size_bytes": 103875,
-    "size_human": "101.4 KB",
+    "size_bytes": 104348,
+    "size_human": "101.9 KB",
     "file_count": 45
   },
   "nightly-maintenance-workflow": {
     "filename": "nightly-maintenance-workflow.zip",
-    "size_bytes": 66702,
-    "size_human": "65.1 KB",
-    "file_count": 15
+    "size_bytes": 133270,
+    "size_human": "130.1 KB",
+    "file_count": 33
   },
   "notebooklm-youtube-automation": {
     "filename": "notebooklm-youtube-automation.zip",
-    "size_bytes": 95468,
-    "size_human": "93.2 KB",
-    "file_count": 34
+    "size_bytes": 161018,
+    "size_human": "157.2 KB",
+    "file_count": 51
   },
   "notion-dashboard": {
     "filename": "notion-dashboard.zip",
@@ -217,14 +331,14 @@
   },
   "python-oss-bootstrap": {
     "filename": "python-oss-bootstrap.zip",
-    "size_bytes": 92314,
-    "size_human": "90.2 KB",
-    "file_count": 17
+    "size_bytes": 104135,
+    "size_human": "101.7 KB",
+    "file_count": 20
   },
   "smart-summary": {
     "filename": "smart-summary.zip",
-    "size_bytes": 1900,
-    "size_human": "1.9 KB",
+    "size_bytes": 5064,
+    "size_human": "4.9 KB",
     "file_count": 1
   },
   "stock-market-pro": {
@@ -247,15 +361,15 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 472419,
-    "size_human": "461.3 KB",
-    "file_count": 174
+    "size_bytes": 724976,
+    "size_human": "708.0 KB",
+    "file_count": 261
   },
   "tokscale": {
     "filename": "tokscale.zip",
-    "size_bytes": 14897,
-    "size_human": "14.5 KB",
-    "file_count": 3
+    "size_bytes": 17530,
+    "size_human": "17.1 KB",
+    "file_count": 4
   },
   "trading-strategy": {
     "filename": "trading-strategy.zip",
@@ -277,9 +391,9 @@
   },
   "weekly-tech-digest": {
     "filename": "weekly-tech-digest.zip",
-    "size_bytes": 11360,
-    "size_human": "11.1 KB",
-    "file_count": 2
+    "size_bytes": 14759,
+    "size_human": "14.4 KB",
+    "file_count": 3
   },
   "agent-prompts": {
     "filename": "agent-prompts.zip",
@@ -289,15 +403,15 @@
   },
   "autonomous-coding-agents": {
     "filename": "autonomous-coding-agents.zip",
-    "size_bytes": 25298,
-    "size_human": "24.7 KB",
+    "size_bytes": 26726,
+    "size_human": "26.1 KB",
     "file_count": 4
   },
   "hermes-agent": {
     "filename": "hermes-agent.zip",
-    "size_bytes": 14597,
-    "size_human": "14.3 KB",
-    "file_count": 3
+    "size_bytes": 22626,
+    "size_human": "22.1 KB",
+    "file_count": 5
   },
   "kanban-codex-lane": {
     "filename": "kanban-codex-lane.zip",
@@ -307,15 +421,15 @@
   },
   "project-delegation": {
     "filename": "project-delegation.zip",
-    "size_bytes": 13398,
-    "size_human": "13.1 KB",
+    "size_bytes": 14119,
+    "size_human": "13.8 KB",
     "file_count": 5
   },
   "canvas-static-site-pipeline": {
     "filename": "canvas-static-site-pipeline.zip",
-    "size_bytes": 67945,
-    "size_human": "66.4 KB",
-    "file_count": 14
+    "size_bytes": 177592,
+    "size_human": "173.4 KB",
+    "file_count": 32
   },
   "architecture-diagram": {
     "filename": "architecture-diagram.zip",
@@ -481,15 +595,15 @@
   },
   "device-environment-migration": {
     "filename": "device-environment-migration.zip",
-    "size_bytes": 23224,
-    "size_human": "22.7 KB",
+    "size_bytes": 32462,
+    "size_human": "31.7 KB",
     "file_count": 5
   },
   "direct-device-execution": {
     "filename": "direct-device-execution.zip",
-    "size_bytes": 6260,
-    "size_human": "6.1 KB",
-    "file_count": 1
+    "size_bytes": 20731,
+    "size_human": "20.2 KB",
+    "file_count": 3
   },
   "kanban-orchestrator": {
     "filename": "kanban-orchestrator.zip",
@@ -529,9 +643,9 @@
   },
   "opencode-nvidia-setup": {
     "filename": "opencode-nvidia-setup.zip",
-    "size_bytes": 1512,
-    "size_human": "1.5 KB",
-    "file_count": 1
+    "size_bytes": 19377,
+    "size_human": "18.9 KB",
+    "file_count": 4
   },
   "readme-changelog-automation": {
     "filename": "readme-changelog-automation.zip",
@@ -547,9 +661,9 @@
   },
   "vercel": {
     "filename": "vercel.zip",
-    "size_bytes": 1820,
-    "size_human": "1.8 KB",
-    "file_count": 1
+    "size_bytes": 44234,
+    "size_human": "43.2 KB",
+    "file_count": 8
   },
   "webhook-subscriptions": {
     "filename": "webhook-subscriptions.zip",
@@ -583,15 +697,15 @@
   },
   "github-cli": {
     "filename": "github-cli.zip",
-    "size_bytes": 24346,
-    "size_human": "23.8 KB",
+    "size_bytes": 27971,
+    "size_human": "27.3 KB",
     "file_count": 10
   },
   "github-profile-readme": {
     "filename": "github-profile-readme.zip",
-    "size_bytes": 9269,
-    "size_human": "9.1 KB",
-    "file_count": 2
+    "size_bytes": 32170,
+    "size_human": "31.4 KB",
+    "file_count": 7
   },
   "idea-bank-curator": {
     "filename": "idea-bank-curator.zip",
@@ -601,21 +715,21 @@
   },
   "oss-python-bootstrap": {
     "filename": "oss-python-bootstrap.zip",
-    "size_bytes": 8437,
-    "size_human": "8.2 KB",
+    "size_bytes": 10719,
+    "size_human": "10.5 KB",
     "file_count": 1
   },
   "github-trending-monitor": {
     "filename": "github-trending-monitor.zip",
-    "size_bytes": 4121,
-    "size_human": "4.0 KB",
-    "file_count": 2
+    "size_bytes": 8640,
+    "size_human": "8.4 KB",
+    "file_count": 4
   },
   "hermes-gateway-doctor": {
     "filename": "hermes-gateway-doctor.zip",
-    "size_bytes": 4532,
-    "size_human": "4.4 KB",
-    "file_count": 1
+    "size_bytes": 12952,
+    "size_human": "12.6 KB",
+    "file_count": 3
   },
   "impeccable": {
     "filename": "impeccable.zip",
@@ -625,9 +739,9 @@
   },
   "ios-trend-digest": {
     "filename": "ios-trend-digest.zip",
-    "size_bytes": 32477,
-    "size_human": "31.7 KB",
-    "file_count": 10
+    "size_bytes": 65779,
+    "size_human": "64.2 KB",
+    "file_count": 21
   },
   "find-nearby": {
     "filename": "find-nearby.zip",
@@ -691,15 +805,15 @@
   },
   "youtube-content": {
     "filename": "youtube-content.zip",
-    "size_bytes": 4392,
+    "size_bytes": 4391,
     "size_human": "4.3 KB",
     "file_count": 3
   },
   "minimax-image-gen": {
     "filename": "minimax-image-gen.zip",
-    "size_bytes": 2822,
-    "size_human": "2.8 KB",
-    "file_count": 2
+    "size_bytes": 8760,
+    "size_human": "8.6 KB",
+    "file_count": 4
   },
   "modal-serverless-gpu": {
     "filename": "modal-serverless-gpu.zip",
@@ -835,8 +949,8 @@
   },
   "obsidian": {
     "filename": "obsidian.zip",
-    "size_bytes": 674,
-    "size_human": "0.7 KB",
+    "size_bytes": 2974,
+    "size_human": "2.9 KB",
     "file_count": 1
   },
   "airtable": {
@@ -853,9 +967,9 @@
   },
   "google-workspace": {
     "filename": "google-workspace.zip",
-    "size_bytes": 13629,
-    "size_human": "13.3 KB",
-    "file_count": 5
+    "size_bytes": 14521,
+    "size_human": "14.2 KB",
+    "file_count": 6
   },
   "idea-bank-sync": {
     "filename": "idea-bank-sync.zip",
@@ -943,9 +1057,9 @@
   },
   "llm-wiki": {
     "filename": "llm-wiki.zip",
-    "size_bytes": 36498,
-    "size_human": "35.6 KB",
-    "file_count": 3
+    "size_bytes": 54482,
+    "size_human": "53.2 KB",
+    "file_count": 5
   },
   "polymarket": {
     "filename": "polymarket.zip",
@@ -955,8 +1069,8 @@
   },
   "research-paper-writing": {
     "filename": "research-paper-writing.zip",
-    "size_bytes": 799638,
-    "size_human": "780.9 KB",
+    "size_bytes": 799759,
+    "size_human": "781.0 KB",
     "file_count": 55
   },
   "openhue": {
@@ -967,8 +1081,8 @@
   },
   "xurl": {
     "filename": "xurl.zip",
-    "size_bytes": 6200,
-    "size_human": "6.1 KB",
+    "size_bytes": 7688,
+    "size_human": "7.5 KB",
     "file_count": 1
   },
   "hermes-agent-skill-authoring": {
