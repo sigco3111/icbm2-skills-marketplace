@@ -11,10 +11,10 @@ from pathlib import Path
 from collections import Counter
 from typing import Dict, List, Optional, Any, Tuple
 
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO_DIR = SCRIPT_DIR.parent
 SKILLS_DIR = Path.home() / ".hermes" / "skills"
-OUTPUT_PATH = Path(
-    "/Users/hjshin/Desktop/project/work/icbm2-skills-marketplace/src/data/skills.json"
-)
+OUTPUT_PATH = REPO_DIR / "src" / "data" / "skills.json"
 
 READING_SPEED_WPM = 200  # average adult reading speed
 

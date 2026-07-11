@@ -2,7 +2,7 @@
 # sync-skills-to-marketplace.sh
 # 스킬 변경을 감지하고 GitHub Pages 사이트를 업데이트합니다
 
-REPO_DIR="/Users/hjshin/Desktop/project/work/icbm2-skills-marketplace"
+REPO_DIR="/Users/mac/Desktop/project/work/icbm2-skills-marketplace"
 SKILLS_DIR="$HOME/.hermes/skills"
 HASH_FILE="$HOME/.hermes/data/skills-sync-hash.txt"
 

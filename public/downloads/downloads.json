@@ -119,6 +119,12 @@
     "size_human": "6.2 KB",
     "file_count": 1
   },
+  "ad-hoc-verifier": {
+    "filename": "ad-hoc-verifier.zip",
+    "size_bytes": 55703,
+    "size_human": "54.4 KB",
+    "file_count": 10
+  },
   "ai-model-tracker": {
     "filename": "ai-model-tracker.zip",
     "size_bytes": 48618,
@@ -323,6 +329,12 @@
     "size_human": "2.4 KB",
     "file_count": 1
   },
+  "periodic-data-pipeline": {
+    "filename": "periodic-data-pipeline.zip",
+    "size_bytes": 37089,
+    "size_human": "36.2 KB",
+    "file_count": 12
+  },
   "portfolio-rebalancer": {
     "filename": "portfolio-rebalancer.zip",
     "size_bytes": 2824,
@@ -364,6 +376,12 @@
     "size_bytes": 724976,
     "size_human": "708.0 KB",
     "file_count": 261
+  },
+  "tistory-publisher-205th-session": {
+    "filename": "tistory-publisher-205th-session.zip",
+    "size_bytes": 2912,
+    "size_human": "2.8 KB",
+    "file_count": 1
   },
   "tokscale": {
     "filename": "tokscale.zip",
@@ -419,6 +437,12 @@
     "size_human": "6.4 KB",
     "file_count": 2
   },
+  "multi-model-orchestration": {
+    "filename": "multi-model-orchestration.zip",
+    "size_bytes": 16309,
+    "size_human": "15.9 KB",
+    "file_count": 5
+  },
   "project-delegation": {
     "filename": "project-delegation.zip",
     "size_bytes": 14119,
@@ -430,6 +454,12 @@
     "size_bytes": 177592,
     "size_human": "173.4 KB",
     "file_count": 32
+  },
+  "computer-use": {
+    "filename": "computer-use.zip",
+    "size_bytes": 5120,
+    "size_human": "5.0 KB",
+    "file_count": 1
   },
   "architecture-diagram": {
     "filename": "architecture-diagram.zip",
@@ -593,6 +623,24 @@
     "size_human": "4.3 KB",
     "file_count": 1
   },
+  "ad-hoc-verification-bash-heredoc-pitfall": {
+    "filename": "ad-hoc-verification-bash-heredoc-pitfall.zip",
+    "size_bytes": 24096,
+    "size_human": "23.5 KB",
+    "file_count": 1
+  },
+  "coding-mission-fullcycle": {
+    "filename": "coding-mission-fullcycle.zip",
+    "size_bytes": 16759,
+    "size_human": "16.4 KB",
+    "file_count": 7
+  },
+  "desktop-mobile-pairing": {
+    "filename": "desktop-mobile-pairing.zip",
+    "size_bytes": 7736,
+    "size_human": "7.6 KB",
+    "file_count": 2
+  },
   "device-environment-migration": {
     "filename": "device-environment-migration.zip",
     "size_bytes": 32462,
@@ -622,6 +670,12 @@
     "size_bytes": 1333,
     "size_human": "1.3 KB",
     "file_count": 1
+  },
+  "mac-bootstrap": {
+    "filename": "mac-bootstrap.zip",
+    "size_bytes": 26166,
+    "size_human": "25.6 KB",
+    "file_count": 8
   },
   "neon-drizzle": {
     "filename": "neon-drizzle.zip",
@@ -659,11 +713,11 @@
     "size_human": "1.5 KB",
     "file_count": 1
   },
-  "vercel": {
-    "filename": "vercel.zip",
-    "size_bytes": 44234,
-    "size_human": "43.2 KB",
-    "file_count": 8
+  "tossinvest-app": {
+    "filename": "tossinvest-app.zip",
+    "size_bytes": 69687,
+    "size_human": "68.1 KB",
+    "file_count": 19
   },
   "webhook-subscriptions": {
     "filename": "webhook-subscriptions.zip",
@@ -1013,6 +1067,12 @@
     "size_human": "1.9 KB",
     "file_count": 1
   },
+  "petdex": {
+    "filename": "petdex.zip",
+    "size_bytes": 1834,
+    "size_human": "1.8 KB",
+    "file_count": 1
+  },
   "powerpoint": {
     "filename": "powerpoint.zip",
     "size_bytes": 140721,
@@ -1061,6 +1121,12 @@
     "size_human": "53.2 KB",
     "file_count": 5
   },
+  "notion-dev-news-sync": {
+    "filename": "notion-dev-news-sync.zip",
+    "size_bytes": 4295,
+    "size_human": "4.2 KB",
+    "file_count": 1
+  },
   "polymarket": {
     "filename": "polymarket.zip",
     "size_bytes": 6814,
@@ -1084,6 +1150,12 @@
     "size_bytes": 7688,
     "size_human": "7.5 KB",
     "file_count": 1
+  },
+  "ad-hoc-verification": {
+    "filename": "ad-hoc-verification.zip",
+    "size_bytes": 61193,
+    "size_human": "59.8 KB",
+    "file_count": 12
   },
   "hermes-agent-skill-authoring": {
     "filename": "hermes-agent-skill-authoring.zip",
@@ -1156,6 +1228,18 @@
     "size_bytes": 3167,
     "size_human": "3.1 KB",
     "file_count": 1
+  },
+  "toss-trader-dev": {
+    "filename": "toss-trader-dev.zip",
+    "size_bytes": 35637,
+    "size_human": "34.8 KB",
+    "file_count": 7
+  },
+  "vercel": {
+    "filename": "vercel.zip",
+    "size_bytes": 44234,
+    "size_human": "43.2 KB",
+    "file_count": 8
   },
   "video-editing": {
     "filename": "video-editing.zip",
