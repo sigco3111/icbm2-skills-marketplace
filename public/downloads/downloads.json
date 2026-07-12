@@ -37,9 +37,9 @@
   },
   "daily-self-review": {
     "filename": "daily-self-review.zip",
-    "size_bytes": 130261,
-    "size_human": "127.2 KB",
-    "file_count": 40
+    "size_bytes": 134466,
+    "size_human": "131.3 KB",
+    "file_count": 41
   },
   "design-md": {
     "filename": "design-md.zip",
@@ -139,8 +139,8 @@
   },
   "agent-benchmark-tracker": {
     "filename": "agent-benchmark-tracker.zip",
-    "size_bytes": 21879,
-    "size_human": "21.4 KB",
+    "size_bytes": 24342,
+    "size_human": "23.8 KB",
     "file_count": 6
   },
   "agentnews-monitor": {
@@ -283,8 +283,8 @@
   },
   "learning-log": {
     "filename": "learning-log.zip",
-    "size_bytes": 16576,
-    "size_human": "16.2 KB",
+    "size_bytes": 18596,
+    "size_human": "18.2 KB",
     "file_count": 4
   },
   "memory-error-tracker": {
@@ -319,9 +319,9 @@
   },
   "notebooklm-youtube-automation": {
     "filename": "notebooklm-youtube-automation.zip",
-    "size_bytes": 161018,
-    "size_human": "157.2 KB",
-    "file_count": 51
+    "size_bytes": 182794,
+    "size_human": "178.5 KB",
+    "file_count": 56
   },
   "notion-dashboard": {
     "filename": "notion-dashboard.zip",
@@ -373,9 +373,9 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 727832,
-    "size_human": "710.8 KB",
-    "file_count": 262
+    "size_bytes": 730630,
+    "size_human": "713.5 KB",
+    "file_count": 263
   },
   "tistory-publisher-205th-session": {
     "filename": "tistory-publisher-205th-session.zip",
@@ -397,9 +397,9 @@
   },
   "weekly-automation-report": {
     "filename": "weekly-automation-report.zip",
-    "size_bytes": 14776,
-    "size_human": "14.4 KB",
-    "file_count": 7
+    "size_bytes": 20069,
+    "size_human": "19.6 KB",
+    "file_count": 8
   },
   "weekly-self-report": {
     "filename": "weekly-self-report.zip",
@@ -409,9 +409,9 @@
   },
   "weekly-tech-digest": {
     "filename": "weekly-tech-digest.zip",
-    "size_bytes": 14759,
-    "size_human": "14.4 KB",
-    "file_count": 3
+    "size_bytes": 18153,
+    "size_human": "17.7 KB",
+    "file_count": 4
   },
   "agent-prompts": {
     "filename": "agent-prompts.zip",
@@ -781,9 +781,9 @@
   },
   "hermes-gateway-doctor": {
     "filename": "hermes-gateway-doctor.zip",
-    "size_bytes": 12952,
-    "size_human": "12.6 KB",
-    "file_count": 3
+    "size_bytes": 22275,
+    "size_human": "21.8 KB",
+    "file_count": 5
   },
   "impeccable": {
     "filename": "impeccable.zip",
