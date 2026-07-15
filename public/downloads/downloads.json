@@ -37,9 +37,9 @@
   },
   "daily-self-review": {
     "filename": "daily-self-review.zip",
-    "size_bytes": 135429,
-    "size_human": "132.3 KB",
-    "file_count": 41
+    "size_bytes": 138966,
+    "size_human": "135.7 KB",
+    "file_count": 42
   },
   "design-md": {
     "filename": "design-md.zip",
@@ -505,15 +505,15 @@
   },
   "nightly-maintenance-workflow": {
     "filename": "nightly-maintenance-workflow.zip",
-    "size_bytes": 137116,
-    "size_human": "133.9 KB",
-    "file_count": 34
+    "size_bytes": 142554,
+    "size_human": "139.2 KB",
+    "file_count": 36
   },
   "notebooklm-youtube-automation": {
     "filename": "notebooklm-youtube-automation.zip",
-    "size_bytes": 182794,
-    "size_human": "178.5 KB",
-    "file_count": 56
+    "size_bytes": 190554,
+    "size_human": "186.1 KB",
+    "file_count": 58
   },
   "notion-dashboard": {
     "filename": "notion-dashboard.zip",
@@ -571,9 +571,9 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 755525,
-    "size_human": "737.8 KB",
-    "file_count": 273
+    "size_bytes": 801264,
+    "size_human": "782.5 KB",
+    "file_count": 286
   },
   "tistory-publisher-205th-session": {
     "filename": "tistory-publisher-205th-session.zip",
@@ -619,9 +619,9 @@
   },
   "autonomous-coding-agents": {
     "filename": "autonomous-coding-agents.zip",
-    "size_bytes": 26726,
-    "size_human": "26.1 KB",
-    "file_count": 4
+    "size_bytes": 32127,
+    "size_human": "31.4 KB",
+    "file_count": 5
   },
   "hermes-agent": {
     "filename": "hermes-agent.zip",
@@ -727,8 +727,8 @@
   },
   "humanizer": {
     "filename": "humanizer.zip",
-    "size_bytes": 12703,
-    "size_human": "12.4 KB",
+    "size_bytes": 14525,
+    "size_human": "14.2 KB",
     "file_count": 2
   },
   "image-batch-processor": {
@@ -847,9 +847,15 @@
   },
   "direct-device-execution": {
     "filename": "direct-device-execution.zip",
-    "size_bytes": 20731,
-    "size_human": "20.2 KB",
+    "size_bytes": 22608,
+    "size_human": "22.1 KB",
     "file_count": 3
+  },
+  "gjc-cli-setup": {
+    "filename": "gjc-cli-setup.zip",
+    "size_bytes": 4798,
+    "size_human": "4.7 KB",
+    "file_count": 2
   },
   "kanban-orchestrator": {
     "filename": "kanban-orchestrator.zip",
@@ -862,6 +868,12 @@
     "size_bytes": 5716,
     "size_human": "5.6 KB",
     "file_count": 1
+  },
+  "legacy-repo-modernization": {
+    "filename": "legacy-repo-modernization.zip",
+    "size_bytes": 31201,
+    "size_human": "30.5 KB",
+    "file_count": 9
   },
   "local-dashboard": {
     "filename": "local-dashboard.zip",
@@ -935,6 +947,12 @@
     "size_human": "6.5 KB",
     "file_count": 3
   },
+  "game-assets-curator": {
+    "filename": "game-assets-curator.zip",
+    "size_bytes": 51522,
+    "size_human": "50.3 KB",
+    "file_count": 22
+  },
   "minecraft-modpack-server": {
     "filename": "minecraft-modpack-server.zip",
     "size_bytes": 3236,
@@ -955,15 +973,21 @@
   },
   "github-profile-readme": {
     "filename": "github-profile-readme.zip",
-    "size_bytes": 32170,
-    "size_human": "31.4 KB",
-    "file_count": 7
+    "size_bytes": 39193,
+    "size_human": "38.3 KB",
+    "file_count": 9
   },
   "idea-bank-curator": {
     "filename": "idea-bank-curator.zip",
     "size_bytes": 7901,
     "size_human": "7.7 KB",
     "file_count": 3
+  },
+  "oss-fork-localization": {
+    "filename": "oss-fork-localization.zip",
+    "size_bytes": 76517,
+    "size_human": "74.7 KB",
+    "file_count": 18
   },
   "oss-python-bootstrap": {
     "filename": "oss-python-bootstrap.zip",
@@ -973,9 +997,9 @@
   },
   "github-trending-monitor": {
     "filename": "github-trending-monitor.zip",
-    "size_bytes": 8640,
-    "size_human": "8.4 KB",
-    "file_count": 4
+    "size_bytes": 11237,
+    "size_human": "11.0 KB",
+    "file_count": 5
   },
   "hermes-gateway-doctor": {
     "filename": "hermes-gateway-doctor.zip",
@@ -991,9 +1015,9 @@
   },
   "ios-trend-digest": {
     "filename": "ios-trend-digest.zip",
-    "size_bytes": 69469,
-    "size_human": "67.8 KB",
-    "file_count": 22
+    "size_bytes": 73821,
+    "size_human": "72.1 KB",
+    "file_count": 23
   },
   "find-nearby": {
     "filename": "find-nearby.zip",
@@ -1001,11 +1025,17 @@
     "size_human": "4.2 KB",
     "file_count": 2
   },
+  "kakao-playmcp": {
+    "filename": "kakao-playmcp.zip",
+    "size_bytes": 12704,
+    "size_human": "12.4 KB",
+    "file_count": 4
+  },
   "mcporter": {
     "filename": "mcporter.zip",
-    "size_bytes": 1527,
-    "size_human": "1.5 KB",
-    "file_count": 1
+    "size_bytes": 8761,
+    "size_human": "8.6 KB",
+    "file_count": 3
   },
   "native-mcp": {
     "filename": "native-mcp.zip",
@@ -1337,6 +1367,12 @@
     "size_human": "781.0 KB",
     "file_count": 55
   },
+  "service-alive-check": {
+    "filename": "service-alive-check.zip",
+    "size_bytes": 8368,
+    "size_human": "8.2 KB",
+    "file_count": 3
+  },
   "openhue": {
     "filename": "openhue.zip",
     "size_bytes": 1251,
@@ -1429,9 +1465,9 @@
   },
   "toss-trader-dev": {
     "filename": "toss-trader-dev.zip",
-    "size_bytes": 35637,
-    "size_human": "34.8 KB",
-    "file_count": 7
+    "size_bytes": 42333,
+    "size_human": "41.3 KB",
+    "file_count": 8
   },
   "vercel": {
     "filename": "vercel.zip",
