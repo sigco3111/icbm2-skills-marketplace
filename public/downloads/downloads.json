@@ -571,9 +571,9 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 801264,
-    "size_human": "782.5 KB",
-    "file_count": 286
+    "size_bytes": 826052,
+    "size_human": "806.7 KB",
+    "file_count": 291
   },
   "tistory-publisher-205th-session": {
     "filename": "tistory-publisher-205th-session.zip",
@@ -737,6 +737,12 @@
     "size_human": "3.9 KB",
     "file_count": 1
   },
+  "incremental-game-design": {
+    "filename": "incremental-game-design.zip",
+    "size_bytes": 12954,
+    "size_human": "12.7 KB",
+    "file_count": 4
+  },
   "llm-desktop-companion": {
     "filename": "llm-desktop-companion.zip",
     "size_bytes": 39535,
@@ -857,6 +863,12 @@
     "size_human": "4.7 KB",
     "file_count": 2
   },
+  "godot-game-bootstrap": {
+    "filename": "godot-game-bootstrap.zip",
+    "size_bytes": 54564,
+    "size_human": "53.3 KB",
+    "file_count": 21
+  },
   "kanban-orchestrator": {
     "filename": "kanban-orchestrator.zip",
     "size_bytes": 6627,
@@ -949,8 +961,8 @@
   },
   "game-assets-curator": {
     "filename": "game-assets-curator.zip",
-    "size_bytes": 51522,
-    "size_human": "50.3 KB",
+    "size_bytes": 53345,
+    "size_human": "52.1 KB",
     "file_count": 22
   },
   "minecraft-modpack-server": {
@@ -1351,8 +1363,8 @@
   },
   "notion-dev-news-sync": {
     "filename": "notion-dev-news-sync.zip",
-    "size_bytes": 4295,
-    "size_human": "4.2 KB",
+    "size_bytes": 6302,
+    "size_human": "6.2 KB",
     "file_count": 1
   },
   "polymarket": {
