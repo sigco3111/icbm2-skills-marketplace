@@ -505,9 +505,9 @@
   },
   "nightly-maintenance-workflow": {
     "filename": "nightly-maintenance-workflow.zip",
-    "size_bytes": 149149,
-    "size_human": "145.7 KB",
-    "file_count": 38
+    "size_bytes": 152164,
+    "size_human": "148.6 KB",
+    "file_count": 39
   },
   "notebooklm-youtube-automation": {
     "filename": "notebooklm-youtube-automation.zip",
@@ -568,12 +568,6 @@
     "size_bytes": 3621,
     "size_human": "3.5 KB",
     "file_count": 1
-  },
-  "tistory-publisher": {
-    "filename": "tistory-publisher.zip",
-    "size_bytes": 875085,
-    "size_human": "854.6 KB",
-    "file_count": 307
   },
   "tistory-publisher-205th-session": {
     "filename": "tistory-publisher-205th-session.zip",
@@ -1051,9 +1045,9 @@
   },
   "ios-trend-digest": {
     "filename": "ios-trend-digest.zip",
-    "size_bytes": 82862,
-    "size_human": "80.9 KB",
-    "file_count": 25
+    "size_bytes": 85223,
+    "size_human": "83.2 KB",
+    "file_count": 26
   },
   "find-nearby": {
     "filename": "find-nearby.zip",
@@ -1510,6 +1504,12 @@
     "size_bytes": 3167,
     "size_human": "3.1 KB",
     "file_count": 1
+  },
+  "tistory-publisher": {
+    "filename": "tistory-publisher.zip",
+    "size_bytes": 29158,
+    "size_human": "28.5 KB",
+    "file_count": 13
   },
   "toss-trader-dev": {
     "filename": "toss-trader-dev.zip",
