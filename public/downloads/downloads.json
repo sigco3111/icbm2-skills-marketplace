@@ -323,6 +323,12 @@
     "size_human": "54.4 KB",
     "file_count": 10
   },
+  "apfs-metadata-stall-diagnosis": {
+    "filename": "apfs-metadata-stall-diagnosis.zip",
+    "size_bytes": 2656,
+    "size_human": "2.6 KB",
+    "file_count": 1
+  },
   "apple-platform": {
     "filename": "apple-platform.zip",
     "size_bytes": 6075,
@@ -505,9 +511,9 @@
   },
   "nightly-maintenance-workflow": {
     "filename": "nightly-maintenance-workflow.zip",
-    "size_bytes": 152512,
-    "size_human": "148.9 KB",
-    "file_count": 39
+    "size_bytes": 154355,
+    "size_human": "150.7 KB",
+    "file_count": 40
   },
   "notebooklm-youtube-automation": {
     "filename": "notebooklm-youtube-automation.zip",
@@ -649,9 +655,15 @@
   },
   "computer-use": {
     "filename": "computer-use.zip",
-    "size_bytes": 5120,
-    "size_human": "5.0 KB",
+    "size_bytes": 6258,
+    "size_human": "6.1 KB",
     "file_count": 1
+  },
+  "cpp-game-koreanization": {
+    "filename": "cpp-game-koreanization.zip",
+    "size_bytes": 21943,
+    "size_human": "21.4 KB",
+    "file_count": 9
   },
   "architecture-diagram": {
     "filename": "architecture-diagram.zip",
@@ -715,8 +727,8 @@
   },
   "godot-control-input-quirks": {
     "filename": "godot-control-input-quirks.zip",
-    "size_bytes": 9147,
-    "size_human": "8.9 KB",
+    "size_bytes": 9938,
+    "size_human": "9.7 KB",
     "file_count": 2
   },
   "google-veo-api": {
@@ -739,15 +751,15 @@
   },
   "incremental-game-design": {
     "filename": "incremental-game-design.zip",
-    "size_bytes": 60022,
-    "size_human": "58.6 KB",
-    "file_count": 13
+    "size_bytes": 70760,
+    "size_human": "69.1 KB",
+    "file_count": 15
   },
   "incremental-game-design-last-banner-event-engine": {
     "filename": "incremental-game-design-last-banner-event-engine.zip",
-    "size_bytes": 77373,
-    "size_human": "75.6 KB",
-    "file_count": 12
+    "size_bytes": 125119,
+    "size_human": "122.2 KB",
+    "file_count": 17
   },
   "llm-desktop-companion": {
     "filename": "llm-desktop-companion.zip",
@@ -877,9 +889,9 @@
   },
   "godot-game-bootstrap": {
     "filename": "godot-game-bootstrap.zip",
-    "size_bytes": 162136,
-    "size_human": "158.3 KB",
-    "file_count": 41
+    "size_bytes": 182355,
+    "size_human": "178.1 KB",
+    "file_count": 44
   },
   "interactive-widget-pages-deploy": {
     "filename": "interactive-widget-pages-deploy.zip",
@@ -911,11 +923,17 @@
     "size_human": "6.3 KB",
     "file_count": 3
   },
+  "lucas2-game-build-and-release": {
+    "filename": "lucas2-game-build-and-release.zip",
+    "size_bytes": 25106,
+    "size_human": "24.5 KB",
+    "file_count": 8
+  },
   "mac-bootstrap": {
     "filename": "mac-bootstrap.zip",
-    "size_bytes": 26166,
-    "size_human": "25.6 KB",
-    "file_count": 8
+    "size_bytes": 28822,
+    "size_human": "28.1 KB",
+    "file_count": 9
   },
   "neon-drizzle": {
     "filename": "neon-drizzle.zip",
@@ -959,6 +977,12 @@
     "size_human": "68.1 KB",
     "file_count": 19
   },
+  "unity-game-bootstrap": {
+    "filename": "unity-game-bootstrap.zip",
+    "size_bytes": 6472,
+    "size_human": "6.3 KB",
+    "file_count": 3
+  },
   "webhook-subscriptions": {
     "filename": "webhook-subscriptions.zip",
     "size_bytes": 2540,
@@ -982,6 +1006,12 @@
     "size_bytes": 56374,
     "size_human": "55.1 KB",
     "file_count": 23
+  },
+  "game-autopilot": {
+    "filename": "game-autopilot.zip",
+    "size_bytes": 13049,
+    "size_human": "12.7 KB",
+    "file_count": 3
   },
   "minecraft-modpack-server": {
     "filename": "minecraft-modpack-server.zip",
@@ -1007,17 +1037,29 @@
     "size_human": "38.3 KB",
     "file_count": 9
   },
+  "github-repo-triage": {
+    "filename": "github-repo-triage.zip",
+    "size_bytes": 5394,
+    "size_human": "5.3 KB",
+    "file_count": 2
+  },
   "idea-bank-curator": {
     "filename": "idea-bank-curator.zip",
     "size_bytes": 7901,
     "size_human": "7.7 KB",
     "file_count": 3
   },
+  "open-source-similar-finder": {
+    "filename": "open-source-similar-finder.zip",
+    "size_bytes": 3306,
+    "size_human": "3.2 KB",
+    "file_count": 1
+  },
   "oss-fork-localization": {
     "filename": "oss-fork-localization.zip",
-    "size_bytes": 76517,
-    "size_human": "74.7 KB",
-    "file_count": 18
+    "size_bytes": 186056,
+    "size_human": "181.7 KB",
+    "file_count": 42
   },
   "oss-python-bootstrap": {
     "filename": "oss-python-bootstrap.zip",
@@ -1030,6 +1072,12 @@
     "size_bytes": 11237,
     "size_human": "11.0 KB",
     "file_count": 5
+  },
+  "hermes-desktop-plugins": {
+    "filename": "hermes-desktop-plugins.zip",
+    "size_bytes": 6065,
+    "size_human": "5.9 KB",
+    "file_count": 2
   },
   "hermes-gateway-doctor": {
     "filename": "hermes-gateway-doctor.zip",
@@ -1045,14 +1093,26 @@
   },
   "ios-trend-digest": {
     "filename": "ios-trend-digest.zip",
-    "size_bytes": 90503,
-    "size_human": "88.4 KB",
-    "file_count": 27
+    "size_bytes": 93440,
+    "size_human": "91.2 KB",
+    "file_count": 28
   },
   "find-nearby": {
     "filename": "find-nearby.zip",
     "size_bytes": 4260,
     "size_human": "4.2 KB",
+    "file_count": 2
+  },
+  "love-lua-game-fork": {
+    "filename": "love-lua-game-fork.zip",
+    "size_bytes": 19383,
+    "size_human": "18.9 KB",
+    "file_count": 5
+  },
+  "lua-love-game-fork": {
+    "filename": "lua-love-game-fork.zip",
+    "size_bytes": 17608,
+    "size_human": "17.2 KB",
     "file_count": 2
   },
   "kakao-playmcp": {
@@ -1381,8 +1441,8 @@
   },
   "notion-dev-news-sync": {
     "filename": "notion-dev-news-sync.zip",
-    "size_bytes": 6302,
-    "size_human": "6.2 KB",
+    "size_bytes": 13262,
+    "size_human": "13.0 KB",
     "file_count": 1
   },
   "polymarket": {
@@ -1438,6 +1498,12 @@
     "size_bytes": 4781,
     "size_human": "4.7 KB",
     "file_count": 1
+  },
+  "love2d-to-web-port": {
+    "filename": "love2d-to-web-port.zip",
+    "size_bytes": 14894,
+    "size_human": "14.5 KB",
+    "file_count": 2
   },
   "node-inspect-debugger": {
     "filename": "node-inspect-debugger.zip",
@@ -1507,9 +1573,15 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 49653,
-    "size_human": "48.5 KB",
-    "file_count": 18
+    "size_bytes": 94495,
+    "size_human": "92.3 KB",
+    "file_count": 30
+  },
+  "tistory-publisher-session-20260720-304th": {
+    "filename": "tistory-publisher-session-20260720-304th.zip",
+    "size_bytes": 3458,
+    "size_human": "3.4 KB",
+    "file_count": 1
   },
   "toss-trader-dev": {
     "filename": "toss-trader-dev.zip",
@@ -1519,9 +1591,9 @@
   },
   "vercel": {
     "filename": "vercel.zip",
-    "size_bytes": 44234,
-    "size_human": "43.2 KB",
-    "file_count": 8
+    "size_bytes": 49367,
+    "size_human": "48.2 KB",
+    "file_count": 9
   },
   "video-editing": {
     "filename": "video-editing.zip",
