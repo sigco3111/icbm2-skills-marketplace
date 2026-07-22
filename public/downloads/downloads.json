@@ -127,9 +127,9 @@
   },
   "ai-model-tracker": {
     "filename": "ai-model-tracker.zip",
-    "size_bytes": 56844,
-    "size_human": "55.5 KB",
-    "file_count": 22
+    "size_bytes": 59453,
+    "size_human": "58.1 KB",
+    "file_count": 23
   },
   "d3-layout-debugging": {
     "filename": "d3-layout-debugging.zip",
@@ -653,12 +653,6 @@
     "size_human": "173.4 KB",
     "file_count": 32
   },
-  "computer-use": {
-    "filename": "computer-use.zip",
-    "size_bytes": 6258,
-    "size_human": "6.1 KB",
-    "file_count": 1
-  },
   "cpp-game-koreanization": {
     "filename": "cpp-game-koreanization.zip",
     "size_bytes": 21943,
@@ -893,6 +887,12 @@
     "size_human": "178.1 KB",
     "file_count": 44
   },
+  "hermes-telegram-cross-machine-doctor": {
+    "filename": "hermes-telegram-cross-machine-doctor.zip",
+    "size_bytes": 5766,
+    "size_human": "5.6 KB",
+    "file_count": 1
+  },
   "interactive-widget-pages-deploy": {
     "filename": "interactive-widget-pages-deploy.zip",
     "size_bytes": 11805,
@@ -964,6 +964,18 @@
     "size_bytes": 2193,
     "size_human": "2.1 KB",
     "file_count": 2
+  },
+  "rust-frontend-monorepo-setup": {
+    "filename": "rust-frontend-monorepo-setup.zip",
+    "size_bytes": 9860,
+    "size_human": "9.6 KB",
+    "file_count": 2
+  },
+  "rust-monorepo-game-dev": {
+    "filename": "rust-monorepo-game-dev.zip",
+    "size_bytes": 15943,
+    "size_human": "15.6 KB",
+    "file_count": 4
   },
   "skills-showcase": {
     "filename": "skills-showcase.zip",
@@ -1057,9 +1069,9 @@
   },
   "oss-fork-localization": {
     "filename": "oss-fork-localization.zip",
-    "size_bytes": 186056,
-    "size_human": "181.7 KB",
-    "file_count": 42
+    "size_bytes": 196457,
+    "size_human": "191.9 KB",
+    "file_count": 44
   },
   "oss-python-bootstrap": {
     "filename": "oss-python-bootstrap.zip",
@@ -1081,9 +1093,15 @@
   },
   "hermes-gateway-doctor": {
     "filename": "hermes-gateway-doctor.zip",
-    "size_bytes": 22275,
-    "size_human": "21.8 KB",
+    "size_bytes": 23909,
+    "size_human": "23.3 KB",
     "file_count": 5
+  },
+  "hermes-subagent-diagnosis": {
+    "filename": "hermes-subagent-diagnosis.zip",
+    "size_bytes": 16074,
+    "size_human": "15.7 KB",
+    "file_count": 4
   },
   "impeccable": {
     "filename": "impeccable.zip",
@@ -1093,9 +1111,9 @@
   },
   "ios-trend-digest": {
     "filename": "ios-trend-digest.zip",
-    "size_bytes": 93440,
-    "size_human": "91.2 KB",
-    "file_count": 28
+    "size_bytes": 103216,
+    "size_human": "100.8 KB",
+    "file_count": 31
   },
   "find-nearby": {
     "filename": "find-nearby.zip",
@@ -1105,15 +1123,15 @@
   },
   "love-lua-game-fork": {
     "filename": "love-lua-game-fork.zip",
-    "size_bytes": 19383,
-    "size_human": "18.9 KB",
+    "size_bytes": 27902,
+    "size_human": "27.2 KB",
     "file_count": 5
   },
   "lua-love-game-fork": {
     "filename": "lua-love-game-fork.zip",
-    "size_bytes": 17608,
-    "size_human": "17.2 KB",
-    "file_count": 2
+    "size_bytes": 141197,
+    "size_human": "137.9 KB",
+    "file_count": 26
   },
   "kakao-playmcp": {
     "filename": "kakao-playmcp.zip",
@@ -1337,6 +1355,12 @@
     "size_human": "4.9 KB",
     "file_count": 1
   },
+  "docx": {
+    "filename": "docx.zip",
+    "size_bytes": 161771,
+    "size_human": "158.0 KB",
+    "file_count": 61
+  },
   "google-workspace": {
     "filename": "google-workspace.zip",
     "size_bytes": 14521,
@@ -1363,8 +1387,8 @@
   },
   "nano-pdf": {
     "filename": "nano-pdf.zip",
-    "size_bytes": 946,
-    "size_human": "0.9 KB",
+    "size_bytes": 1041,
+    "size_human": "1.0 KB",
     "file_count": 1
   },
   "notion": {
@@ -1375,9 +1399,15 @@
   },
   "ocr-and-documents": {
     "filename": "ocr-and-documents.zip",
-    "size_bytes": 5163,
-    "size_human": "5.0 KB",
+    "size_bytes": 5211,
+    "size_human": "5.1 KB",
     "file_count": 4
+  },
+  "pdf": {
+    "filename": "pdf.zip",
+    "size_bytes": 21637,
+    "size_human": "21.1 KB",
+    "file_count": 12
   },
   "pdf-report": {
     "filename": "pdf-report.zip",
@@ -1393,9 +1423,9 @@
   },
   "powerpoint": {
     "filename": "powerpoint.zip",
-    "size_bytes": 140721,
-    "size_human": "137.4 KB",
-    "file_count": 50
+    "size_bytes": 166358,
+    "size_human": "162.5 KB",
+    "file_count": 56
   },
   "snippet-manager": {
     "filename": "snippet-manager.zip",
@@ -1414,6 +1444,12 @@
     "size_bytes": 3131,
     "size_human": "3.1 KB",
     "file_count": 1
+  },
+  "xlsx": {
+    "filename": "xlsx.zip",
+    "size_bytes": 11065,
+    "size_human": "10.8 KB",
+    "file_count": 4
   },
   "godmode": {
     "filename": "godmode.zip",
@@ -1441,8 +1477,8 @@
   },
   "notion-dev-news-sync": {
     "filename": "notion-dev-news-sync.zip",
-    "size_bytes": 13262,
-    "size_human": "13.0 KB",
+    "size_bytes": 17843,
+    "size_human": "17.4 KB",
     "file_count": 1
   },
   "polymarket": {
@@ -1501,8 +1537,8 @@
   },
   "love2d-to-web-port": {
     "filename": "love2d-to-web-port.zip",
-    "size_bytes": 14894,
-    "size_human": "14.5 KB",
+    "size_bytes": 15790,
+    "size_human": "15.4 KB",
     "file_count": 2
   },
   "node-inspect-debugger": {
@@ -1573,9 +1609,9 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 94495,
-    "size_human": "92.3 KB",
-    "file_count": 30
+    "size_bytes": 111292,
+    "size_human": "108.7 KB",
+    "file_count": 34
   },
   "tistory-publisher-session-20260720-304th": {
     "filename": "tistory-publisher-session-20260720-304th.zip",
