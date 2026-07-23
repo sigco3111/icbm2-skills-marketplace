@@ -37,9 +37,9 @@
   },
   "daily-self-review": {
     "filename": "daily-self-review.zip",
-    "size_bytes": 144982,
-    "size_human": "141.6 KB",
-    "file_count": 44
+    "size_bytes": 147536,
+    "size_human": "144.1 KB",
+    "file_count": 45
   },
   "design-md": {
     "filename": "design-md.zip",
@@ -388,6 +388,12 @@
     "size_bytes": 1887,
     "size_human": "1.8 KB",
     "file_count": 1
+  },
+  "cron-error-pattern-tuning": {
+    "filename": "cron-error-pattern-tuning.zip",
+    "size_bytes": 4188,
+    "size_human": "4.1 KB",
+    "file_count": 2
   },
   "cron-stale-triage": {
     "filename": "cron-stale-triage.zip",
@@ -905,6 +911,12 @@
     "size_human": "6.5 KB",
     "file_count": 1
   },
+  "kanban-project-delivery": {
+    "filename": "kanban-project-delivery.zip",
+    "size_bytes": 20296,
+    "size_human": "19.8 KB",
+    "file_count": 4
+  },
   "kanban-worker": {
     "filename": "kanban-worker.zip",
     "size_bytes": 5716,
@@ -1103,6 +1115,12 @@
     "size_human": "15.7 KB",
     "file_count": 4
   },
+  "hermes-themes": {
+    "filename": "hermes-themes.zip",
+    "size_bytes": 4221,
+    "size_human": "4.1 KB",
+    "file_count": 2
+  },
   "impeccable": {
     "filename": "impeccable.zip",
     "size_bytes": 31870,
@@ -1129,9 +1147,9 @@
   },
   "lua-love-game-fork": {
     "filename": "lua-love-game-fork.zip",
-    "size_bytes": 141197,
-    "size_human": "137.9 KB",
-    "file_count": 26
+    "size_bytes": 158238,
+    "size_human": "154.5 KB",
+    "file_count": 33
   },
   "kakao-playmcp": {
     "filename": "kakao-playmcp.zip",
@@ -1343,6 +1361,18 @@
     "size_human": "2.9 KB",
     "file_count": 1
   },
+  "pixijs": {
+    "filename": "pixijs.zip",
+    "size_bytes": 7649,
+    "size_human": "7.5 KB",
+    "file_count": 2
+  },
+  "pixijs-assets": {
+    "filename": "pixijs-assets.zip",
+    "size_bytes": 29267,
+    "size_human": "28.6 KB",
+    "file_count": 13
+  },
   "airtable": {
     "filename": "airtable.zip",
     "size_bytes": 4616,
@@ -1438,6 +1468,12 @@
     "size_bytes": 3004,
     "size_human": "2.9 KB",
     "file_count": 1
+  },
+  "tui-widgets": {
+    "filename": "tui-widgets.zip",
+    "size_bytes": 4294,
+    "size_human": "4.2 KB",
+    "file_count": 2
   },
   "word-document": {
     "filename": "word-document.zip",
@@ -1537,9 +1573,9 @@
   },
   "love2d-to-web-port": {
     "filename": "love2d-to-web-port.zip",
-    "size_bytes": 15790,
-    "size_human": "15.4 KB",
-    "file_count": 2
+    "size_bytes": 58612,
+    "size_human": "57.2 KB",
+    "file_count": 11
   },
   "node-inspect-debugger": {
     "filename": "node-inspect-debugger.zip",
@@ -1609,9 +1645,9 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 111292,
-    "size_human": "108.7 KB",
-    "file_count": 34
+    "size_bytes": 120907,
+    "size_human": "118.1 KB",
+    "file_count": 37
   },
   "tistory-publisher-session-20260720-304th": {
     "filename": "tistory-publisher-session-20260720-304th.zip",
