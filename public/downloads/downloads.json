@@ -391,8 +391,8 @@
   },
   "cron-error-pattern-tuning": {
     "filename": "cron-error-pattern-tuning.zip",
-    "size_bytes": 4188,
-    "size_human": "4.1 KB",
+    "size_bytes": 5259,
+    "size_human": "5.1 KB",
     "file_count": 2
   },
   "cron-stale-triage": {
@@ -913,9 +913,9 @@
   },
   "kanban-project-delivery": {
     "filename": "kanban-project-delivery.zip",
-    "size_bytes": 20296,
-    "size_human": "19.8 KB",
-    "file_count": 4
+    "size_bytes": 33476,
+    "size_human": "32.7 KB",
+    "file_count": 6
   },
   "kanban-worker": {
     "filename": "kanban-worker.zip",
@@ -1025,6 +1025,12 @@
     "size_human": "6.5 KB",
     "file_count": 3
   },
+  "external-score-diagnosis": {
+    "filename": "external-score-diagnosis.zip",
+    "size_bytes": 15989,
+    "size_human": "15.6 KB",
+    "file_count": 3
+  },
   "game-assets-curator": {
     "filename": "game-assets-curator.zip",
     "size_bytes": 56374,
@@ -1057,9 +1063,9 @@
   },
   "github-profile-readme": {
     "filename": "github-profile-readme.zip",
-    "size_bytes": 39193,
-    "size_human": "38.3 KB",
-    "file_count": 9
+    "size_bytes": 44245,
+    "size_human": "43.2 KB",
+    "file_count": 10
   },
   "github-repo-triage": {
     "filename": "github-repo-triage.zip",
@@ -1513,9 +1519,9 @@
   },
   "notion-dev-news-sync": {
     "filename": "notion-dev-news-sync.zip",
-    "size_bytes": 17843,
-    "size_human": "17.4 KB",
-    "file_count": 1
+    "size_bytes": 24328,
+    "size_human": "23.8 KB",
+    "file_count": 2
   },
   "polymarket": {
     "filename": "polymarket.zip",
@@ -1528,6 +1534,12 @@
     "size_bytes": 799759,
     "size_human": "781.0 KB",
     "file_count": 55
+  },
+  "scoring-system-analyzer": {
+    "filename": "scoring-system-analyzer.zip",
+    "size_bytes": 12484,
+    "size_human": "12.2 KB",
+    "file_count": 4
   },
   "service-alive-check": {
     "filename": "service-alive-check.zip",
@@ -1573,15 +1585,21 @@
   },
   "love2d-to-web-port": {
     "filename": "love2d-to-web-port.zip",
-    "size_bytes": 58612,
-    "size_human": "57.2 KB",
-    "file_count": 11
+    "size_bytes": 98292,
+    "size_human": "96.0 KB",
+    "file_count": 18
   },
   "node-inspect-debugger": {
     "filename": "node-inspect-debugger.zip",
     "size_bytes": 4881,
     "size_human": "4.8 KB",
     "file_count": 1
+  },
+  "pixijs-v8-pitfalls": {
+    "filename": "pixijs-v8-pitfalls.zip",
+    "size_bytes": 9466,
+    "size_human": "9.2 KB",
+    "file_count": 3
   },
   "plan": {
     "filename": "plan.zip",
@@ -1645,9 +1663,9 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 120907,
-    "size_human": "118.1 KB",
-    "file_count": 37
+    "size_bytes": 132664,
+    "size_human": "129.6 KB",
+    "file_count": 40
   },
   "tistory-publisher-session-20260720-304th": {
     "filename": "tistory-publisher-session-20260720-304th.zip",
