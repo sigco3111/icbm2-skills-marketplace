@@ -1,8 +1,8 @@
 {
   "apple-notes": {
     "filename": "apple-notes.zip",
-    "size_bytes": 1109,
-    "size_human": "1.1 KB",
+    "size_bytes": 1233,
+    "size_human": "1.2 KB",
     "file_count": 1
   },
   "apple-reminders": {
@@ -13,7 +13,7 @@
   },
   "claude-code": {
     "filename": "claude-code.zip",
-    "size_bytes": 12809,
+    "size_bytes": 12811,
     "size_human": "12.5 KB",
     "file_count": 1
   },
@@ -43,8 +43,8 @@
   },
   "design-md": {
     "filename": "design-md.zip",
-    "size_bytes": 4673,
-    "size_human": "4.6 KB",
+    "size_bytes": 5235,
+    "size_human": "5.1 KB",
     "file_count": 2
   },
   "findmy": {
@@ -487,8 +487,8 @@
   },
   "learning-log": {
     "filename": "learning-log.zip",
-    "size_bytes": 22159,
-    "size_human": "21.6 KB",
+    "size_bytes": 22671,
+    "size_human": "22.1 KB",
     "file_count": 4
   },
   "memory-error-tracker": {
@@ -601,9 +601,9 @@
   },
   "weekly-automation-report": {
     "filename": "weekly-automation-report.zip",
-    "size_bytes": 20858,
-    "size_human": "20.4 KB",
-    "file_count": 8
+    "size_bytes": 22872,
+    "size_human": "22.3 KB",
+    "file_count": 9
   },
   "weekly-self-report": {
     "filename": "weekly-self-report.zip",
@@ -703,8 +703,8 @@
   },
   "comfyui": {
     "filename": "comfyui.zip",
-    "size_bytes": 96954,
-    "size_human": "94.7 KB",
+    "size_bytes": 97028,
+    "size_human": "94.8 KB",
     "file_count": 33
   },
   "ideation": {
@@ -721,7 +721,7 @@
   },
   "excalidraw": {
     "filename": "excalidraw.zip",
-    "size_bytes": 10112,
+    "size_bytes": 10113,
     "size_human": "9.9 KB",
     "file_count": 5
   },
@@ -787,8 +787,8 @@
   },
   "pretext": {
     "filename": "pretext.zip",
-    "size_bytes": 28763,
-    "size_human": "28.1 KB",
+    "size_bytes": 28704,
+    "size_human": "28.0 KB",
     "file_count": 4
   },
   "qwen3-tts": {
@@ -805,14 +805,14 @@
   },
   "sketch": {
     "filename": "sketch.zip",
-    "size_bytes": 4420,
-    "size_human": "4.3 KB",
+    "size_bytes": 4573,
+    "size_human": "4.5 KB",
     "file_count": 1
   },
   "songwriting-and-ai-music": {
     "filename": "songwriting-and-ai-music.zip",
-    "size_bytes": 5265,
-    "size_human": "5.1 KB",
+    "size_bytes": 5563,
+    "size_human": "5.4 KB",
     "file_count": 1
   },
   "text-game-builder": {
@@ -823,8 +823,8 @@
   },
   "touchdesigner-mcp": {
     "filename": "touchdesigner-mcp.zip",
-    "size_bytes": 101251,
-    "size_human": "98.9 KB",
+    "size_bytes": 101198,
+    "size_human": "98.8 KB",
     "file_count": 23
   },
   "data-analysis": {
@@ -1013,12 +1013,6 @@
     "size_human": "2.5 KB",
     "file_count": 1
   },
-  "dogfood": {
-    "filename": "dogfood.zip",
-    "size_bytes": 5613,
-    "size_human": "5.5 KB",
-    "file_count": 3
-  },
   "himalaya": {
     "filename": "himalaya.zip",
     "size_bytes": 6672,
@@ -1069,9 +1063,9 @@
   },
   "github-repo-triage": {
     "filename": "github-repo-triage.zip",
-    "size_bytes": 5394,
-    "size_human": "5.3 KB",
-    "file_count": 2
+    "size_bytes": 8070,
+    "size_human": "7.9 KB",
+    "file_count": 3
   },
   "idea-bank-curator": {
     "filename": "idea-bank-curator.zip",
@@ -1237,19 +1231,19 @@
   },
   "evaluating-llms-harness": {
     "filename": "evaluating-llms-harness.zip",
-    "size_bytes": 20106,
-    "size_human": "19.6 KB",
+    "size_bytes": 20240,
+    "size_human": "19.8 KB",
     "file_count": 5
   },
   "weights-and-biases": {
     "filename": "weights-and-biases.zip",
-    "size_bytes": 17742,
-    "size_human": "17.3 KB",
+    "size_bytes": 17830,
+    "size_human": "17.4 KB",
     "file_count": 4
   },
   "huggingface-hub": {
     "filename": "huggingface-hub.zip",
-    "size_bytes": 1913,
+    "size_bytes": 1943,
     "size_human": "1.9 KB",
     "file_count": 1
   },
@@ -1285,8 +1279,8 @@
   },
   "serving-llms-vllm": {
     "filename": "serving-llms-vllm.zip",
-    "size_bytes": 14597,
-    "size_human": "14.3 KB",
+    "size_bytes": 14826,
+    "size_human": "14.5 KB",
     "file_count": 5
   },
   "audiocraft-audio-generation": {
@@ -1367,6 +1361,18 @@
     "size_human": "2.9 KB",
     "file_count": 1
   },
+  "notebooklm-auth-cookie-ttl-2026-07-26": {
+    "filename": "notebooklm-auth-cookie-ttl-2026-07-26.zip",
+    "size_bytes": 2380,
+    "size_human": "2.3 KB",
+    "file_count": 1
+  },
+  "notebooklm-youtube-automation-pitfall-2026-07-26": {
+    "filename": "notebooklm-youtube-automation-pitfall-2026-07-26.zip",
+    "size_bytes": 2897,
+    "size_human": "2.8 KB",
+    "file_count": 1
+  },
   "pixijs": {
     "filename": "pixijs.zip",
     "size_bytes": 7649,
@@ -1393,7 +1399,7 @@
   },
   "docx": {
     "filename": "docx.zip",
-    "size_bytes": 161771,
+    "size_bytes": 161824,
     "size_human": "158.0 KB",
     "file_count": 61
   },
@@ -1423,7 +1429,7 @@
   },
   "nano-pdf": {
     "filename": "nano-pdf.zip",
-    "size_bytes": 1041,
+    "size_bytes": 1034,
     "size_human": "1.0 KB",
     "file_count": 1
   },
@@ -1441,8 +1447,8 @@
   },
   "pdf": {
     "filename": "pdf.zip",
-    "size_bytes": 21637,
-    "size_human": "21.1 KB",
+    "size_bytes": 21694,
+    "size_human": "21.2 KB",
     "file_count": 12
   },
   "pdf-report": {
@@ -1459,7 +1465,7 @@
   },
   "powerpoint": {
     "filename": "powerpoint.zip",
-    "size_bytes": 166358,
+    "size_bytes": 166413,
     "size_human": "162.5 KB",
     "file_count": 56
   },
@@ -1471,7 +1477,7 @@
   },
   "teams-meeting-pipeline": {
     "filename": "teams-meeting-pipeline.zip",
-    "size_bytes": 3004,
+    "size_bytes": 2980,
     "size_human": "2.9 KB",
     "file_count": 1
   },
@@ -1489,7 +1495,7 @@
   },
   "xlsx": {
     "filename": "xlsx.zip",
-    "size_bytes": 11065,
+    "size_bytes": 11100,
     "size_human": "10.8 KB",
     "file_count": 4
   },
@@ -1531,7 +1537,7 @@
   },
   "research-paper-writing": {
     "filename": "research-paper-writing.zip",
-    "size_bytes": 799759,
+    "size_bytes": 799753,
     "size_human": "781.0 KB",
     "file_count": 55
   },
@@ -1549,8 +1555,8 @@
   },
   "openhue": {
     "filename": "openhue.zip",
-    "size_bytes": 1251,
-    "size_human": "1.2 KB",
+    "size_bytes": 1325,
+    "size_human": "1.3 KB",
     "file_count": 1
   },
   "xurl": {
@@ -1565,6 +1571,12 @@
     "size_human": "59.8 KB",
     "file_count": 12
   },
+  "dogfood": {
+    "filename": "dogfood.zip",
+    "size_bytes": 5613,
+    "size_human": "5.5 KB",
+    "file_count": 3
+  },
   "embeddable-web-component": {
     "filename": "embeddable-web-component.zip",
     "size_bytes": 41009,
@@ -1573,8 +1585,8 @@
   },
   "hermes-agent-skill-authoring": {
     "filename": "hermes-agent-skill-authoring.zip",
-    "size_bytes": 4784,
-    "size_human": "4.7 KB",
+    "size_bytes": 5037,
+    "size_human": "4.9 KB",
     "file_count": 1
   },
   "hermes-s6-container-supervision": {
@@ -1591,7 +1603,7 @@
   },
   "node-inspect-debugger": {
     "filename": "node-inspect-debugger.zip",
-    "size_bytes": 4881,
+    "size_bytes": 4873,
     "size_human": "4.8 KB",
     "file_count": 1
   },
@@ -1603,13 +1615,13 @@
   },
   "plan": {
     "filename": "plan.zip",
-    "size_bytes": 3863,
+    "size_bytes": 3843,
     "size_human": "3.8 KB",
     "file_count": 1
   },
   "python-debugpy": {
     "filename": "python-debugpy.zip",
-    "size_bytes": 5642,
+    "size_bytes": 5631,
     "size_human": "5.5 KB",
     "file_count": 1
   },
@@ -1621,8 +1633,8 @@
   },
   "simplify-code": {
     "filename": "simplify-code.zip",
-    "size_bytes": 5153,
-    "size_human": "5.0 KB",
+    "size_bytes": 6721,
+    "size_human": "6.6 KB",
     "file_count": 1
   },
   "spike": {
@@ -1663,9 +1675,9 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 132664,
-    "size_human": "129.6 KB",
-    "file_count": 40
+    "size_bytes": 160090,
+    "size_human": "156.3 KB",
+    "file_count": 49
   },
   "tistory-publisher-session-20260720-304th": {
     "filename": "tistory-publisher-session-20260720-304th.zip",
