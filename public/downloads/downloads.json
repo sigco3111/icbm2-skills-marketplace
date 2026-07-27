@@ -127,9 +127,9 @@
   },
   "ai-model-tracker": {
     "filename": "ai-model-tracker.zip",
-    "size_bytes": 59453,
-    "size_human": "58.1 KB",
-    "file_count": 23
+    "size_bytes": 63104,
+    "size_human": "61.6 KB",
+    "file_count": 24
   },
   "d3-layout-debugging": {
     "filename": "d3-layout-debugging.zip",
@@ -319,8 +319,8 @@
   },
   "ad-hoc-verifier": {
     "filename": "ad-hoc-verifier.zip",
-    "size_bytes": 55703,
-    "size_human": "54.4 KB",
+    "size_bytes": 57216,
+    "size_human": "55.9 KB",
     "file_count": 10
   },
   "apfs-metadata-stall-diagnosis": {
@@ -499,8 +499,8 @@
   },
   "memory-hygiene": {
     "filename": "memory-hygiene.zip",
-    "size_bytes": 35598,
-    "size_human": "34.8 KB",
+    "size_bytes": 37149,
+    "size_human": "36.3 KB",
     "file_count": 12
   },
   "morning-briefing": {
@@ -661,9 +661,9 @@
   },
   "cpp-game-koreanization": {
     "filename": "cpp-game-koreanization.zip",
-    "size_bytes": 21943,
-    "size_human": "21.4 KB",
-    "file_count": 9
+    "size_bytes": 34410,
+    "size_human": "33.6 KB",
+    "file_count": 11
   },
   "architecture-diagram": {
     "filename": "architecture-diagram.zip",
@@ -827,6 +827,12 @@
     "size_human": "98.8 KB",
     "file_count": 23
   },
+  "vite-threejs-game-bootstrap": {
+    "filename": "vite-threejs-game-bootstrap.zip",
+    "size_bytes": 6045,
+    "size_human": "5.9 KB",
+    "file_count": 1
+  },
   "data-analysis": {
     "filename": "data-analysis.zip",
     "size_bytes": 3432,
@@ -913,9 +919,9 @@
   },
   "kanban-project-delivery": {
     "filename": "kanban-project-delivery.zip",
-    "size_bytes": 33476,
-    "size_human": "32.7 KB",
-    "file_count": 6
+    "size_bytes": 42210,
+    "size_human": "41.2 KB",
+    "file_count": 7
   },
   "kanban-worker": {
     "filename": "kanban-worker.zip",
@@ -1049,11 +1055,23 @@
     "size_human": "4.2 KB",
     "file_count": 1
   },
+  "github-brief-vs-reality-probe": {
+    "filename": "github-brief-vs-reality-probe.zip",
+    "size_bytes": 10707,
+    "size_human": "10.5 KB",
+    "file_count": 3
+  },
   "github-cli": {
     "filename": "github-cli.zip",
     "size_bytes": 27971,
     "size_human": "27.3 KB",
     "file_count": 10
+  },
+  "github-game-candidate-scouting": {
+    "filename": "github-game-candidate-scouting.zip",
+    "size_bytes": 14820,
+    "size_human": "14.5 KB",
+    "file_count": 4
   },
   "github-profile-readme": {
     "filename": "github-profile-readme.zip",
@@ -1063,9 +1081,9 @@
   },
   "github-repo-triage": {
     "filename": "github-repo-triage.zip",
-    "size_bytes": 8070,
-    "size_human": "7.9 KB",
-    "file_count": 3
+    "size_bytes": 11948,
+    "size_human": "11.7 KB",
+    "file_count": 4
   },
   "idea-bank-curator": {
     "filename": "idea-bank-curator.zip",
@@ -1081,14 +1099,20 @@
   },
   "oss-fork-localization": {
     "filename": "oss-fork-localization.zip",
-    "size_bytes": 196457,
-    "size_human": "191.9 KB",
-    "file_count": 44
+    "size_bytes": 310393,
+    "size_human": "303.1 KB",
+    "file_count": 66
   },
   "oss-python-bootstrap": {
     "filename": "oss-python-bootstrap.zip",
     "size_bytes": 10719,
     "size_human": "10.5 KB",
+    "file_count": 1
+  },
+  "vite-react-spa-game-fork": {
+    "filename": "vite-react-spa-game-fork.zip",
+    "size_bytes": 5978,
+    "size_human": "5.8 KB",
     "file_count": 1
   },
   "github-trending-monitor": {
@@ -1129,8 +1153,8 @@
   },
   "ios-trend-digest": {
     "filename": "ios-trend-digest.zip",
-    "size_bytes": 103216,
-    "size_human": "100.8 KB",
+    "size_bytes": 103582,
+    "size_human": "101.2 KB",
     "file_count": 31
   },
   "find-nearby": {
@@ -1373,6 +1397,12 @@
     "size_human": "2.8 KB",
     "file_count": 1
   },
+  "one-shot-game-orchestration": {
+    "filename": "one-shot-game-orchestration.zip",
+    "size_bytes": 28562,
+    "size_human": "27.9 KB",
+    "file_count": 9
+  },
   "pixijs": {
     "filename": "pixijs.zip",
     "size_bytes": 7649,
@@ -1529,6 +1559,12 @@
     "size_human": "23.8 KB",
     "file_count": 2
   },
+  "notion-wiki-extraction-recipes": {
+    "filename": "notion-wiki-extraction-recipes.zip",
+    "size_bytes": 16512,
+    "size_human": "16.1 KB",
+    "file_count": 7
+  },
   "polymarket": {
     "filename": "polymarket.zip",
     "size_bytes": 6814,
@@ -1567,8 +1603,8 @@
   },
   "ad-hoc-verification": {
     "filename": "ad-hoc-verification.zip",
-    "size_bytes": 61193,
-    "size_human": "59.8 KB",
+    "size_bytes": 62376,
+    "size_human": "60.9 KB",
     "file_count": 12
   },
   "dogfood": {
@@ -1582,6 +1618,12 @@
     "size_bytes": 41009,
     "size_human": "40.0 KB",
     "file_count": 8
+  },
+  "fork-first-investigation": {
+    "filename": "fork-first-investigation.zip",
+    "size_bytes": 6239,
+    "size_human": "6.1 KB",
+    "file_count": 1
   },
   "hermes-agent-skill-authoring": {
     "filename": "hermes-agent-skill-authoring.zip",
@@ -1605,6 +1647,12 @@
     "filename": "node-inspect-debugger.zip",
     "size_bytes": 4873,
     "size_human": "4.8 KB",
+    "file_count": 1
+  },
+  "patch-line-context-safety": {
+    "filename": "patch-line-context-safety.zip",
+    "size_bytes": 4747,
+    "size_human": "4.6 KB",
     "file_count": 1
   },
   "pixijs-v8-pitfalls": {
@@ -1675,9 +1723,9 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 160090,
-    "size_human": "156.3 KB",
-    "file_count": 49
+    "size_bytes": 175974,
+    "size_human": "171.8 KB",
+    "file_count": 54
   },
   "tistory-publisher-session-20260720-304th": {
     "filename": "tistory-publisher-session-20260720-304th.zip",
@@ -1693,9 +1741,9 @@
   },
   "vercel": {
     "filename": "vercel.zip",
-    "size_bytes": 49367,
-    "size_human": "48.2 KB",
-    "file_count": 9
+    "size_bytes": 77493,
+    "size_human": "75.7 KB",
+    "file_count": 16
   },
   "video-editing": {
     "filename": "video-editing.zip",
