@@ -323,6 +323,12 @@
     "size_human": "55.9 KB",
     "file_count": 10
   },
+  "ai-tool-evaluation-skip-criteria": {
+    "filename": "ai-tool-evaluation-skip-criteria.zip",
+    "size_bytes": 2713,
+    "size_human": "2.6 KB",
+    "file_count": 1
+  },
   "apfs-metadata-stall-diagnosis": {
     "filename": "apfs-metadata-stall-diagnosis.zip",
     "size_bytes": 2656,
@@ -391,9 +397,9 @@
   },
   "cron-error-pattern-tuning": {
     "filename": "cron-error-pattern-tuning.zip",
-    "size_bytes": 5259,
-    "size_human": "5.1 KB",
-    "file_count": 2
+    "size_bytes": 6662,
+    "size_human": "6.5 KB",
+    "file_count": 3
   },
   "cron-stale-triage": {
     "filename": "cron-stale-triage.zip",
@@ -833,6 +839,12 @@
     "size_human": "5.9 KB",
     "file_count": 1
   },
+  "cross-fork-pr-submission": {
+    "filename": "cross-fork-pr-submission.zip",
+    "size_bytes": 2922,
+    "size_human": "2.9 KB",
+    "file_count": 1
+  },
   "data-analysis": {
     "filename": "data-analysis.zip",
     "size_bytes": 3432,
@@ -895,9 +907,9 @@
   },
   "godot-game-bootstrap": {
     "filename": "godot-game-bootstrap.zip",
-    "size_bytes": 182355,
-    "size_human": "178.1 KB",
-    "file_count": 44
+    "size_bytes": 194306,
+    "size_human": "189.8 KB",
+    "file_count": 45
   },
   "hermes-telegram-cross-machine-doctor": {
     "filename": "hermes-telegram-cross-machine-doctor.zip",
@@ -1069,9 +1081,9 @@
   },
   "github-game-candidate-scouting": {
     "filename": "github-game-candidate-scouting.zip",
-    "size_bytes": 14820,
-    "size_human": "14.5 KB",
-    "file_count": 4
+    "size_bytes": 36007,
+    "size_human": "35.2 KB",
+    "file_count": 8
   },
   "github-profile-readme": {
     "filename": "github-profile-readme.zip",
@@ -1081,9 +1093,9 @@
   },
   "github-repo-triage": {
     "filename": "github-repo-triage.zip",
-    "size_bytes": 11948,
-    "size_human": "11.7 KB",
-    "file_count": 4
+    "size_bytes": 20171,
+    "size_human": "19.7 KB",
+    "file_count": 5
   },
   "idea-bank-curator": {
     "filename": "idea-bank-curator.zip",
@@ -1099,9 +1111,9 @@
   },
   "oss-fork-localization": {
     "filename": "oss-fork-localization.zip",
-    "size_bytes": 310393,
-    "size_human": "303.1 KB",
-    "file_count": 66
+    "size_bytes": 319073,
+    "size_human": "311.6 KB",
+    "file_count": 77
   },
   "oss-python-bootstrap": {
     "filename": "oss-python-bootstrap.zip",
@@ -1120,6 +1132,24 @@
     "size_bytes": 11237,
     "size_human": "11.0 KB",
     "file_count": 5
+  },
+  "github-web-app-candidate-scouting": {
+    "filename": "github-web-app-candidate-scouting.zip",
+    "size_bytes": 5591,
+    "size_human": "5.5 KB",
+    "file_count": 2
+  },
+  "godot-dialogue-manager-testing": {
+    "filename": "godot-dialogue-manager-testing.zip",
+    "size_bytes": 1237,
+    "size_human": "1.2 KB",
+    "file_count": 1
+  },
+  "godot-4-i18n-runtime-fallback": {
+    "filename": "godot-4-i18n-runtime-fallback.zip",
+    "size_bytes": 3591,
+    "size_human": "3.5 KB",
+    "file_count": 1
   },
   "hermes-desktop-plugins": {
     "filename": "hermes-desktop-plugins.zip",
@@ -1157,11 +1187,23 @@
     "size_human": "101.2 KB",
     "file_count": 31
   },
+  "java-swing-i18n-extension": {
+    "filename": "java-swing-i18n-extension.zip",
+    "size_bytes": 24811,
+    "size_human": "24.2 KB",
+    "file_count": 4
+  },
   "find-nearby": {
     "filename": "find-nearby.zip",
     "size_bytes": 4260,
     "size_human": "4.2 KB",
     "file_count": 2
+  },
+  "godot-dialogue-manager-localization": {
+    "filename": "godot-dialogue-manager-localization.zip",
+    "size_bytes": 1091,
+    "size_human": "1.1 KB",
+    "file_count": 1
   },
   "love-lua-game-fork": {
     "filename": "love-lua-game-fork.zip",
@@ -1637,6 +1679,12 @@
     "size_human": "4.7 KB",
     "file_count": 1
   },
+  "java-swing-i18n-survey": {
+    "filename": "java-swing-i18n-survey.zip",
+    "size_bytes": 3283,
+    "size_human": "3.2 KB",
+    "file_count": 1
+  },
   "love2d-to-web-port": {
     "filename": "love2d-to-web-port.zip",
     "size_bytes": 98292,
@@ -1651,8 +1699,8 @@
   },
   "patch-line-context-safety": {
     "filename": "patch-line-context-safety.zip",
-    "size_bytes": 4747,
-    "size_human": "4.6 KB",
+    "size_bytes": 7693,
+    "size_human": "7.5 KB",
     "file_count": 1
   },
   "pixijs-v8-pitfalls": {
@@ -1723,9 +1771,9 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 175974,
-    "size_human": "171.8 KB",
-    "file_count": 54
+    "size_bytes": 187691,
+    "size_human": "183.3 KB",
+    "file_count": 61
   },
   "tistory-publisher-session-20260720-304th": {
     "filename": "tistory-publisher-session-20260720-304th.zip",
