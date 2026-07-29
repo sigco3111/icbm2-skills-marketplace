@@ -1079,6 +1079,12 @@
     "size_human": "27.3 KB",
     "file_count": 10
   },
+  "github-ecosystem-survey": {
+    "filename": "github-ecosystem-survey.zip",
+    "size_bytes": 9375,
+    "size_human": "9.2 KB",
+    "file_count": 2
+  },
   "github-game-candidate-scouting": {
     "filename": "github-game-candidate-scouting.zip",
     "size_bytes": 36007,
@@ -1111,9 +1117,9 @@
   },
   "oss-fork-localization": {
     "filename": "oss-fork-localization.zip",
-    "size_bytes": 319073,
-    "size_human": "311.6 KB",
-    "file_count": 77
+    "size_bytes": 332597,
+    "size_human": "324.8 KB",
+    "file_count": 78
   },
   "oss-python-bootstrap": {
     "filename": "oss-python-bootstrap.zip",
@@ -1165,8 +1171,8 @@
   },
   "hermes-subagent-diagnosis": {
     "filename": "hermes-subagent-diagnosis.zip",
-    "size_bytes": 16074,
-    "size_human": "15.7 KB",
+    "size_bytes": 17054,
+    "size_human": "16.7 KB",
     "file_count": 4
   },
   "hermes-themes": {
@@ -1631,6 +1637,18 @@
     "size_human": "8.2 KB",
     "file_count": 3
   },
+  "crossterm-shift-key-handling": {
+    "filename": "crossterm-shift-key-handling.zip",
+    "size_bytes": 858,
+    "size_human": "0.8 KB",
+    "file_count": 1
+  },
+  "skill-maintenance-policy": {
+    "filename": "skill-maintenance-policy.zip",
+    "size_bytes": 761,
+    "size_human": "0.7 KB",
+    "file_count": 1
+  },
   "openhue": {
     "filename": "openhue.zip",
     "size_bytes": 1325,
@@ -1648,6 +1666,12 @@
     "size_bytes": 62376,
     "size_human": "60.9 KB",
     "file_count": 12
+  },
+  "asciirogue-devpitfalls-2026-07": {
+    "filename": "asciirogue-devpitfalls-2026-07.zip",
+    "size_bytes": 33577,
+    "size_human": "32.8 KB",
+    "file_count": 4
   },
   "dogfood": {
     "filename": "dogfood.zip",
@@ -1679,6 +1703,12 @@
     "size_human": "4.7 KB",
     "file_count": 1
   },
+  "inspecting-hermes-desktop-dom": {
+    "filename": "inspecting-hermes-desktop-dom.zip",
+    "size_bytes": 3292,
+    "size_human": "3.2 KB",
+    "file_count": 1
+  },
   "java-swing-i18n-survey": {
     "filename": "java-swing-i18n-survey.zip",
     "size_bytes": 3283,
@@ -1699,8 +1729,8 @@
   },
   "patch-line-context-safety": {
     "filename": "patch-line-context-safety.zip",
-    "size_bytes": 7693,
-    "size_human": "7.5 KB",
+    "size_bytes": 10354,
+    "size_human": "10.1 KB",
     "file_count": 1
   },
   "pixijs-v8-pitfalls": {
@@ -1726,6 +1756,24 @@
     "size_bytes": 3998,
     "size_human": "3.9 KB",
     "file_count": 1
+  },
+  "rust-roguelike-development": {
+    "filename": "rust-roguelike-development.zip",
+    "size_bytes": 30952,
+    "size_human": "30.2 KB",
+    "file_count": 10
+  },
+  "rust-tui-game": {
+    "filename": "rust-tui-game.zip",
+    "size_bytes": 21692,
+    "size_human": "21.2 KB",
+    "file_count": 7
+  },
+  "rust-tui-game-bootstrap": {
+    "filename": "rust-tui-game-bootstrap.zip",
+    "size_bytes": 44905,
+    "size_human": "43.9 KB",
+    "file_count": 12
   },
   "simplify-code": {
     "filename": "simplify-code.zip",
@@ -1771,9 +1819,9 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 187691,
-    "size_human": "183.3 KB",
-    "file_count": 61
+    "size_bytes": 210455,
+    "size_human": "205.5 KB",
+    "file_count": 67
   },
   "tistory-publisher-session-20260720-304th": {
     "filename": "tistory-publisher-session-20260720-304th.zip",
