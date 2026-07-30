@@ -757,9 +757,9 @@
   },
   "incremental-game-design": {
     "filename": "incremental-game-design.zip",
-    "size_bytes": 70760,
-    "size_human": "69.1 KB",
-    "file_count": 15
+    "size_bytes": 79882,
+    "size_human": "78.0 KB",
+    "file_count": 16
   },
   "incremental-game-design-last-banner-event-engine": {
     "filename": "incremental-game-design-last-banner-event-engine.zip",
@@ -841,8 +841,8 @@
   },
   "cross-fork-pr-submission": {
     "filename": "cross-fork-pr-submission.zip",
-    "size_bytes": 2922,
-    "size_human": "2.9 KB",
+    "size_bytes": 3236,
+    "size_human": "3.2 KB",
     "file_count": 1
   },
   "data-analysis": {
@@ -1039,8 +1039,8 @@
   },
   "external-score-diagnosis": {
     "filename": "external-score-diagnosis.zip",
-    "size_bytes": 15989,
-    "size_human": "15.6 KB",
+    "size_bytes": 18349,
+    "size_human": "17.9 KB",
     "file_count": 3
   },
   "game-assets-curator": {
@@ -1198,6 +1198,18 @@
     "size_bytes": 24811,
     "size_human": "24.2 KB",
     "file_count": 4
+  },
+  "legacy-code-archive-attribution": {
+    "filename": "legacy-code-archive-attribution.zip",
+    "size_bytes": 3268,
+    "size_human": "3.2 KB",
+    "file_count": 1
+  },
+  "legacy-codebase-archeology": {
+    "filename": "legacy-codebase-archeology.zip",
+    "size_bytes": 12505,
+    "size_human": "12.2 KB",
+    "file_count": 5
   },
   "find-nearby": {
     "filename": "find-nearby.zip",
@@ -1426,6 +1438,18 @@
     "size_bytes": 500381,
     "size_human": "488.7 KB",
     "file_count": 5
+  },
+  "next-app-router-i18n": {
+    "filename": "next-app-router-i18n.zip",
+    "size_bytes": 8277,
+    "size_human": "8.1 KB",
+    "file_count": 3
+  },
+  "nextjs-i18n-migration": {
+    "filename": "nextjs-i18n-migration.zip",
+    "size_bytes": 7391,
+    "size_human": "7.2 KB",
+    "file_count": 2
   },
   "obsidian": {
     "filename": "obsidian.zip",
@@ -1667,12 +1691,6 @@
     "size_human": "60.9 KB",
     "file_count": 12
   },
-  "asciirogue-devpitfalls-2026-07": {
-    "filename": "asciirogue-devpitfalls-2026-07.zip",
-    "size_bytes": 33577,
-    "size_human": "32.8 KB",
-    "file_count": 4
-  },
   "dogfood": {
     "filename": "dogfood.zip",
     "size_bytes": 5613,
@@ -1759,9 +1777,9 @@
   },
   "rust-roguelike-development": {
     "filename": "rust-roguelike-development.zip",
-    "size_bytes": 30952,
-    "size_human": "30.2 KB",
-    "file_count": 10
+    "size_bytes": 44656,
+    "size_human": "43.6 KB",
+    "file_count": 15
   },
   "rust-tui-game": {
     "filename": "rust-tui-game.zip",
@@ -1819,9 +1837,9 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 210455,
-    "size_human": "205.5 KB",
-    "file_count": 67
+    "size_bytes": 234028,
+    "size_human": "228.5 KB",
+    "file_count": 73
   },
   "tistory-publisher-session-20260720-304th": {
     "filename": "tistory-publisher-session-20260720-304th.zip",
