@@ -383,6 +383,12 @@
     "size_human": "18.9 KB",
     "file_count": 3
   },
+  "backup-folder-github-curation": {
+    "filename": "backup-folder-github-curation.zip",
+    "size_bytes": 24775,
+    "size_human": "24.2 KB",
+    "file_count": 3
+  },
   "chrome-automation": {
     "filename": "chrome-automation.zip",
     "size_bytes": 9109,
@@ -496,6 +502,12 @@
     "size_bytes": 22671,
     "size_human": "22.1 KB",
     "file_count": 4
+  },
+  "legacy-game-source-archive-publisher": {
+    "filename": "legacy-game-source-archive-publisher.zip",
+    "size_bytes": 18049,
+    "size_human": "17.6 KB",
+    "file_count": 7
   },
   "memory-error-tracker": {
     "filename": "memory-error-tracker.zip",
@@ -709,7 +721,7 @@
   },
   "comfyui": {
     "filename": "comfyui.zip",
-    "size_bytes": 97028,
+    "size_bytes": 97095,
     "size_human": "94.8 KB",
     "file_count": 33
   },
@@ -1039,9 +1051,9 @@
   },
   "external-score-diagnosis": {
     "filename": "external-score-diagnosis.zip",
-    "size_bytes": 18349,
-    "size_human": "17.9 KB",
-    "file_count": 3
+    "size_bytes": 23860,
+    "size_human": "23.3 KB",
+    "file_count": 4
   },
   "game-assets-curator": {
     "filename": "game-assets-curator.zip",
@@ -1065,6 +1077,12 @@
     "filename": "pokemon-player.zip",
     "size_bytes": 4281,
     "size_human": "4.2 KB",
+    "file_count": 1
+  },
+  "gitfut-growth": {
+    "filename": "gitfut-growth.zip",
+    "size_bytes": 2849,
+    "size_human": "2.8 KB",
     "file_count": 1
   },
   "github-brief-vs-reality-probe": {
@@ -1099,8 +1117,8 @@
   },
   "github-repo-triage": {
     "filename": "github-repo-triage.zip",
-    "size_bytes": 20171,
-    "size_human": "19.7 KB",
+    "size_bytes": 20704,
+    "size_human": "20.2 KB",
     "file_count": 5
   },
   "idea-bank-curator": {
@@ -1108,6 +1126,24 @@
     "size_bytes": 7901,
     "size_human": "7.7 KB",
     "file_count": 3
+  },
+  "large-private-repo-backup-publisher": {
+    "filename": "large-private-repo-backup-publisher.zip",
+    "size_bytes": 13018,
+    "size_human": "12.7 KB",
+    "file_count": 2
+  },
+  "legacy-game-source-archive": {
+    "filename": "legacy-game-source-archive.zip",
+    "size_bytes": 14205,
+    "size_human": "13.9 KB",
+    "file_count": 5
+  },
+  "legacy-source-public-release": {
+    "filename": "legacy-source-public-release.zip",
+    "size_bytes": 13350,
+    "size_human": "13.0 KB",
+    "file_count": 4
   },
   "open-source-similar-finder": {
     "filename": "open-source-similar-finder.zip",
@@ -1201,20 +1237,32 @@
   },
   "legacy-code-archive-attribution": {
     "filename": "legacy-code-archive-attribution.zip",
-    "size_bytes": 3268,
-    "size_human": "3.2 KB",
+    "size_bytes": 5784,
+    "size_human": "5.6 KB",
     "file_count": 1
+  },
+  "legacy-code-github-private-archive": {
+    "filename": "legacy-code-github-private-archive.zip",
+    "size_bytes": 39665,
+    "size_human": "38.7 KB",
+    "file_count": 5
   },
   "legacy-codebase-archeology": {
     "filename": "legacy-codebase-archeology.zip",
-    "size_bytes": 12505,
-    "size_human": "12.2 KB",
-    "file_count": 5
+    "size_bytes": 23657,
+    "size_human": "23.1 KB",
+    "file_count": 6
   },
   "find-nearby": {
     "filename": "find-nearby.zip",
     "size_bytes": 4260,
     "size_human": "4.2 KB",
+    "file_count": 2
+  },
+  "local-source-archive-prep": {
+    "filename": "local-source-archive-prep.zip",
+    "size_bytes": 8372,
+    "size_human": "8.2 KB",
     "file_count": 2
   },
   "godot-dialogue-manager-localization": {
@@ -1765,8 +1813,8 @@
   },
   "python-debugpy": {
     "filename": "python-debugpy.zip",
-    "size_bytes": 5631,
-    "size_human": "5.5 KB",
+    "size_bytes": 5714,
+    "size_human": "5.6 KB",
     "file_count": 1
   },
   "requesting-code-review": {
@@ -1837,9 +1885,9 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 234028,
-    "size_human": "228.5 KB",
-    "file_count": 73
+    "size_bytes": 240609,
+    "size_human": "235.0 KB",
+    "file_count": 77
   },
   "tistory-publisher-session-20260720-304th": {
     "filename": "tistory-publisher-session-20260720-304th.zip",
