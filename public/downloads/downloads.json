@@ -379,8 +379,8 @@
   },
   "memory-hygiene": {
     "filename": "memory-hygiene.zip",
-    "size_bytes": 37149,
-    "size_human": "36.3 KB",
+    "size_bytes": 38347,
+    "size_human": "37.4 KB",
     "file_count": 12
   },
   "morning-briefing": {
@@ -475,9 +475,9 @@
   },
   "tistory-session-guard": {
     "filename": "tistory-session-guard.zip",
-    "size_bytes": 5860,
-    "size_human": "5.7 KB",
-    "file_count": 2
+    "size_bytes": 8555,
+    "size_human": "8.4 KB",
+    "file_count": 3
   },
   "tokscale": {
     "filename": "tokscale.zip",
@@ -725,6 +725,12 @@
     "size_human": "5.9 KB",
     "file_count": 1
   },
+  "cron-prompt-drift": {
+    "filename": "cron-prompt-drift.zip",
+    "size_bytes": 7394,
+    "size_human": "7.2 KB",
+    "file_count": 3
+  },
   "cross-fork-pr-submission": {
     "filename": "cross-fork-pr-submission.zip",
     "size_bytes": 3236,
@@ -775,8 +781,8 @@
   },
   "direct-device-execution": {
     "filename": "direct-device-execution.zip",
-    "size_bytes": 22608,
-    "size_human": "22.1 KB",
+    "size_bytes": 23858,
+    "size_human": "23.3 KB",
     "file_count": 3
   },
   "git-submodule-troubleshooting": {
@@ -797,6 +803,12 @@
     "size_human": "189.8 KB",
     "file_count": 45
   },
+  "hermes-control-room-office-fork": {
+    "filename": "hermes-control-room-office-fork.zip",
+    "size_bytes": 14722,
+    "size_human": "14.4 KB",
+    "file_count": 3
+  },
   "hermes-telegram-cross-machine-doctor": {
     "filename": "hermes-telegram-cross-machine-doctor.zip",
     "size_bytes": 5766,
@@ -805,9 +817,9 @@
   },
   "interactive-widget-pages-deploy": {
     "filename": "interactive-widget-pages-deploy.zip",
-    "size_bytes": 11805,
-    "size_human": "11.5 KB",
-    "file_count": 3
+    "size_bytes": 26981,
+    "size_human": "26.3 KB",
+    "file_count": 5
   },
   "kanban-orchestrator": {
     "filename": "kanban-orchestrator.zip",
@@ -935,6 +947,12 @@
     "size_human": "4.2 KB",
     "file_count": 1
   },
+  "gh-pages-spa-deploy": {
+    "filename": "gh-pages-spa-deploy.zip",
+    "size_bytes": 5818,
+    "size_human": "5.7 KB",
+    "file_count": 1
+  },
   "gitfut-growth": {
     "filename": "gitfut-growth.zip",
     "size_bytes": 2849,
@@ -1009,8 +1027,8 @@
   },
   "oss-python-bootstrap": {
     "filename": "oss-python-bootstrap.zip",
-    "size_bytes": 10719,
-    "size_human": "10.5 KB",
+    "size_bytes": 13129,
+    "size_human": "12.8 KB",
     "file_count": 1
   },
   "vite-react-spa-game-fork": {
@@ -1023,6 +1041,12 @@
     "filename": "github-trending-monitor.zip",
     "size_bytes": 11237,
     "size_human": "11.0 KB",
+    "file_count": 5
+  },
+  "github-visual-style-scout": {
+    "filename": "github-visual-style-scout.zip",
+    "size_bytes": 16123,
+    "size_human": "15.7 KB",
     "file_count": 5
   },
   "github-web-app-candidate-scouting": {
@@ -1081,8 +1105,8 @@
   },
   "interactive-globe-viz": {
     "filename": "interactive-globe-viz.zip",
-    "size_bytes": 13385,
-    "size_human": "13.1 KB",
+    "size_bytes": 14080,
+    "size_human": "13.8 KB",
     "file_count": 4
   },
   "ios-trend-digest": {
@@ -1493,6 +1517,12 @@
     "size_human": "10.8 KB",
     "file_count": 4
   },
+  "r3f-vite-room-viz": {
+    "filename": "r3f-vite-room-viz.zip",
+    "size_bytes": 43566,
+    "size_human": "42.5 KB",
+    "file_count": 8
+  },
   "godmode": {
     "filename": "godmode.zip",
     "size_bytes": 37804,
@@ -1651,9 +1681,9 @@
   },
   "pixijs-v8-pitfalls": {
     "filename": "pixijs-v8-pitfalls.zip",
-    "size_bytes": 9466,
-    "size_human": "9.2 KB",
-    "file_count": 3
+    "size_bytes": 25013,
+    "size_human": "24.4 KB",
+    "file_count": 4
   },
   "plan": {
     "filename": "plan.zip",
@@ -1727,6 +1757,12 @@
     "size_human": "22.8 KB",
     "file_count": 5
   },
+  "visual-clean-room-redesign": {
+    "filename": "visual-clean-room-redesign.zip",
+    "size_bytes": 7425,
+    "size_human": "7.3 KB",
+    "file_count": 1
+  },
   "writing-plans": {
     "filename": "writing-plans.zip",
     "size_bytes": 3167,
@@ -1735,9 +1771,9 @@
   },
   "tistory-publisher": {
     "filename": "tistory-publisher.zip",
-    "size_bytes": 275623,
-    "size_human": "269.2 KB",
-    "file_count": 89
+    "size_bytes": 280996,
+    "size_human": "274.4 KB",
+    "file_count": 91
   },
   "tistory-publisher-session-20260720-304th": {
     "filename": "tistory-publisher-session-20260720-304th.zip",
@@ -1753,8 +1789,8 @@
   },
   "vercel": {
     "filename": "vercel.zip",
-    "size_bytes": 77493,
-    "size_human": "75.7 KB",
+    "size_bytes": 78466,
+    "size_human": "76.6 KB",
     "file_count": 16
   },
   "video-editing": {
@@ -1762,6 +1798,12 @@
     "size_bytes": 8152,
     "size_human": "8.0 KB",
     "file_count": 2
+  },
+  "visual-look-fork-not-rebuild": {
+    "filename": "visual-look-fork-not-rebuild.zip",
+    "size_bytes": 8679,
+    "size_human": "8.5 KB",
+    "file_count": 4
   },
   "yuanbao": {
     "filename": "yuanbao.zip",
